@@ -1,0 +1,19 @@
+
+section#resume {
+	margin-top: 5rem;
+	position: relative;
+}
+
+section#resume .inner {
+    padding-top: 5rem;
+}
+
+section#resume .profile-image {
+	max-width: 10rem;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 0;
+	border: 0.5rem solid #1e2738;
+}

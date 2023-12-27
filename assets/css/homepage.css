@@ -1,0 +1,66 @@
+
+
+section#profile .inner {
+	margin-top: 5rem;
+	position: relative;
+	padding-top: 6rem;
+}
+
+section#profile .profile-image {
+	max-width: 10rem;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 0;
+	border: 0.5rem solid #1e2738;
+}
+
+#skill-slider {
+    margin-right: auto;
+    margin-bottom: 1rem;
+    margin-left: auto;
+}
+
+section#skill .splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#skill [data-tpl="experience-row"] [data-tpl="item"] {
+    padding: 1rem;
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+    border-radius: 0.5rem;
+}
+
+section#skill [data-tpl="experience-row"] [data-tpl="item"]:hover {
+    background-color: #303e59;
+}
+
+section#skill [data-tpl="experience-row"] [data-tpl="icon-wrapper"] {
+	width: 70px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	border: 2px solid #adadad;
+	color: #d7dde9;
+    margin-right: auto;
+	margin-bottom: 1.125rem;
+    margin-left: auto;
+    font-size: 2rem;
+    transition: all .5s ease-in-out;
+}
+
+section#skill [data-tpl="experience-row"] [data-tpl="item"]:hover [data-tpl="icon-wrapper"] {
+    background-color: #adadad;
+    color: #1e2738;
+}
+
+section#skill [data-tpl="experience-row"] [data-tpl="title"] {
+    margin-bottom: 1rem;
+    color: #fff;
+}

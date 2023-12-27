@@ -1,162 +1,183 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Pedro Jesus - Resume</title>
+    <head>
+        <title>Pedro Jesus - Resume</title>
 
-	<!-- Meta -->
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Pedro Jesus - Resume">
-	<meta name="author" content="Pedro Jesus">
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Pedro Jesus - Resume">
+        <meta name="author" content="Pedro Jesus">
 
-    <!-- Lib -->
-    <link href="./assets/lib/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./assets/lib/fontawesome-free-6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- Lib -->
+        <link href="./assets/lib/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/lib/fontawesome-free-6.4.2/css/all.min.css" rel="stylesheet">
+        <link href="./assets/lib/splide-4.1.3/css/splide.min.css" rel="stylesheet">
 
-    <link href="./assets/css/root.css" rel="stylesheet">
-    <link href="./assets/css/btn.css" rel="stylesheet">
-    <link href="./assets/css/theme.css" rel="stylesheet">
-    <link href="./assets/css/menu.css" rel="stylesheet">
-    <link href="./assets/css/header.css" rel="stylesheet">
+        <link href="./assets/css/root.css" rel="stylesheet">
+        <link href="./assets/css/btn.css" rel="stylesheet">
+        <link href="./assets/css/theme.css" rel="stylesheet">
+        <link href="./assets/css/menu.css" rel="stylesheet">
+        <link href="./assets/css/header.css" rel="stylesheet">
+        <link href="./assets/css/footer.css" rel="stylesheet">
+        <link href="./assets/css/homepage.css" rel="stylesheet">
+        <link href="./assets/css/resume.css" rel="stylesheet">
 
-  </head>
-  <body>
+    </head>
+    <body>
 
-    <header>
-        <div class="container-fluid">
-            <div class="top-bar">
-                <nav class="navbar navbar-expand-lg bg-transparent position-relative">
+        <header>
+            <div class="container-fluid">
+                <div class="top-bar">
+                    <nav class="navbar navbar-expand-lg bg-transparent position-relative">
 
-                    <button class="btn menu-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-navigation">
-                        <span class="fa-solid fa-bars fa-fw"></span>
-                    </button>
+                        <button class="btn menu-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-navigation">
+                            <span class="fa-solid fa-bars fa-fw"></span>
+                        </button>
 
-                    <div id="social-list">
-                        <a href="#" data-bs-toggle="tooltip" title="Github">
-                            <i class="fa-brands fa-github fa-fw"></i>
-                        </a>
-                        <a href="#" data-bs-toggle="tooltip" title="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in fa-fw"></i>
-                        </a>
-                    </div>
+                        <div id="social-list">
+                            <a href="#" data-bs-toggle="tooltip" title="Github">
+                                <i class="fa-brands fa-github fa-fw"></i>
+                            </a>
+                            <a href="#" data-bs-toggle="tooltip" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in fa-fw"></i>
+                            </a>
+                        </div>
 
-                    <a class="btn btn-primary top-btn-contact" href="./contact.html">Hire Me!</a>
-                </nav>
+                        <a class="btn btn-primary top-btn-contact" href="./contact.html">Hire Me!</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="offcanvas show" tabindex="-1" id="menu-navigation" data-bs-backdrop="false" data-bs-scroll="true" >
+            <div class="offcanvas-body">
+                <a class="link active" href="./index.html">
+                    <span class="icon-holder">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </span>
+                    <span class="nav-text">About</span>
+                </a>
+                <a class="link" href="./resume.html">
+                    <span class="icon-holder">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+                    <span class="nav-text">Resume</span>
+                </a>
+                <a class="link" href="#">
+                    <span class="icon-holder">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </span>
+                    <span class="nav-text">Contact</span>
+                </a>
+
             </div>
         </div>
-    </header>
 
-    <div class="offcanvas show" tabindex="-1" id="menu-navigation" data-bs-backdrop="false" data-bs-scroll="true" >
-        <div class="offcanvas-body">
-            <a class="link active" href="./index.html">
-                <span class="icon-holder">
-                    <i class="fa-solid fa-circle-user"></i>
-                </span>
-                <span class="nav-text">About</span>
-            </a>
-            <a class="link" href="./resume.html">
-                <span class="icon-holder">
-                    <i class="fa-solid fa-file-lines"></i>
-                </span>
-                <span class="nav-text">Resume</span>
-            </a>
-            <a class="link" href="#">
-                <span class="icon-holder">
-                    <i class="fa-solid fa-comment-dots"></i>
-                </span>
-                <span class="nav-text">Contact</span>
-            </a>
+        <main>
 
-        </div>
-    </div>
-
-	<main>
-
-        <div class="container">
-
-            <section id="section-profile" class="text-center">
-                <img class="profile-image rounded-circle" src="assets/image/profile.png">
-                <h1>Pedro Jesus</h1>
-                <div>
-                    <p>Hi! I’m a Senior Developer with more than ten years of experience working in mobile banking apps. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Welcome to my online portfolio!</p>
-                    <a href="#" class="btn btn-secondary">Go somewhere</a>
-                </div>
-            </section>
-
-            <section id="section-skill" class="text-center">
-                <h1>Skills & Experiences</h1>
-
-                <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. You can replace or add more tech icons below to reflect your skillset.</p>
-
-                <div class="row justify-content-center align-items-center">
-
-                    <div class="col-4 col-md-3 col-lg-1 mb-3 mb-lg-5">
-                        <img class="img-fluid rounded" src="./assets/image/skill/php.svg" alt="php" data-bs-toggle="tooltip" title="Php">
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-1 mb-3 mb-lg-5">
-                        <img class="img-fluid rounded" src="./assets/image/skill/html-5.svg" alt="html" data-bs-toggle="tooltip" title="Html">
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-1 mb-3 mb-lg-5">
-                        <img class="img-fluid rounded" src="./assets/image/skill/css-3.svg" alt="css" data-bs-toggle="tooltip" title="Css">
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-1 mb-3 mb-lg-5">
-                        <img class="img-fluid rounded" src="./assets/image/skill/javascript.svg" alt="javascript" data-bs-toggle="tooltip" title="Javascript">
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-1 mb-3 mb-lg-5">
-                        <img class="img-fluid rounded" src="./assets/image/skill/jquery.svg" alt="jquery" data-bs-toggle="tooltip" title="JQuery">
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-1 mb-3 mb-lg-5">
-                        <img class="img-fluid rounded" src="./assets/image/skill/bootstrap5.svg" alt="bootstrap-5" data-bs-toggle="tooltip" title="Bootstrap 5">
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-1 mb-3 mb-lg-5">
-                        <img class="img-fluid rounded" src="./assets/image/skill/mysql.svg" alt="mysql" data-bs-toggle="tooltip" title="MySql">
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="item col-md-6 col-lg-4 text-md-center">
-                        <div class="item-icon-holder mx-md-auto">
-                            <span class="fas fa-laptop-code fa-2xl"></span>
-                        </div>
-                        <h5 class="mb-3 text-white">Web Development</h5>
-                        <div class="">
-                            Describe your expertise here. You can change the icon above to any of the <a href="https://icons.getbootstrap.com/" targert="_blank">free Bootstrap icons</a>, consectetur adipiscing elit. Phasellus enim quam, gravida accumsan dignissim eu.
-                        </div>
-                    </div>
-                    <div class="item col-md-6 col-lg-4 text-md-center">
-                        <div class="item-icon-holder mx-md-auto">
-                            <span class="fas fa-database fa-2xl"></span>
-                        </div>
-                        <h5 class="mb-3 text-white">Database Infrastructure</h5>
-                        <div class="">
-                            Describe your expertise here. You can change the icon above to any of the <a href="https://icons.getbootstrap.com/" targert="_blank">free Bootstrap icons</a>, consectetur adipiscing elit. Phasellus enim quam, gravida accumsan dignissim eu.
-                        </div>
-                    </div>
-                    <div class="item col-md-6 col-lg-4 text-md-center">
-                        <div class="item-icon-holder mx-md-auto">
-                            <span class="fas fa-code fa-2xl"></span>
-                        </div>
-                        <h5 class="mb-3 text-white">BackOffice</h5>
-                        <div class="item-desc">
-                            Describe your expertise here. You can change the icon above to any of the <a href="https://icons.getbootstrap.com/" targert="_blank">free Bootstrap icons</a>, consectetur adipiscing elit. Phasellus enim quam, gravida accumsan dignissim eu.
+            <section id="profile">
+                <div class="container">
+                    <div class="inner">
+                        <img class="profile-image rounded-circle" src="assets/image/profile.png">
+                        <h1>Pedro Jesus</h1>
+                        <div>
+                            <p>Hi! I’m a Senior Developer with more than ten years of experience working in mobile banking apps. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Welcome to my online portfolio!</p>
+                            <a href="#" class="btn btn-secondary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
 
             </section>
 
-        </div>
 
-    </main>
+            <section id="skill">
+                <div class="container">
+                    <div class="inner">
+                        <h1>Skills & Experiences</h1>
 
-	<footer class="footer text-center py-5">
-		<small class="copyright">Copyright &copy; Pedro Jesus</small>
-	</footer>
+                        <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. You can replace or add more tech icons below to reflect your skillset.</p>
 
-    <script src="./assets/lib/pooper-2.11.8/pooper.min.js"></script>
-    <script src="./assets/lib/bootstrap-5.3.2/js/bootstrap.min.js"></script>
-    <script src="./assets/js/tooltip.js"></script>
-  </body>
+                        <div id="skill-slider" class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/php.svg" alt="php" data-bs-toggle="tooltip" title="Php">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/html-5.svg" alt="html" data-bs-toggle="tooltip" title="Html">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/css-3.svg" alt="css" data-bs-toggle="tooltip" title="Css">
+                                        </li>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/javascript.svg" alt="javascript" data-bs-toggle="tooltip" title="Javascript">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/jquery.svg" alt="jquery" data-bs-toggle="tooltip" title="JQuery">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/bootstrap5.svg" alt="bootstrap-5" data-bs-toggle="tooltip" title="Bootstrap 5">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/mysql.svg" alt="mysql" data-bs-toggle="tooltip" title="MySql">
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row" data-tpl="experience-row">
+                            <div class="col-md-6 col-lg-4">
+                                <div data-tpl="item">
+                                    <div data-tpl="icon-wrapper">
+                                        <span class="fas fa-laptop-code" data-tpl="icon"></span>
+                                    </div>
+                                    <h5 data-tpl="title">Web Development</h5>
+                                    <div data-tpl="description">
+                                        Describe your expertise here. You can change the icon above to any of the <a href="https://icons.getbootstrap.com/" targert="_blank">free Bootstrap icons</a>, consectetur adipiscing elit. Phasellus enim quam, gravida accumsan dignissim eu.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div data-tpl="item">
+                                    <div data-tpl="icon-wrapper">
+                                        <span class="fas fa-database" data-tpl="icon"></span>
+                                    </div>
+                                    <h5 data-tpl="title">Database Infrastructure</h5>
+                                    <div data-tpl="description">
+                                        Describe your expertise here. You can change the icon above to any of the <a href="https://icons.getbootstrap.com/" targert="_blank">free Bootstrap icons</a>, consectetur adipiscing elit. Phasellus enim quam, gravida accumsan dignissim eu.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div data-tpl="item">
+                                    <div data-tpl="icon-wrapper">
+                                        <span class="fas fa-code" data-tpl="icon"></span>
+                                    </div>
+                                    <h5 data-tpl="title">BackOffice</h5>
+                                    <div data-tpl="description">
+                                        Describe your expertise here. You can change the icon above to any of the <a href="https://icons.getbootstrap.com/" targert="_blank">free Bootstrap icons</a>, consectetur adipiscing elit. Phasellus enim quam, gravida accumsan dignissim eu.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <small class="copyright">Copyright &copy; Pedro Jesus</small>
+        </footer>
+
+        <script src="./assets/lib/pooper-2.11.8/pooper.min.js"></script>
+        <script src="./assets/lib/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+        <script src="./assets/lib/splide-4.1.3/js/splide.min.js"></script>
+        <script src="./assets/js/tooltip.js"></script>
+        <script src="./assets/js/skill-slider.js"></script>
+    </body>
 </html>
