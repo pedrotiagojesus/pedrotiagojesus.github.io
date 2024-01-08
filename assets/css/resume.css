@@ -1,19 +1,313 @@
+section#resume .inner [data-tpl="subtitle"] {
+	margin-bottom: 1.5rem;
+}
 
-section#resume {
-	margin-top: 5rem;
+section#resume [data-tpl="contact"] {
+	display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--bs-border-color);
+    border-bottom: 1px solid var(--bs-border-color);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+	margin-bottom: 2rem;
+}
+
+section#resume [data-tpl="contact"] [data-tpl="icon"] {
+	font-size: 1.1rem;
+    margin-right: 0.5rem;
+    color: var(--bs-heading-color);
+}
+
+section#resume [data-tpl="row-main"] [data-tpl="left"]{
+	padding-right: 1rem;
+    border-right: 1px solid var(--bs-border-color);
+}
+
+section#resume [data-tpl="summary"] {
+	text-align: left;
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+section#resume [data-tpl="summary"] [data-tpl="title"] {
+	margin-bottom: 1rem;
+	letter-spacing: 3;
+	font-weight: 700;
+}
+
+section#resume [data-tpl="experience"] {
+	text-align: left;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+section#resume [data-tpl="experience"] [data-tpl="title"] {
+	margin-bottom: 1rem;
+	letter-spacing: 3;
+	font-weight: 700;
+}
+
+section#resume [data-tpl="experience"] [data-tpl="resume-timeline"] {
+	padding-left: 2.5rem;
 	position: relative;
 }
 
-section#resume .inner {
-    padding-top: 5rem;
+section#resume [data-tpl="experience"] [data-tpl="resume-timeline"]:before {
+	content: "";
+	display: inline-block;
+	width: 3px;
+	height: 100%;
+	background: rgba(0,0,0,.1);
+	left: 1.25rem;
+	top: 0;
+	position: absolute;
 }
 
-section#resume .profile-image {
-	max-width: 10rem;
-	height: auto;
+section#resume [data-tpl="experience"] [data-tpl="item"] {
+	position: relative;
+	margin-bottom: 1.5rem;
+}
+
+section#resume [data-tpl="experience"] [data-tpl="resume-timeline"] > [data-tpl="item"]:last-child {
+	margin-bottom: 0;
+}
+
+section#resume [data-tpl="experience"] [data-tpl="item"]:before {
+	content: "";
+	display: inline-block;
 	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	left: calc(-1.25rem - 3px)	;
 	top: 0;
-	border: 0.5rem solid #1e2738;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #a5b3ce;
+	background: rgba(0,0,0,.3);
+	border-radius: 50%;
+}
+
+section#resume [data-tpl="experience"] [data-tpl="item"] [data-tpl="header"] {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+section#resume [data-tpl="experience"] [data-tpl="item"] [data-tpl="header"] [data-tpl="time"] {
+	font-size: 0.8rem;
+}
+
+section#resume [data-tpl="experience"] [data-tpl="item"] [data-tpl="header"] [data-tpl="company-name"] {
+	background: rgba(0,0,0,.1);
+	padding: .2rem .5rem;
+	border-radius: .25rem;
+	font-weight: 600;
+	font-size: 0.8rem;
+}
+
+section#resume [data-tpl="experience"] [data-tpl="item"] [data-tpl="description"] ul {
+	padding-left: 1rem;
+}
+
+section#resume [data-tpl="experience"] [data-tpl="item"] [data-tpl="description"] ul li {
+	margin-bottom: 0.5rem;
+}
+
+section#resume [data-tpl="skill"] {
+	text-align: left;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+section#resume [data-tpl="skill"] [data-tpl="title"] {
+	margin-bottom: 1rem;
+	letter-spacing: 3;
+	font-weight: 700;
+}
+
+section#resume [data-tpl="skill"] [data-tpl="list"] {
+	list-style: none;
+	padding: 0;
+}
+
+section#resume [data-tpl="skill"] [data-tpl="list"] [data-tpl="item"] {
+	margin-bottom: 1.5rem;
+}
+
+section#resume [data-tpl="skill"] [data-tpl="list"] [data-tpl="item"]:last-child {
+	margin-bottom: 0;
+}
+
+section#resume [data-tpl="skill"] [data-tpl="name"] {
+	margin-bottom: .25rem;
+	color: #fff;
+	font-size: .8rem;
+	font-weight: bold;
+}
+
+section#resume [data-tpl="skill"] [data-tpl="item"] .progress {
+	--bs-progress-height: 0.3rem;
+	--bs-progress-border-radius: 0.3rem;
+	--bs-progress-bg: #19202e;
+	--bs-progress-bar-bg: #8497bc;
+}
+
+section#resume [data-tpl="skill-topic"] {
+	text-align: left;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+section#resume [data-tpl="skill-topic"] [data-tpl="title"] {
+	margin-bottom: 1rem;
+	letter-spacing: 3;
+	font-weight: 700;
+}
+
+section#resume [data-tpl="skill-topic"] [data-tpl="list"] {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem;
+}
+
+section#resume [data-tpl="skill-topic"] [data-tpl="list"] [data-tpl="item"] {
+	display: inline-block;
+}
+
+section#resume [data-tpl="skill-topic"] [data-tpl="list"] [data-tpl="item"] .badge {
+	background-color: rgba(0,0,0,.1);
+	color: rgba(255,255,255,.8);
+  	padding: .5rem .65rem;
+}
+
+section#resume [data-tpl="project"] {
+	text-align: left;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+section#resume [data-tpl="project"] [data-tpl="title"] {
+	margin-bottom: 1rem;
+	letter-spacing: 3;
+	font-weight: 700;
+}
+
+section#resume [data-tpl="project"] [data-tpl="item"] {
+	margin-bottom: 1rem;
+}
+
+section#resume [data-tpl="project"] [data-tpl="item"]:last-child {
+	margin-bottom: 0;
+}
+
+section#resume [data-tpl="project"] [data-tpl="item"] [data-tpl="heading"] {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+section#resume [data-tpl="project"] [data-tpl="item"] [data-tpl="heading"] a {
+	color: #fff;
+	font-weight: 700;
+  	text-decoration: none;
+}
+
+section#resume [data-tpl="project"] [data-tpl="item"] [data-tpl="heading"]:hover a {
+  	text-decoration: underline;
+}
+
+section#resume [data-tpl="project"] [data-tpl="item"] [data-tpl="heading"] [data-tpl="icon"] {
+	font-size: 0.5rem
+}
+
+section#resume [data-tpl="education"] {
+	text-align: left;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+section#resume [data-tpl="education"] [data-tpl="title"] {
+	margin-bottom: 1rem;
+	letter-spacing: 3;
+	font-weight: 700;
+}
+
+section#resume [data-tpl="education"] [data-tpl="list"] {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+section#resume [data-tpl="education"] [data-tpl="list"] li {
+	margin-bottom: 1rem;
+}
+
+section#resume [data-tpl="education"] [data-tpl="list"] li:last-child {
+	margin-bottom: 0;
+}
+
+section#resume [data-tpl="education"] li [data-tpl="organization"] {
+	font-weight: 700;
+	color: #fff;
+}
+
+section#resume [data-tpl="education"] li [data-tpl="degree"] {
+}
+
+section#resume [data-tpl="education"] li [data-tpl="time"] {
+	font-size: 0.8rem;
+}
+
+section#resume [data-tpl="language"] {
+	text-align: left;
+	padding-bottom: 2rem;
+}
+
+section#resume [data-tpl="language"] [data-tpl="title"] {
+	margin-bottom: 1rem;
+	letter-spacing: 3;
+	font-weight: 700;
+}
+
+section#resume [data-tpl="language"] [data-tpl="list"] {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+section#resume [data-tpl="language"] [data-tpl="list"] li {
+	margin-bottom: 1rem;
+}
+
+section#resume [data-tpl="language"] [data-tpl="list"] li:last-child {
+	margin-bottom: 0;
+}
+
+section#resume [data-tpl="language"] [data-tpl="list"] [data-tpl="name"] {
+	font-weight: 600;
+	margin-bottom: .5rem;
+	color: #fff;
+}
+
+section#resume [data-tpl="language"] [data-tpl="list"] [data-tpl="indicator"] {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+}
+
+section#resume [data-tpl="language"] [data-tpl="list"] [data-tpl="indicator"] > * {
+	background-color: #19202e;
+	min-height: 10px;
+	border-radius: 2px;
+	width: 100%;
+}
+
+section#resume [data-tpl="language"] [data-tpl="list"] [data-tpl="indicator"] > *[data-tpl="full"] {
+	background-color: #8497bc;
 }

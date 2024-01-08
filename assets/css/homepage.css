@@ -1,21 +1,3 @@
-
-
-section#profile .inner {
-	margin-top: 5rem;
-	position: relative;
-	padding-top: 6rem;
-}
-
-section#profile .profile-image {
-	max-width: 10rem;
-	height: auto;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	top: 0;
-	border: 0.5rem solid #1e2738;
-}
-
 #skill-slider {
     margin-right: auto;
     margin-bottom: 1rem;
@@ -46,7 +28,7 @@ section#skill [data-tpl="experience-row"] [data-tpl="icon-wrapper"] {
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	border: 2px solid #adadad;
+	border: 2px solid #F0FFF0;
 	color: #d7dde9;
     margin-right: auto;
 	margin-bottom: 1.125rem;
@@ -56,11 +38,11 @@ section#skill [data-tpl="experience-row"] [data-tpl="icon-wrapper"] {
 }
 
 section#skill [data-tpl="experience-row"] [data-tpl="item"]:hover [data-tpl="icon-wrapper"] {
-    background-color: #adadad;
+    background-color: #F0FFF0;
     color: #1e2738;
 }
 
-section#skill [data-tpl="experience-row"] [data-tpl="title"] {
+section#skill [data-tpl="experience-row"] [data-tpl="item"] [data-tpl="item-title"] {
     margin-bottom: 1rem;
-    color: #fff;
+    color: #F0FFF0;
 }

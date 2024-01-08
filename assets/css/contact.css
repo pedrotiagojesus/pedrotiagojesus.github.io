@@ -1,0 +1,31 @@
+
+section#contact {
+	margin-top: 5rem;
+	position: relative;
+}
+
+section#contact .inner {
+    padding-top: 5rem;
+}
+
+section#contact .profile-image {
+	max-width: 10rem;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 0;
+	border: 0.5rem solid #1e2738;
+}
+
+section#contact .inner [data-tpl="subtitle"] {
+	margin-bottom: 1.5rem;
+}
+
+section#contact .inner form {
+	margin-top: 2rem;
+}
+
+section#contact .inner form #contact-message {
+	height: 10rem;
+}

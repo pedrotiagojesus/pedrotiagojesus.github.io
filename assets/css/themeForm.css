@@ -1,0 +1,23 @@
+.form-control {
+	--bs-body-bg: #273248;
+	--bs-border-width: 0;
+}
+
+.form-control:focus {
+	box-shadow: none;
+}
+
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+	--bs-body-color-rgb: 255, 255, 255;
+	--bs-border-width: 0;
+}
+
+form-floating > .form-control-plaintext ~ label::after,
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select ~ label::after {
+    --bs-body-bg: transparent;
+}

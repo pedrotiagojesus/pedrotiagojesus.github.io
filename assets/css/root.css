@@ -1,7 +1,14 @@
 :root {
     --font-size: 14px;
+
     --bs-body-color: #a5b3ce;
+
     --bs-body-bg: #19202e;
+    --bs-body-font-family: 'Roboto', sans-serif;
+
+    --bs-heading-color: #F0FFF0;
+
+    --bs-border-color: rgba(255,255,255,.2);
 }
 
 /* SM */

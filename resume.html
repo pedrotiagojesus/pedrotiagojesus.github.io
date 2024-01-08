@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
     <head>
         <title>Pedro Jesus - Resume</title>
@@ -14,14 +15,20 @@
         <link href="./assets/lib/fontawesome-free-6.4.2/css/all.min.css" rel="stylesheet">
         <link href="./assets/lib/splide-4.1.3/css/splide.min.css" rel="stylesheet">
 
+        <link href="./assets/fonts/Lato/Lato.css" rel="stylesheet">
+        <link href="./assets/fonts/Roboto/Roboto.css" rel="stylesheet">
+
         <link href="./assets/css/root.css" rel="stylesheet">
         <link href="./assets/css/btn.css" rel="stylesheet">
         <link href="./assets/css/theme.css" rel="stylesheet">
+        <link href="./assets/css/themeForm.css" rel="stylesheet">
+        <link href="./assets/css/themeTooltip.css" rel="stylesheet">
         <link href="./assets/css/menu.css" rel="stylesheet">
         <link href="./assets/css/header.css" rel="stylesheet">
         <link href="./assets/css/footer.css" rel="stylesheet">
         <link href="./assets/css/homepage.css" rel="stylesheet">
         <link href="./assets/css/resume.css" rel="stylesheet">
+        <link href="./assets/css/contact.css" rel="stylesheet">
 
     </head>
     <body>
@@ -36,10 +43,10 @@
                         </button>
 
                         <div id="social-list">
-                            <a href="#" data-bs-toggle="tooltip" title="Github">
+                            <a href="https://github.com/pedrotiagojesus" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
                                 <i class="fa-brands fa-github fa-fw"></i>
                             </a>
-                            <a href="#" data-bs-toggle="tooltip" title="LinkedIn">
+                            <a href="https://www.linkedin.com/in/pedro-jesus-7a1654140/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="LinkedIn">
                                 <i class="fa-brands fa-linkedin-in fa-fw"></i>
                             </a>
                         </div>
@@ -64,7 +71,7 @@
                     </span>
                     <span class="nav-text">Resume</span>
                 </a>
-                <a class="link" href="#">
+                <a class="link" href="./contact.html">
                     <span class="icon-holder">
                         <i class="fa-solid fa-comment-dots"></i>
                     </span>
@@ -76,74 +83,64 @@
 
         <main>
 
-            <section id="resume">
+            <section class="wrapper-profile" id="resume">
 
                 <div class="container">
                     <div class="inner">
 
-                        <div class="header">
-                            <img class="profile-image rounded-circle" src="./assets/image/profile.png">
-                            <h1 class="text-center">Pedro Jesus</h1>
-                            <h4 class="text-center">Website Developer</h4>
-                            <div class="resume-contact mt-4">
-                                <ul class="d-flex mb-0 justify-content-center gap-5">
-                                    <li class="list-inline-item">
-                                        <i class="fas fa-phone me-2"></i>
-                                        +123-4567890
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="fas fa-at me-2"></i>
-                                        hello@yourwebsite.com
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="fas fa-globe me-2"></i>
-                                        www.yourwebsite.com
-                                    </li>
-                                </ul>
+                        <img class="profile-image rounded-circle" src="./assets/image/profile.png">
+                        <h3 data-tpl="title">Pedro Jesus</h3>
+                        <h4 data-tpl="subtitle">Website Developer</h4>
+
+                        <div data-tpl="contact">
+                            <div data-tpl="item">
+                                <span class="fas fa-phone" data-tpl="icon"></span>
+                                <span>+351 910 746 466</span>
+                            </div>
+                            <div data-tpl="item">
+                                <span class="fas fa-at" data-tpl="icon"></span>
+                                <span>pedrotiagojesus@gmail.com</span>
+                            </div>
+                            <div data-tpl="item">
+                                <span class="fas fa-globe" data-tpl="icon"></span>
+                                <span>https://pedrotiagojesus.github.io</span>
                             </div>
                         </div>
 
                         <div class="body">
 
-                            <div class="row">
-                                <div class="col-main col-12 col-lg-8 pe-lg-4">
-                                    <div class="resume-summary-section resume-section">
-                                        <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-2 py-lg-3">
-                                            <i class="resume-section-heading-icon bi bi-person me-2"></i>
-                                            About Me
-                                        </h3>
+                            <div class="row" data-tpl="row-main">
+                                <div class="col-12 col-lg-8" data-tpl="left">
+
+                                    <div data-tpl="summary">
+                                        <h4 data-tpl="title">About Me</h4>
                                         <div class="resume-summary-desc">
                                             Summarise your career profile here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                                         </div>
                                     </div>
 
-                                    <hr>
+                                    <div data-tpl="experience">
 
-                                    <div class="resume-experience-section resume-section">
-                                        <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3">
-                                            <i class="resume-section-heading-icon bi bi-briefcase me-2"></i>
-                                            Work Experience
-                                        </h3>
-                                        <div class="resume-timeline position-relative">
+                                        <h4 data-tpl="title">Work Experience</h4>
 
-                                            <article class="resume-timeline-item position-relative pb-5">
+                                        <div data-tpl="resume-timeline">
 
-                                                <div class="resume-timeline-item-header mb-2">
+                                            <article data-tpl="item">
 
-                                                    <div class="resume-position-meta d-flex justify-content-between mb-1">
-                                                        <div class="resume-position-time">2023 - Present</div>
-                                                        <div class="resume-company-name">Google</div>
-                                                    </div>
-                                                    <h3 class="resume-position-title mb-1">Tech Lead</h3>
+                                                <div data-tpl="header">
+
+                                                    <span data-tpl="time">2017 - Present</span>
+                                                    <span data-tpl="company-name">MagicBrain®</span>
 
                                                 </div>
-                                                <div class="resume-timeline-item-desc">
 
+                                                <h3 data-tpl="role">Web Developer</h3>
 
-                                                    <ul class="resume-timeline-list">
+                                                <div data-tpl="description">
+
+                                                    <ul>
                                                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta est diam, et blandit ipsum suscipit facilisis. Praesent nec semper eros. Aliquam quis turpis sed metus mollis luctus vitae rhoncus mi. </li>
                                                         <li>Vivamus accumsan purus at urna tincidunt convallis. Sed nisi dolor, elementum eget tempus ac, blandit ac mi. Aliquam id tellus ut arcu luctus accumsan in at odio. </li>
-
                                                         <li>Morbi condimentum, lorem in pharetra mollis, purus justo sollicitudin dolor, tristique vulputate mi odio sit amet ante.</li>
                                                         <li>Blanditiis praesentium voluptatum deleniti atque corrupti.</li>
                                                     </ul>
@@ -152,180 +149,134 @@
 
                                             </article>
 
-                                            <article class="resume-timeline-item position-relative pb-5">
-
-                                                <div class="resume-timeline-item-header mb-2">
-
-                                                    <div class="resume-position-meta d-flex justify-content-between mb-1">
-                                                        <div class="resume-position-time">2019 - 2023</div>
-                                                        <div class="resume-company-name">Meta</div>
-                                                    </div>
-                                                    <h3 class="resume-position-title mb-1">Senior App Developer</h3>
-
-                                                </div>
-                                                <div class="resume-timeline-item-desc">
-                                                    <ul class="resume-timeline-list">
-
-                                                        <li>Praesent nec semper eros. Aliquam quis turpis sed metus mollis luctus vitae rhoncus mi. At vero eos et accusamus et iusto odio dignissimos.</li>
-                                                        <li>Proin tempus eu arcu in semper. Quisque gravida, sem ut vehicula ultrices, diam est viverra odio, eget tristique tortor tortor sed neque.</li>
-                                                        <li>Suspendisse quis pharetra elit. Curabitur vitae cursus lacus, et bibendum magna. Donec in orci eu augue posuere mattis ut in turpis.</li>
-                                                    </ul>
-
-                                                </div>
-
-                                            </article>
-
-                                            <article class="resume-timeline-item position-relative">
-
-                                                <div class="resume-timeline-item-header mb-2">
-
-                                                    <div class="resume-position-meta d-flex justify-content-between mb-1">
-                                                        <div class="resume-position-time">2017 - 2019</div>
-                                                        <div class="resume-company-name">Coinbase</div>
-                                                    </div>
-                                                    <h3 class="resume-position-title mb-1">App Developer</h3>
-
-                                                </div>
-                                                <div class="resume-timeline-item-desc">
-                                                    <ul class="resume-timeline-list">
-
-                                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                        <li>Nulla velit dui, ultrices sit amet arcu eget, sodales lacinia lorem.</li>
-                                                        <li>Quisque semper nisi mauris, non ullamcorper nunc consectetur eget. </li>
-
-                                                    </ul>
-
-                                                </div>
-
-                                            </article>
                                         </div>
                                     </div>
 
                                 </div>
 
-                                <div class="col-12 col-lg-4 ps-lg-4">
+                                <div class="col-12 col-lg-4" data-tpl="right">
 
-                                    <div class="resume-skills-section resume-section">
-                                        <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-gear me-2"></i>Tech Stack</h3>
+                                    <div data-tpl="skill">
+                                        <h4 data-tpl="title">Tech Stack</h4>
 
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">
-                                                <div class="resume-skill-name">JavaScript</div>
-                                                <div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
-                                                <div class="progress-bar resume-progress-bar" style="width: 98%"></div>
+                                        <ul data-tpl="list">
+                                            <li data-tpl="item">
+                                                <div data-tpl="name">JavaScript</div>
+                                                <div class="progress" role="progressbar">
+                                                    <div class="progress-bar" style="width: 98%"></div>
                                                 </div>
                                             </li>
-                                            <li class="mb-2">
-                                                <div class="resume-skill-name">ReactJS</div>
-                                                <div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                                <div class="progress-bar resume-progress-bar" style="width: 95%"></div>
+                                            <li data-tpl="item">
+                                                <div data-tpl="name">ReactJS</div>
+                                                <div class="progress" role="progressbar">
+                                                    <div class="progress-bar" style="width: 95%"></div>
                                                 </div>
 
                                             </li>
-                                            <li class="mb-2">
-                                                <div class="resume-skill-name">Python</div>
-                                                <div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
-                                                <div class="progress-bar resume-progress-bar" style="width: 92%"></div>
+                                            <li data-tpl="item">
+                                                <div data-tpl="name">Python</div>
+                                                <div class="progress" role="progressbar">
+                                                    <div class="progress-bar" style="width: 92%"></div>
                                                 </div>
                                             </li>
-                                            <li class="mb-2">
-                                                <div class="resume-skill-name">MongoDB</div>
-                                                <div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">
-                                                <div class="progress-bar resume-progress-bar" style="width: 86%"></div>
+                                            <li data-tpl="item">
+                                                <div data-tpl="name">MongoDB</div>
+                                                <div class="progress" role="progressbar">
+                                                    <div class="progress-bar" style="width: 86%"></div>
                                                 </div>
                                             </li>
-
-                                        </ul>
-
-                                    </div>
-
-                                    <hr>
-
-                                    <div class="resume-skills-section resume-section">
-                                        <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-person-gear me-2"></i>Soft Skills</h3>
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item"><span class="badge resume-skill-badge">Leadership</span></li>
-                                            <li class="list-inline-item"><span class="badge resume-skill-badge">Project Management</span></li>
-
-                                            <li class="list-inline-item"><span class="badge resume-skill-badge">DevOps</span></li>
-                                            <li class="list-inline-item"><span class="badge resume-skill-badge">Public Speaking</span></li>
-
-
                                         </ul>
                                     </div>
 
-                                    <hr>
+                                    <div data-tpl="skill-topic">
+                                        <h4 data-tpl="title">Soft Skills</h4>
+                                        <ul data-tpl="list">
+                                            <li data-tpl="item">
+                                                <span class="badge">Leadership</span>
+                                            </li>
+                                            <li data-tpl="item">
+                                                <span class="badge">Project Management</span>
+                                            </li>
+                                            <li data-tpl="item">
+                                                <span class="badge">DevOps</span>
+                                            </li>
+                                            <li data-tpl="item">
+                                                <span class="badge">Public Speaking</span>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                                    <div class="resume-projects-section resume-section">
-                                        <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-code-slash me-2"></i>Projects</h3>
-                                        <div class="item">
-                                            <h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i><a href="#">Project lorem Ipsum</a></h4>
-                                            <div class="item-desc">
+                                    <div data-tpl="project">
+                                        <h4 data-tpl="title">Projects</h4>
+                                        <div data-tpl="item">
+                                            <div data-tpl="heading">
+                                                <span class="fa-solid fa-square" data-tpl="icon"></span>
+                                                <a href="#">Project lorem Ipsum</a>
+                                            </div>
+                                            <div data-tpl="description">
                                                 Project desc goes here aenean ut libero sit amet ante fermentum scelerisque non a leo.
                                             </div>
-                                        </div><!--//item-->
-                                        <div class="item">
-                                            <h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i><a href="#">Volutpat App</a></h4>
-                                            <div class="item-desc">
-                                                You can link to your project Github page.
-                                            </div>
-                                        </div><!--//item-->
-
-
+                                        </div>
                                     </div>
 
-                                    <hr>
-
-                                    <div class="resume-educate-section resume-section">
-                                        <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-book me-2"></i>Education</h3>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">
-                                                <div class="resume-degree font-weight-bold">MSc in Computer Science</div>
-                                                <div class="resume-degree-org">Oxford University</div>
-                                                <div class="resume-degree-time">2016 - 2017</div>
-                                            </li>
-                                            <li>
-                                                <div class="resume-degree font-weight-bold">BSc Maths and Physics</div>
-                                                <div class="resume-degree-org">University of California, Berkeley</div>
-                                                <div class="resume-degree-time">2012 - 2016</div>
+                                    <div data-tpl="education">
+                                        <h4 data-tpl="title">Education</h4>
+                                        <ul data-tpl="list">
+                                            <li data-tpl="item">
+                                                <div data-tpl="organization">Coimbra Business School | ISCAC</div>
+                                                <div data-tpl="degree">Licenciatura, Informática de Gestão</div>
+                                                <div data-tpl="time">2013 - 2017</div>
                                             </li>
                                         </ul>
                                     </div>
 
-                                    <hr>
-
-                                    <div class="resume-lang-section resume-section">
-                                        <h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-translate me-2"></i>Languages</h3>
-                                        <ul class="list-unstyled resume-lang-list">
-                                            <li class="mb-2">
-                                                <div class="resume-lang-name">English</div>
-                                                <div class="resume-level-indicator row gx-0 flex-nowrap">
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-half"></span></div>
-                                                </div><!--//resume-level-indicator-->
+                                    <div data-tpl="language">
+                                        <h4 data-tpl="title">Languages</h4>
+                                        <ul data-tpl="list">
+                                            <li>
+                                                <div data-tpl="name">Portugues</div>
+                                                <div data-tpl="indicator">
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                </div>
                                             </li>
-                                            <li class="mb-2">
-                                                <div class="resume-lang-name">Spanish</div>
-                                                <div class="resume-level-indicator row gx-0 flex-nowrap">
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-full"></span></div>
-                                                    <div class="col"><span class="item item-half"></span></div>
-                                                    <div class="col"><span class="item"></span></div>
-                                                </div><!--//resume-level-indicator-->
+                                            <li>
+                                                <div data-tpl="name">English</div>
+                                                <div data-tpl="indicator">
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="empty"></div>
+                                                    <div data-tpl="empty"></div>
+                                                    <div data-tpl="empty"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div data-tpl="name">Spanish</div>
+                                                <div data-tpl="indicator">
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="full"></div>
+                                                    <div data-tpl="empty"></div>
+                                                    <div data-tpl="empty"></div>
+                                                    <div data-tpl="empty"></div>
+                                                    <div data-tpl="empty"></div>
+                                                    <div data-tpl="empty"></div>
+                                                    <div data-tpl="empty"></div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
