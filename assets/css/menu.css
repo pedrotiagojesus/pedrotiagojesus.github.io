@@ -24,10 +24,9 @@
     display: flex;
     flex-direction: row;
 	background: rgba(0, 0, 0, 0.7);
-	border-radius: 6px;
+	border-radius: 0;
 	text-align: center;
     justify-content: space-around;
-    margin-left: 1rem;
 }
 
 #menu-navigation .offcanvas-body .link {
@@ -82,6 +81,8 @@
     #menu-navigation .offcanvas-body {
         flex-direction: column;
         background: rgba(0, 0, 0, 0.1);
+        margin-left: 1rem;
+        border-radius: 6px;
     }
 }
 

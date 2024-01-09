@@ -46,3 +46,28 @@ section#skill [data-tpl="experience-row"] [data-tpl="item"] [data-tpl="item-titl
     margin-bottom: 1rem;
     color: #F0FFF0;
 }
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+}
+
+/* LG */
+
+@media (min-width: 992px) {
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XXL */
+
+@media (min-width: 1400px) {
+}

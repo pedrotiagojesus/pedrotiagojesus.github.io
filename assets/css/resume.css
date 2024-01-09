@@ -10,6 +10,8 @@ section#resume [data-tpl="contact"] {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
 	margin-bottom: 2rem;
+	flex-direction: column;
+  	gap: 0.75rem;
 }
 
 section#resume [data-tpl="contact"] [data-tpl="icon"] {
@@ -19,8 +21,6 @@ section#resume [data-tpl="contact"] [data-tpl="icon"] {
 }
 
 section#resume [data-tpl="row-main"] [data-tpl="left"]{
-	padding-right: 1rem;
-    border-right: 1px solid var(--bs-border-color);
 }
 
 section#resume [data-tpl="summary"] {
@@ -310,4 +310,39 @@ section#resume [data-tpl="language"] [data-tpl="list"] [data-tpl="indicator"] > 
 
 section#resume [data-tpl="language"] [data-tpl="list"] [data-tpl="indicator"] > *[data-tpl="full"] {
 	background-color: #8497bc;
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+}
+
+/* LG */
+
+@media (min-width: 992px) {
+
+	section#resume [data-tpl="contact"] {
+		flex-direction: row;
+		gap: 0;
+	}
+
+	section#resume [data-tpl="row-main"] [data-tpl="left"]{
+		padding-right: 1rem;
+		border-right: 1px solid var(--bs-border-color);
+	}
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XXL */
+
+@media (min-width: 1400px) {
 }
