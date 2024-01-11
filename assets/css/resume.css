@@ -264,6 +264,10 @@ section#resume [data-tpl="education"] li [data-tpl="time"] {
 	font-size: 0.8rem;
 }
 
+section#resume [data-tpl="education"] li [data-tpl="description"] {
+	font-size: 0.8rem;
+}
+
 section#resume [data-tpl="language"] {
 	text-align: left;
 	padding-bottom: 2rem;
