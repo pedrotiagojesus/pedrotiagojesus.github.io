@@ -63,10 +63,10 @@
                         </button>
 
                         <div id="social-list">
-                            <a href="https://github.com/pedrotiagojesus" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Github">
+                            <a href="https://github.com/pedrotiagojesus" data-bs-toggle="tooltip" title="Github">
                                 <i class="fa-brands fa-github fa-fw"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/pedro-jesus-7a1654140/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="LinkedIn">
+                            <a href="https://www.linkedin.com/in/pedro-jesus-7a1654140/" data-bs-toggle="tooltip" title="LinkedIn">
                                 <i class="fa-brands fa-linkedin-in fa-fw"></i>
                             </a>
                         </div>
@@ -82,9 +82,9 @@
                     <span class="icon-holder">
                         <i class="fa-solid fa-circle-user"></i>
                     </span>
-                    <span class="nav-text">Sobre Mim</span>
+                    <span class="nav-text">Início</span>
                 </a>
-                <a class="link" href="#">
+                <a class="link" href="./resume.html">
                     <span class="icon-holder">
                         <i class="fa-solid fa-file-lines"></i>
                     </span>
@@ -95,251 +95,98 @@
 
         <main>
 
-            <section class="wrapper-profile" id="resume">
-
+            <section class="wrapper-profile" id="profile">
                 <div class="container">
                     <div class="inner">
-
-                        <img class="profile-image rounded-circle" src="./assets/image/profile.png">
+                        <img class="profile-image rounded-circle" src="assets/image/profile.png">
                         <h3 data-tpl="title">Pedro Jesus</h3>
-                        <h4 data-tpl="subtitle">Desenvolvedor Web</h4>
+                        <div>
+                            <p>Olá, meu nome é Pedro Jesus e sou desenvolvedor Web e tenho exprencia em FrontEnd e BackEnd. Bem vindo ao meu site pessoal!</p>
+                            <a href="resume.html" class="btn btn-secondary">Saber Mais</a>
+                        </div>
+                    </div>
+                </div>
 
-                        <div data-tpl="contact">
-                            <div data-tpl="item">
-                                <span class="fas fa-phone" data-tpl="icon"></span>
-                                <span>+351 910 746 466</span>
-                            </div>
-                            <div data-tpl="item">
-                                <span class="fas fa-at" data-tpl="icon"></span>
-                                <span>pedrotiagojesus@gmail.com</span>
-                            </div>
-                            <div data-tpl="item">
-                                <span class="fas fa-globe" data-tpl="icon"></span>
-                                <span>https://pedrotiagojesus.github.io</span>
+            </section>
+
+
+            <section id="skill">
+                <div class="container">
+                    <div class="inner">
+                        <h3 data-tpl="title">Skills & Experiences</h3>
+
+                        <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. You can replace or add more tech icons below to reflect your skillset.</p>
+
+                        <div id="skill-slider" class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/php.svg" alt="php" data-bs-toggle="tooltip" title="Php" data-bs-placement="top">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/html-5.svg" alt="html" data-bs-toggle="tooltip" title="Html" data-bs-placement="top">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/css-3.svg" alt="css" data-bs-toggle="tooltip" title="Css" data-bs-placement="top">
+                                        </li>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/javascript.svg" alt="javascript" data-bs-toggle="tooltip" title="Javascript" data-bs-placement="top">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/jquery.svg" alt="jquery" data-bs-toggle="tooltip" title="JQuery" data-bs-placement="top">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/bootstrap5.svg" alt="bootstrap-5" data-bs-toggle="tooltip" title="Bootstrap 5" data-bs-placement="top">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/mysql.svg" alt="mysql" data-bs-toggle="tooltip" title="MySql" data-bs-placement="top">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img class="img-fluid rounded" src="./assets/image/skill/fontawesome.svg" alt="fontawesome" data-bs-toggle="tooltip" title="Fontawesome" data-bs-placement="top">
+                                        </li>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="body">
-
-                            <div class="row" data-tpl="row-main">
-                                <div class="col-12 col-lg-8" data-tpl="left">
-
-                                    <div data-tpl="summary">
-                                        <h2 data-tpl="title">About Me</h2>
-                                        <div class="resume-summary-desc">
-                                            Summarise your career profile here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                                        </div>
+                        <div class="row" data-tpl="experience-row">
+                            <div class="col-md-6 col-lg-4">
+                                <div data-tpl="item">
+                                    <div data-tpl="icon-wrapper">
+                                        <span class="fas fa-laptop-code" data-tpl="icon"></span>
                                     </div>
-
-                                    <div data-tpl="experience">
-
-                                        <h2 data-tpl="title">Experiência de trabalho</h2>
-
-                                        <div data-tpl="resume-timeline">
-
-                                            <article data-tpl="item">
-
-                                                <div data-tpl="header">
-
-                                                    <span data-tpl="time">2017 - Presente</span>
-                                                    <span data-tpl="company-name">MagicBrain®</span>
-
-                                                </div>
-
-                                                <h3 data-tpl="role">Desenvolvedor Web</h3>
-
-                                                <div data-tpl="description">
-
-                                                    <ul>
-                                                        <li>Experiência sólida no desenvolvimento de websites e aplicações de gerenciamento baseadas na web para diversos clientes.</li>
-                                                        <li>Especialização no mercado de E-commerce, atendendo empresas renomadas como Dalifal, Tailedecor, Eixorientador.</li>
-                                                    </ul>
-
-                                                    <h5>Principais Realizações</h5>
-
-                                                    <ul>
-                                                        <li>Criei websites dinâmicos e visualmente atraentes para clientes, como Dalifal, Tailedecor, Eixorientador, Black Koncept, Eurostocks, Guided Portugal, Lusovini, OPDA Investment, Saviconta destacando produtos de forma eficaz.</li>
-                                                        <li>Contribuiu para a melhoria da experiência do usuário, garantindo navegação intuitiva e interfaces amigáveis em todos os projetos.</li>
-                                                        <li>Implementou funcionalidades inovadoras, como sistemas de compra online e ferramentas de personalização de produtos, para aumentar a interatividade nos websites.</li>
-                                                    </ul>
-
-                                                    <h5>Habilidades Técnicas</h5>
-
-                                                    <ul>
-                                                        <li>Domínio de HTML, CSS e JavaScript para criar interfaces atraentes e responsivas.</li>
-                                                        <li>Experiência no MySql para para os dados fluirem eficientemente.</li>
-                                                        <li>Trabalhei com uma arquitetura de software MVC criado pela empresa, mas com conhecimentos sólidos capazes de ambientar com outras frameworks.</li>
-                                                    </ul>
-
-                                                </div>
-
-                                            </article>
-
-                                        </div>
+                                    <h5 data-tpl="item-title">Web Development</h5>
+                                    <div data-tpl="description">
+                                        Describe your expertise here. You can change the icon above to any of the <a href="https://icons.getbootstrap.com/" targert="_blank">free Bootstrap icons</a>, consectetur adipiscing elit. Phasellus enim quam, gravida accumsan dignissim eu.
                                     </div>
-
                                 </div>
-
-                                <div class="col-12 col-lg-4" data-tpl="right">
-
-                                    <div data-tpl="skill">
-
-                                        <h4 data-tpl="title">Habilidades</h4>
-
-                                        <ul data-tpl="list">
-                                            <li data-tpl="item">
-                                                <div data-tpl="name">PHP</div>
-                                                <div class="progress" role="progressbar">
-                                                    <div class="progress-bar" style="width: 90%"></div>
-                                                </div>
-                                            </li>
-                                            <li data-tpl="item">
-                                                <div data-tpl="name">JS</div>
-                                                <div class="progress" role="progressbar">
-                                                    <div class="progress-bar" style="width: 80%"></div>
-                                                </div>
-                                            </li>
-                                            <li data-tpl="item">
-                                                <div data-tpl="name">HTML</div>
-                                                <div class="progress" role="progressbar">
-                                                    <div class="progress-bar" style="width: 100%"></div>
-                                                </div>
-
-                                            </li>
-                                            <li data-tpl="item">
-                                                <div data-tpl="name">CSS</div>
-                                                <div class="progress" role="progressbar">
-                                                    <div class="progress-bar" style="width: 90%"></div>
-                                                </div>
-                                            </li>
-                                            <li data-tpl="item">
-                                                <div data-tpl="name">MySQL</div>
-                                                <div class="progress" role="progressbar">
-                                                    <div class="progress-bar" style="width: 80%"></div>
-                                                </div>
-                                            </li>
-                                            <li data-tpl="item">
-                                                <div data-tpl="name">Bootstrap</div>
-                                                <div class="progress" role="progressbar">
-                                                    <div class="progress-bar" style="width: 100%"></div>
-                                                </div>
-                                            </li>
-                                            <li data-tpl="item">
-                                                <div data-tpl="name">Bootstrap</div>
-                                                <div class="progress" role="progressbar">
-                                                    <div class="progress-bar" style="width: 100%"></div>
-                                                </div>
-                                            </li>
-                                            <li data-tpl="item">
-                                                <div data-tpl="name">JQuery</div>
-                                                <div class="progress" role="progressbar">
-                                                    <div class="progress-bar" style="width: 80%"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div data-tpl="item">
+                                    <div data-tpl="icon-wrapper">
+                                        <span class="fas fa-database" data-tpl="icon"></span>
                                     </div>
-
-                                    <div data-tpl="skill-topic">
-                                        <h4 data-tpl="title">Soft Skills</h4>
-                                        <ul data-tpl="list">
-                                            <li data-tpl="item">
-                                                <span class="badge">Leadership</span>
-                                            </li>
-                                            <li data-tpl="item">
-                                                <span class="badge">Project Management</span>
-                                            </li>
-                                            <li data-tpl="item">
-                                                <span class="badge">DevOps</span>
-                                            </li>
-                                            <li data-tpl="item">
-                                                <span class="badge">Public Speaking</span>
-                                            </li>
-                                        </ul>
+                                    <h5 data-tpl="item-title">Database Infrastructure</h5>
+                                    <div data-tpl="description">
+                                        Describe your expertise here. You can change the icon above to any of the <a href="https://icons.getbootstrap.com/" targert="_blank">free Bootstrap icons</a>, consectetur adipiscing elit. Phasellus enim quam, gravida accumsan dignissim eu.
                                     </div>
-
-                                    <div data-tpl="project">
-                                        <h4 data-tpl="title">Projects</h4>
-                                        <div data-tpl="item">
-                                            <div data-tpl="heading">
-                                                <span class="fa-solid fa-square" data-tpl="icon"></span>
-                                                <a href="#">Project lorem Ipsum</a>
-                                            </div>
-                                            <div data-tpl="description">
-                                                Project desc goes here aenean ut libero sit amet ante fermentum scelerisque non a leo.
-                                            </div>
-                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div data-tpl="item">
+                                    <div data-tpl="icon-wrapper">
+                                        <span class="fas fa-code" data-tpl="icon"></span>
                                     </div>
-
-                                    <div data-tpl="education">
-                                        <h4 data-tpl="title">Education</h4>
-                                        <ul data-tpl="list">
-                                            <li data-tpl="item">
-                                                <div data-tpl="organization">Coimbra Business School | ISCAC</div>
-                                                <div data-tpl="degree">Licenciatura, Informática de Gestão</div>
-                                                <div data-tpl="time">2013 - 2017</div>
-                                                <div data-tpl="description">
-                                                    A licenciatura em Informática de Gestão tem como principais objectivos formar profissionais na área dos Sistemas de informação e da Gestão capazes de exercerem a sua actividade profissional com elevado nível de competência técnica e científica.
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <h5 data-tpl="item-title">BackOffice</h5>
+                                    <div data-tpl="description">
+                                        Describe your expertise here. You can change the icon above to any of the <a href="https://icons.getbootstrap.com/" targert="_blank">free Bootstrap icons</a>, consectetur adipiscing elit. Phasellus enim quam, gravida accumsan dignissim eu.
                                     </div>
-
-                                    <div data-tpl="language">
-                                        <h4 data-tpl="title">Languages</h4>
-                                        <ul data-tpl="list">
-                                            <li>
-                                                <div data-tpl="name">Portugues</div>
-                                                <div data-tpl="indicator">
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div data-tpl="name">English</div>
-                                                <div data-tpl="indicator">
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="empty"></div>
-                                                    <div data-tpl="empty"></div>
-                                                    <div data-tpl="empty"></div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div data-tpl="name">Spanish</div>
-                                                <div data-tpl="indicator">
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="full"></div>
-                                                    <div data-tpl="empty"></div>
-                                                    <div data-tpl="empty"></div>
-                                                    <div data-tpl="empty"></div>
-                                                    <div data-tpl="empty"></div>
-                                                    <div data-tpl="empty"></div>
-                                                    <div data-tpl="empty"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section>
 
         </main>
