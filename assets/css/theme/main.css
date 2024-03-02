@@ -6,7 +6,7 @@ section {
 }
 
 section .inner {
-	background: #1e2738;
+	background-color: #1e2738;
 	padding: 1.5rem;
 	border-radius: 0.5rem;
 	margin-bottom: 2.5rem;
@@ -14,6 +14,7 @@ section .inner {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	position: relative;
 }
 
 section .inner > [data-tpl="title"] {
