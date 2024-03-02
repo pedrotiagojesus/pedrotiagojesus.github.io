@@ -225,6 +225,11 @@ section#resume [data-tpl="project"] [data-tpl="item"] [data-tpl="heading"] [data
 	font-size: 0.5rem
 }
 
+section#resume [data-tpl="project"] [data-tpl="item"]  {
+	--bs-link-color-rgb: 165, 179, 206;
+	--bs-link-hover-color-rgb: 255, 255, 255;
+}
+
 section#resume [data-tpl="education"] {
 	text-align: left;
 	padding-bottom: 2rem;
