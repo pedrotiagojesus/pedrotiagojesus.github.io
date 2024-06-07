@@ -11,7 +11,7 @@ const Experience = () => {
         experienceArr &&
         experienceArr.length && (
             <div data-tpl="experience">
-                <h2 data-tpl="title">Experiência de trabalho</h2>
+                <h2 data-tpl="title">Experience</h2>
 
                 <div data-tpl="resume-timeline">
                     {experienceArr.map((experience, i) => (
