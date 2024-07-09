@@ -35,7 +35,7 @@ export const skillArr = [
 
 export const softSkillArr = [
     "Proactivity",
-    "Flexibilidade",
+    "Flexibility",
     "Resilience",
     "Adaptability",
     "Collaborator",
