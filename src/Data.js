@@ -43,6 +43,12 @@ export const softSkillArr = [
 
 export const projectArr = [
     {
+        name: "Villa View",
+        description:
+            "Using the React framework, I built a website aimed at selling properties. Property data is being saved in the Firebase database.",
+        url: "https://pedrotiagojesus.github.io/villa-view/",
+    },
+    {
         name: "APP's Lib",
         description:
             "Using the React framework, I built a website that features a library of mini apps. It serves to improve my programming skills.",
