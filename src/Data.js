@@ -129,7 +129,6 @@ export const experienceArr = [
 export const aboutMeArr = [
     "Graduated in Management IT at the Instituto Superior de Contabilidade e Administração de Coimbra, I bring six years and six months of professional experience.",
     "I'm a Web Developer based in Coimbra, Portugal, looking for new opportunities in dynamic environments.",
-    "Conheço uma variedade de tecnologias incluindo HTML, CSS, JavaScript, PHP, MySQL, JQuery, Bootstrap e JSON.",
     "I know a variety of technologies including HTML, CSS, JavaScript, PHP, MySQL, JQuery, Bootstrap and JSON.",
     "I took a course on the online platform udemy about React, it was my first interaction with this technology.",
     "I'm excited to contribute my experience to boundary-pushing projects.",
