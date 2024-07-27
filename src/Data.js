@@ -95,6 +95,13 @@ export const educationArr = [
 
 export const certificationArr = [
     {
+        name: "20+ Projetos em React JS aprenda Redux, Bootstrap, APIs",
+        date: "July 2024",
+        url: "https://ude.my/UC-472d3bab-5f50-46b3-b9c5-767ffa1dde9e/",
+        description:
+            "It was an excellent course to apply my knowledge acquired in the last course.",
+    },
+    {
         name: "React do Zero a Maestria (c/ hooks, router, API, Projetos)",
         date: "May 2024",
         url: "https://www.udemy.com/certificate/UC-9272c0df-be55-4b4a-9573-21a90566161d/",
