@@ -2,9 +2,6 @@ html {
     font-size: var(--font-size);
 }
 
-section {
-}
-
 section .inner {
     background-color: #1e2738;
     padding: 1.5rem;
@@ -23,12 +20,7 @@ section .inner > [data-tpl="title"] {
 }
 
 section .inner > [data-tpl="subtitle"] {
-    font-family: Lato;
-    font-weight: 100;
-}
-
-section .inner > [data-tpl="subtitle"] {
-    font-family: Lato;
+    font-family: Lato, sans-serif;
     font-weight: 100;
 }
 
