@@ -19,8 +19,6 @@ const Item = ({ name, level }) => {
         );
     }
 
-    console.log(levelName[level]);
-
     return (
         <li title={levelName[level]}>
             <div data-tpl="name">{name}</div>
