@@ -43,6 +43,12 @@ export const softSkillArr = [
 
 export const projectArr = [
     {
+        name: "Dev Chat",
+        description:
+            "This is a real-time chat app that I developed using React and Firebase. It allows instant conversations with a modern and responsive interface, leveraging the power of React for a dynamic experience and Firebase for real-time data management.",
+        url: "https://pedrotiagojesus.github.io/dev-chat/",
+    },
+    {
         name: "Perfect Pixels",
         description:
             "Application that transforms images. The background of the images is removed, the DPI is set to 300 and the dimensions are changed to 4267px X 4267px.",
