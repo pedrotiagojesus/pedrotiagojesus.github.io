@@ -43,6 +43,12 @@ export const softSkillArr = [
 
 export const projectArr = [
     {
+        name: "Perfect Pixels",
+        description:
+            "Application that transforms images. The background of the images is removed, the DPI is set to 300 and the dimensions are changed to 4267px X 4267px.",
+        url: "https://github.com/pedrotiagojesus/perfect-pixels",
+    },
+    {
         name: "Villa View",
         description:
             "Using the React framework, I built a website aimed at selling properties. Property data is being saved in the Firebase database.",
