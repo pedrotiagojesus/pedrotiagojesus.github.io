@@ -37,7 +37,7 @@ section.wrapper-profile .inner .profile-image {
     left: 50%;
     transform: translate(-50%, -50%);
     top: 0;
-    border: 0.5rem solid #fec14b;
+    border: 0.5rem solid #e5dbc6;
 }
 
 .tooltip {

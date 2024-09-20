@@ -36,7 +36,7 @@
 }
 
 #language [data-tpl="list"] [data-tpl="indicator"] > * {
-    background-color: #fec14b;
+    background-color: #e5dbc6;
     min-height: 10px;
     border-radius: 2px;
     width: 100%;

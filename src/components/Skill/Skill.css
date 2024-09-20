@@ -34,6 +34,6 @@
 #skill [data-tpl="item"] .progress {
     --bs-progress-height: 0.3rem;
     --bs-progress-border-radius: 0.3rem;
-    --bs-progress-bg: #fec14b;
+    --bs-progress-bg: #e5dbc6;
     --bs-progress-bar-bg: #c38d0b;
 }
