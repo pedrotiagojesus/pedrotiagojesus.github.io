@@ -10,9 +10,9 @@ const Education = () => {
     return (
         educationArr &&
         educationArr.length && (
-            <div data-tpl="education">
-                <h4 data-tpl="title">Education</h4>
-                <ul data-tpl="list">
+            <div id="education">
+                <h4 className="title">Education</h4>
+                <ul className="list">
                     {educationArr.map((education) => (
                         <Item
                             key={education.organization}

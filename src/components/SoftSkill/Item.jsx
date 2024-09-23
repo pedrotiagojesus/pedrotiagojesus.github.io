@@ -3,7 +3,7 @@ import "./SoftSkill.css";
 
 const Item = ({ name }) => {
     return (
-        <li data-tpl="item">
+        <li className="item">
             <span className="badge">{name}</span>
         </li>
     );

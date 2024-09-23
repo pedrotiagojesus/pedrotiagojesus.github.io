@@ -11,7 +11,7 @@ const Certification = () => {
         certificationArr &&
         certificationArr.length && (
             <div id="certification">
-                <h4 data-tpl="title">Certifications</h4>
+                <h4 className="title">Certifications</h4>
                 {certificationArr.map((certification) => (
                     <Item
                         key={certification.name}

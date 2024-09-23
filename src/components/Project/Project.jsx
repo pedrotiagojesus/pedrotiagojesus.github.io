@@ -10,8 +10,8 @@ const Project = () => {
     return (
         projectArr &&
         projectArr.length && (
-            <div data-tpl="project">
-                <h4 data-tpl="title">Projects</h4>
+            <div id="project">
+                <h4 className="title">Projects</h4>
                 {projectArr.map((project) => (
                     <Item
                         key={project.name}

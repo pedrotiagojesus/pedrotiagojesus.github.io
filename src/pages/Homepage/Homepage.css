@@ -1,3 +1,19 @@
+section.wrapper-profile .inner {
+    margin-top: 5rem;
+    position: relative;
+    padding-top: 6rem;
+}
+
+section.wrapper-profile .inner .profile-image {
+    max-width: 10rem;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 0;
+    border: 0.5rem solid #c38d0b;
+}
+
 section#resume .inner [data-tpl="subtitle"] {
     margin-bottom: 1.5rem;
 }
@@ -139,139 +155,6 @@ section#resume
     ul
     li {
     margin-bottom: 0.5rem;
-}
-
-section#resume [data-tpl="skill-topic"] {
-    text-align: left;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--bs-border-color);
-}
-
-section#resume [data-tpl="skill-topic"] [data-tpl="title"] {
-    margin-bottom: 1rem;
-    letter-spacing: 3;
-    font-weight: 700;
-}
-
-section#resume [data-tpl="skill-topic"] [data-tpl="list"] {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-section#resume [data-tpl="skill-topic"] [data-tpl="list"] [data-tpl="item"] {
-    display: inline-block;
-}
-
-section#resume
-    [data-tpl="skill-topic"]
-    [data-tpl="list"]
-    [data-tpl="item"]
-    .badge {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 0.5rem 0.65rem;
-}
-
-section#resume [data-tpl="project"] {
-    text-align: left;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--bs-border-color);
-}
-
-section#resume [data-tpl="project"] [data-tpl="title"] {
-    margin-bottom: 1rem;
-    letter-spacing: 3;
-    font-weight: 700;
-}
-
-section#resume [data-tpl="project"] [data-tpl="item"] {
-    margin-bottom: 1rem;
-}
-
-section#resume [data-tpl="project"] [data-tpl="item"]:last-child {
-    margin-bottom: 0;
-}
-
-section#resume [data-tpl="project"] [data-tpl="item"] [data-tpl="heading"] {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-section#resume [data-tpl="project"] [data-tpl="item"] [data-tpl="heading"] a {
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-section#resume
-    [data-tpl="project"]
-    [data-tpl="item"]
-    [data-tpl="heading"]:hover
-    a {
-    text-decoration: underline;
-}
-
-section#resume
-    [data-tpl="project"]
-    [data-tpl="item"]
-    [data-tpl="heading"]
-    [data-tpl="icon"] {
-    font-size: 0.5rem;
-}
-
-section#resume [data-tpl="project"] [data-tpl="item"] {
-    --bs-link-color-rgb: 165, 179, 206;
-    --bs-link-hover-color-rgb: 255, 255, 255;
-}
-
-section#resume [data-tpl="education"] {
-    text-align: left;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--bs-border-color);
-}
-
-section#resume [data-tpl="education"] [data-tpl="title"] {
-    margin-bottom: 1rem;
-    letter-spacing: 3;
-    font-weight: 700;
-}
-
-section#resume [data-tpl="education"] [data-tpl="list"] {
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-}
-
-section#resume [data-tpl="education"] [data-tpl="list"] li {
-    margin-bottom: 1rem;
-}
-
-section#resume [data-tpl="education"] [data-tpl="list"] li:last-child {
-    margin-bottom: 0;
-}
-
-section#resume [data-tpl="education"] li [data-tpl="organization"] {
-    font-weight: 700;
-    color: #fff;
-}
-
-section#resume [data-tpl="education"] li [data-tpl="degree"] {
-}
-
-section#resume [data-tpl="education"] li [data-tpl="time"] {
-    font-size: 0.8rem;
-}
-
-section#resume [data-tpl="education"] li [data-tpl="description"] {
-    font-size: 0.8rem;
 }
 
 /* SM */

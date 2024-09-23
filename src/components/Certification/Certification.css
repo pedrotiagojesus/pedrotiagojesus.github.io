@@ -5,13 +5,16 @@
     border-bottom: 1px solid var(--bs-border-color);
 }
 
-#certification [data-tpl="title"] {
+#certification .title {
     margin-bottom: 1rem;
     letter-spacing: 3;
     font-weight: 700;
 }
 
 #certification .item {
+    --bs-link-color-rgb: 165, 179, 206;
+    --bs-link-hover-color-rgb: 255, 255, 255;
+
     margin-bottom: 1rem;
 }
 
@@ -35,11 +38,10 @@
     text-decoration: underline;
 }
 
-#certification .item .heading [data-tpl="icon"] {
+#certification .item .heading .icon {
     font-size: 0.5rem;
 }
 
-#certification .item {
-    --bs-link-color-rgb: 165, 179, 206;
-    --bs-link-hover-color-rgb: 255, 255, 255;
+#certification .description {
+    font-size: 0.875rem;
 }

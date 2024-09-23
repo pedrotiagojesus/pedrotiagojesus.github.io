@@ -3,45 +3,45 @@
     padding-bottom: 2rem;
 }
 
-#language [data-tpl="title"] {
+#language .title {
     margin-bottom: 1rem;
     letter-spacing: 3;
     font-weight: 700;
 }
 
-#language [data-tpl="list"] {
+#language .list {
     margin-bottom: 0;
     padding-left: 0;
     list-style: none;
 }
 
-#language [data-tpl="list"] li {
+#language .list li {
     margin-bottom: 1rem;
 }
 
-#language [data-tpl="list"] li:last-child {
+#language .list li:last-child {
     margin-bottom: 0;
 }
 
-#language [data-tpl="list"] [data-tpl="name"] {
+#language .list .name {
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: #fff;
 }
 
-#language [data-tpl="list"] [data-tpl="indicator"] {
+#language .list .indicator {
     display: flex;
     flex-wrap: nowrap;
     gap: 0.5rem;
 }
 
-#language [data-tpl="list"] [data-tpl="indicator"] > * {
+#language .list .indicator > * {
     background-color: #e5dbc6;
     min-height: 10px;
     border-radius: 2px;
     width: 100%;
 }
 
-#language [data-tpl="list"] [data-tpl="indicator"] > *[data-tpl="full"] {
+#language .list .indicator > *.full {
     background-color: #c38d0b;
 }

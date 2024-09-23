@@ -1,0 +1,42 @@
+#education {
+    text-align: left;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+#education .title {
+    margin-bottom: 1rem;
+    letter-spacing: 3;
+    font-weight: 700;
+}
+
+#education .list {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+#education .list li {
+    margin-bottom: 1rem;
+}
+
+#education .list li:last-child {
+    margin-bottom: 0;
+}
+
+#education li .organization {
+    font-weight: 700;
+    color: #fff;
+}
+
+#education li .degree {
+}
+
+#education li .time {
+    font-size: 0.8rem;
+}
+
+#education li .description {
+    font-size: 0.8rem;
+}

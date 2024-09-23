@@ -15,14 +15,14 @@ const Item = ({ name, level }) => {
 
     for (let index = 0; index < 7; index++) {
         levelHtml.push(
-            <div key={index} data-tpl={index > level ? "empty" : "full"}></div>
+            <div key={index} className={index > level ? "empty" : "full"}></div>
         );
     }
 
     return (
         <li title={levelName[level]}>
-            <div data-tpl="name">{name}</div>
-            <div data-tpl="indicator">{levelHtml}</div>
+            <div className="name">{name}</div>
+            <div className="indicator">{levelHtml}</div>
         </li>
     );
 };

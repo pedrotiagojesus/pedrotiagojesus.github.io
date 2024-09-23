@@ -11,8 +11,8 @@ const Language = () => {
         languageArr &&
         languageArr.length && (
             <div id="language">
-                <h4 data-tpl="title">Languages</h4>
-                <ul data-tpl="list">
+                <h4 className="title">Languages</h4>
+                <ul className="list">
                     {languageArr.map((language) => (
                         <Item
                             key={language.name}

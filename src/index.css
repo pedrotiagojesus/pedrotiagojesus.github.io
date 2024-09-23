@@ -24,22 +24,6 @@ section .inner > [data-tpl="subtitle"] {
     font-weight: 100;
 }
 
-section.wrapper-profile .inner {
-    margin-top: 5rem;
-    position: relative;
-    padding-top: 6rem;
-}
-
-section.wrapper-profile .inner .profile-image {
-    max-width: 10rem;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 0;
-    border: 0.5rem solid #e5dbc6;
-}
-
 .tooltip {
     --bs-body-bg: #fff;
 }
