@@ -11,9 +11,9 @@ const Skill = () => {
         skillArr &&
         skillArr.length && (
             <div id="skill">
-                <h4 data-tpl="title">Skills</h4>
+                <h4 className="title">Skills</h4>
 
-                <div data-tpl="list">
+                <div className="list">
                     {skillArr.map((skill) => (
                         <Item
                             key={skill.name}

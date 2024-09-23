@@ -4,15 +4,15 @@ export const skillArr = [
         percentage: "90",
     },
     {
-        name: "JS",
+        name: "JavaScript",
         percentage: "80",
     },
     {
-        name: "HTML",
+        name: "HTML5",
         percentage: "100",
     },
     {
-        name: "CSS",
+        name: "CSS3",
         percentage: "90",
     },
     {

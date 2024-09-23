@@ -5,35 +5,60 @@
     border-bottom: 1px solid var(--bs-border-color);
 }
 
-#skill [data-tpl="title"] {
+#skill .title {
     margin-bottom: 1rem;
     letter-spacing: 3;
     font-weight: 700;
 }
 
-#skill [data-tpl="list"] {
+#skill .list {
     list-style: none;
     padding: 0;
 }
 
-#skill [data-tpl="list"] [data-tpl="item"] {
+#skill .list .item {
     margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-#skill [data-tpl="list"] [data-tpl="item"]:last-child {
+#skill .list .item:last-child {
     margin-bottom: 0;
 }
 
-#skill [data-tpl="name"] {
-    margin-bottom: 0.25rem;
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: bold;
+#skill img {
+    max-width: 32px;
 }
 
-#skill [data-tpl="item"] .progress {
+#skill .item .progress {
     --bs-progress-height: 0.3rem;
     --bs-progress-border-radius: 0.3rem;
     --bs-progress-bg: #e5dbc6;
     --bs-progress-bar-bg: #c38d0b;
+}
+
+#skill .item .name {
+    margin-bottom: 0.25rem;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    overflow: hidden;
+
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.2s ease;
+}
+
+#skill .item:hover .name {
+    max-height: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+#skill .content {
+    flex: 1 1 auto;
 }
