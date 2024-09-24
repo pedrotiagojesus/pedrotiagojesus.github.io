@@ -43,7 +43,7 @@
 }
 
 #project .item .description {
-    font-family: 0.875rem;
+    font-size: 0.8rem;
 }
 
 #project .item .description.truncate {
