@@ -17,7 +17,7 @@ const Item = ({ name, description, url }) => {
                     getComputedStyle(element).lineHeight
                 );
 
-                const maxHeight = lineHeight * 3;
+                const maxHeight = lineHeight * 2;
 
                 if (element.scrollHeight > maxHeight) {
                     setShowButton(true);

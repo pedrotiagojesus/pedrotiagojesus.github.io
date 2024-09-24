@@ -43,15 +43,23 @@
 }
 
 #project .item .description {
+    --text-line-height: 1.5rem;
+    --text-number-line: 2;
+
+    line-height: var(--text-line-height);
     font-size: 0.8rem;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: all 0.75s ease-out;
 }
 
 #project .item .description.truncate {
-    overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -webkit-line-clamp: var(--text-number-line);
+    line-clamp: var(--text-number-line);
     -webkit-box-orient: vertical;
+    max-height: calc(var(--text-line-height) * var(--text-number-line));
+    transition: all 0.75s ease-out;
 }
 
 #project .see-more {
