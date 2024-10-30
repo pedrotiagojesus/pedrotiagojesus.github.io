@@ -1,14 +1,14 @@
-header .top-bar {
+header.top-bar {
     padding: 1.5rem 0;
     min-height: 60px;
     position: relative;
 }
 
-header .top-bar .navbar {
+header.top-bar .navbar {
     --bs-navbar-padding-y: 0;
 }
 
-header .top-bar .menu-toggler {
+header.top-bar .menu-toggler {
     color: #d7dde9;
     z-index: 1050;
     font-size: 1.5rem;
@@ -21,7 +21,7 @@ header .top-bar .menu-toggler {
     transform: translateY(-50%);
 }
 
-header .top-bar .menu-toggler:hover {
+header.top-bar .menu-toggler:hover {
     color: #d7dde9;
 }
 

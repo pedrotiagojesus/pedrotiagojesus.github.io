@@ -9,7 +9,7 @@
 }
 
 #experience .resume-timeline {
-    padding-left: 2.5rem;
+    padding-left: 2rem;
     position: relative;
 }
 
@@ -19,7 +19,7 @@
     width: 3px;
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
-    left: 1.25rem;
+    left: 0.75rem;
     top: 0;
     position: absolute;
 }
@@ -46,6 +46,13 @@
     border-radius: 50%;
 }
 
+#experience article .identification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
 #experience article .company-name {
     background: rgba(0, 0, 0, 0.1);
     padding: 0.2rem 0.5rem;
@@ -68,6 +75,7 @@
 
 #experience article ul {
     padding-left: 1rem;
+    text-align: justify;
 }
 
 #experience article ul li {

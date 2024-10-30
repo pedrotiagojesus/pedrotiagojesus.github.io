@@ -19,8 +19,8 @@ const Item = ({ company, role, dateStart, dateEnd, contentArr }: Props) => {
     return (
         <article>
             <header>
-                <h3 data-tpl="role">{role}</h3>
-                <div className="d-flex justify-content-between">
+                <h3>{role}</h3>
+                <div className="identification">
                     <div className="time">
                         <time dateTime={dateStart.toString()}>{dateStart}</time>{" "}
                         – <time dateTime={dateEnd.toString()}>{dateEnd}</time>

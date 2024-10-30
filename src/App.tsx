@@ -8,6 +8,7 @@ import Menu from "./components/Menu/Menu";
 function App() {
     return (
         <>
+            <h1 className="nocontent outline d-none">Pedro Jesus</h1>
             <BackgroundAnimated />
             <Header />
             <Menu />

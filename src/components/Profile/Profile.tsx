@@ -11,7 +11,7 @@ function Profile() {
                 alt="Profile Image"
             />
             <h3>Pedro Jesus</h3>
-            <h4>Web Developer</h4>
+            <p>Web Developer</p>
         </section>
     );
 }

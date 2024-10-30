@@ -3,9 +3,10 @@
     letter-spacing: 5px;
 }
 
-#profile h4 {
+#profile p {
     font-family: Lato, sans-serif;
     font-weight: 100;
+    font-size: 1.4rem;
 }
 
 #profile .profile-image {
@@ -16,6 +17,7 @@
     transform: translate(-50%, -80%);
     top: 0;
     border: 0.5rem solid var(--theme-color-primary);
+    box-shadow: var(--bs-box-shadow);
 }
 
 /* SM */

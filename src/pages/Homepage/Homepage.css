@@ -10,6 +10,7 @@
     max-width: 960px;
     text-align: center;
     position: relative;
+    box-shadow: var(--bs-box-shadow);
 }
 
 /* SM */
