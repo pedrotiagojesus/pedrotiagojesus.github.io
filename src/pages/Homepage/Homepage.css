@@ -4,7 +4,7 @@
     gap: 1rem;
 
     padding: 1.5rem;
-    margin: 5rem auto 2.5rem auto;
+    margin: calc(8rem * 0.8) auto 2.5rem;
     background-color: #1e2738;
     border-radius: 0.5rem;
     max-width: 960px;
@@ -26,6 +26,7 @@
 
 @media (min-width: 992px) {
     #homepage {
+        margin: calc(5rem * 0.5) auto 2.5rem;
         padding: 6rem 3rem 3rem 3rem;
     }
 }
