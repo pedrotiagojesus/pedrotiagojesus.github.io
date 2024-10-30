@@ -10,7 +10,7 @@ function Profile() {
                 src={Avatar}
                 alt="Profile Image"
             />
-            <h3>Pedro Jesus</h3>
+            <h1>Pedro Jesus</h1>
             <p>Web Developer</p>
         </section>
     );
