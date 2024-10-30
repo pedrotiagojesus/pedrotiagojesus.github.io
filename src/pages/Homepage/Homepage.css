@@ -26,7 +26,7 @@
 
 @media (min-width: 992px) {
     #homepage {
-        margin: calc(5rem * 0.5) auto 2.5rem;
+        margin: 5rem auto 2.5rem;
         padding: 6rem 3rem 3rem 3rem;
     }
 }
