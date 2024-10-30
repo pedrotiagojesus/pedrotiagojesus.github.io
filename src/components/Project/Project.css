@@ -47,7 +47,7 @@
     --text-number-line: 2;
 
     line-height: var(--text-line-height);
-    font-size: 0.8rem;
+    font-size: 1rem;
     max-height: 1000px;
     overflow: hidden;
     transition: all 0.75s ease-out;
@@ -67,4 +67,32 @@
     font-weight: 300;
     padding: 0;
     color: var(--theme-color-primary);
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+}
+
+/* LG  */
+
+@media (min-width: 992px) {
+    #project article .description {
+        font-size: 0.8rem;
+    }
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XL */
+
+@media (min-width: 1400px) {
 }

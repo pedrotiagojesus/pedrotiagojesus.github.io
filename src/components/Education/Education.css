@@ -23,7 +23,7 @@
 }
 
 #education article .time {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 #education article .description {
@@ -43,6 +43,10 @@
 /* LG */
 
 @media (min-width: 992px) {
+    #education article .time {
+        font-size: 0.8rem;
+    }
+
     #education article .description {
         font-size: 0.8rem;
     }

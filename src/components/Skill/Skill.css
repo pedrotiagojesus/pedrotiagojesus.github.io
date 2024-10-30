@@ -40,7 +40,7 @@
 #skill .item .name {
     margin-bottom: 0.25rem;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
     overflow: hidden;
 
@@ -59,4 +59,32 @@
 
 #skill .content {
     flex: 1 1 auto;
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+}
+
+/* LG  */
+
+@media (min-width: 992px) {
+    #skill .item .name {
+        font-size: 0.8rem;
+    }
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XL */
+
+@media (min-width: 1400px) {
 }

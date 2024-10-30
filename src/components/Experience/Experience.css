@@ -51,11 +51,11 @@
     padding: 0.2rem 0.5rem;
     border-radius: 0.25rem;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 #experience article .time {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 #experience article .company-name {
@@ -63,7 +63,7 @@
     padding: 0.2rem 0.5rem;
     border-radius: 0.25rem;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 #experience article ul {
@@ -72,4 +72,40 @@
 
 #experience article ul li {
     margin-bottom: 0.5rem;
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+}
+
+/* LG */
+
+@media (min-width: 992px) {
+    #experience article .company-name {
+        font-size: 0.8rem;
+    }
+
+    #experience article .time {
+        font-size: 0.8rem;
+    }
+
+    #experience article .company-name {
+        font-size: 0.8rem;
+    }
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XXL */
+
+@media (min-width: 1400px) {
 }
