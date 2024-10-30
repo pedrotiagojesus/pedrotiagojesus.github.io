@@ -34,7 +34,7 @@
     --bs-progress-height: 0.3rem;
     --bs-progress-border-radius: 0.3rem;
     --bs-progress-bg: #e5dbc6;
-    --bs-progress-bar-bg: #c38d0b;
+    --bs-progress-bar-bg: var(--theme-color-primary);
 }
 
 #skill .item .name {

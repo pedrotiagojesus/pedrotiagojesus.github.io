@@ -43,5 +43,5 @@
 }
 
 #language .list .indicator > *.full {
-    background-color: #c38d0b;
+    background-color: var(--theme-color-primary);
 }

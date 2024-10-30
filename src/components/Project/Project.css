@@ -66,5 +66,5 @@
     font-family: Lato, sans-serif;
     font-weight: 300;
     padding: 0;
-    color: #c38d0b;
+    color: var(--theme-color-primary);
 }

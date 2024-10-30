@@ -39,11 +39,11 @@
 
 #menu-navigation .offcanvas-body .link.active:hover,
 #menu-navigation .offcanvas-body .link.active {
-    color: #c38d0b;
+    color: var(--theme-color-primary);
 }
 
 #menu-navigation .offcanvas-body .link:hover {
-    color: #c38d0b;
+    color: var(--theme-color-primary);
 }
 
 #menu-navigation .offcanvas-body .link .icon-holder {
