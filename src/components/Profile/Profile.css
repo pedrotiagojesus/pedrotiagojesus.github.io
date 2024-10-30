@@ -9,11 +9,40 @@
 }
 
 #profile .profile-image {
-    max-width: 10rem;
+    max-width: 8rem;
     height: auto;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -65%);
     top: 0;
     border: 0.5rem solid var(--theme-color-primary);
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+}
+
+/* LG */
+
+@media (min-width: 992px) {
+    #profile .profile-image {
+        max-width: 10rem;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XXL */
+
+@media (min-width: 1400px) {
 }
