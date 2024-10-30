@@ -3,11 +3,17 @@ import { useState, useRef, useEffect } from "react";
 // CSS
 import "./Project.css";
 
-const Item = ({ name, description, url }) => {
+interface Props {
+    name: string;
+    description: string;
+    url: string;
+}
+
+const Item = ({ name, description, url }: Props) => {
     const [showAll, setShowAll] = useState(false);
     const [showButton, setShowButton] = useState(false);
 
-    const descriptionRef = useRef(null);
+    const descriptionRef = useRef<any>(null);
 
     useEffect(() => {
         const verifyLine = () => {
@@ -31,13 +37,13 @@ const Item = ({ name, description, url }) => {
     }, []);
 
     return (
-        <div className="item">
-            <div className="heading">
-                <span className="fa-solid fa-square" data-tpl="icon"></span>
+        <article>
+            <header>
+                <i className="fa-solid fa-square" data-tpl="icon"></i>
                 <a target="_blank" href={url}>
-                    {name}
+                    <h5 className="mb-0">{name}</h5>
                 </a>
-            </div>
+            </header>
             <div
                 className={`description ${
                     showButton && !showAll ? "truncate" : ""
@@ -54,7 +60,7 @@ const Item = ({ name, description, url }) => {
                     ver mais
                 </button>
             )}
-        </div>
+        </article>
     );
 };
 

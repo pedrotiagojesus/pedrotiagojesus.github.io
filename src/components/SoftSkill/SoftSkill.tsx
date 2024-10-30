@@ -4,20 +4,20 @@ import { softSkillArr } from "../../Data.js";
 import "./SoftSkill.css";
 
 // Components
-import Item from "./Item.jsx";
+import Item from "./Item.js";
 
 const SoftSkill = () => {
     return (
         softSkillArr &&
         softSkillArr.length && (
-            <div id="skill-topic">
-                <h4 className="title">Soft Skills</h4>
+            <section id="skill-topic">
+                <h4>Soft Skills</h4>
                 <ul className="list">
                     {softSkillArr.map((softSkill) => (
                         <Item key={softSkill} name={softSkill} />
                     ))}
                 </ul>
-            </div>
+            </section>
         )
     );
 };

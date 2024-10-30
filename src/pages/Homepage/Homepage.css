@@ -1,64 +1,19 @@
-section.wrapper-profile .inner {
-    margin-top: 5rem;
-    position: relative;
-    padding-top: 6rem;
-}
+#homepage {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
-section.wrapper-profile .inner .profile-image {
-    max-width: 10rem;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 0;
-    border: 0.5rem solid #c38d0b;
+    padding: 1.5rem;
+    margin: 5rem auto 2.5rem auto;
+    background-color: #1e2738;
+    border-radius: 0.5rem;
+    max-width: 960px;
+    text-align: center;
+    position: relative;
 }
 
 section#resume .inner [data-tpl="subtitle"] {
     margin-bottom: 1.5rem;
-}
-
-section#resume [data-tpl="contact"] {
-    display: flex;
-    justify-content: space-around;
-    border-top: 1px solid var(--bs-border-color);
-    border-bottom: 1px solid var(--bs-border-color);
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    margin-bottom: 2rem;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-section#resume [data-tpl="contact"] [data-tpl="icon"] {
-    font-size: 1.1rem;
-    margin-right: 0.5rem;
-    color: var(--bs-heading-color);
-}
-
-section#resume [data-tpl="contact"] a {
-    color: var(--bs-body-color);
-    text-decoration: none;
-}
-
-section#resume [data-tpl="contact"] a:hover {
-    color: #ccc;
-}
-
-section#resume [data-tpl="row-main"] [data-tpl="left"] {
-}
-
-section#resume [data-tpl="summary"] {
-    text-align: left;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--bs-border-color);
-}
-
-section#resume [data-tpl="summary"] [data-tpl="title"] {
-    margin-bottom: 1rem;
-    letter-spacing: 3;
-    font-weight: 700;
 }
 
 section#resume [data-tpl="experience"] {
@@ -170,14 +125,8 @@ section#resume
 /* LG */
 
 @media (min-width: 992px) {
-    section#resume [data-tpl="contact"] {
-        flex-direction: row;
-        gap: 0;
-    }
-
-    section#resume [data-tpl="row-main"] [data-tpl="left"] {
-        padding-right: 1rem;
-        border-right: 1px solid var(--bs-border-color);
+    #homepage {
+        padding: 6rem 3rem 3rem 3rem;
     }
 }
 

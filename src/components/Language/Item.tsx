@@ -1,6 +1,11 @@
 import "./Language.css";
 
-const Item = ({ name, level }) => {
+interface Props {
+    name: string;
+    level: number;
+}
+
+const Item = ({ name, level }: Props) => {
     let levelHtml = [];
 
     const levelName = [

@@ -99,7 +99,8 @@ export const educationArr = [
     {
         organization: "Coimbra Business School | ISCAC",
         degree: "Degree, Informática de Gestão",
-        time: "2013 - 2017",
+        dateStart: 2013,
+        dateEnd: 2017,
         description:
             "The main objectives of the degree in Management Informatics are to train professionals in the area of ​​Information Systems and Management capable of carrying out their professional activity with a high level of technical and scientific competence.",
     },
@@ -126,7 +127,8 @@ export const experienceArr = [
     {
         company: "MagicBrain®",
         role: "Web Developer",
-        date: "2017 - 2024",
+        dateStart: 2017,
+        dateEnd: 2024,
         content: [
             "Creation of several institutional websites, e-commerce websites and its platform that manages the content.",
             "Implementation of e-commerce with integration of billing APIs.",

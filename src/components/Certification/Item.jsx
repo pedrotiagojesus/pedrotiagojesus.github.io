@@ -5,7 +5,7 @@ const Item = ({ name, description, date, url }) => {
     return (
         <div className="item">
             <div className="heading">
-                <span className="fa-solid fa-square icon"></span>
+                <i className="fa-solid fa-square icon"></i>
                 <a target="_blank" href={url}>
                     {name}
                 </a>

@@ -2,18 +2,6 @@ html {
     font-size: var(--font-size);
 }
 
-section .inner {
-    background-color: #1e2738;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    margin-bottom: 2.5rem;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    position: relative;
-}
-
 section .inner > [data-tpl="title"] {
     font-weight: 900;
     letter-spacing: 5px;
@@ -41,9 +29,6 @@ section .inner > [data-tpl="subtitle"] {
 /* LG */
 
 @media (min-width: 992px) {
-    section .inner {
-        padding: 3rem;
-    }
 }
 
 /* XL */

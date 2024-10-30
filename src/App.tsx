@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
+import BackgroundAnimated from "./components/BackgroundAnimated/BackgroundAnimated";
 import Header from "./components/Header/Header";
 import Menu from "./components/Menu/Menu";
-import BackgroundAnimated from "./components/BackgroundAnimated/BackgroundAnimated";
 
 function App() {
     return (
@@ -10,9 +10,7 @@ function App() {
             <Header />
             <Menu />
             <main>
-                <div className="content">
-                    <Outlet />
-                </div>
+                <Outlet />
             </main>
         </>
     );

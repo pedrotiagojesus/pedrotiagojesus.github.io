@@ -1,0 +1,75 @@
+#experience {
+    text-align: left;
+}
+
+#experience h2 {
+    margin-bottom: 1rem;
+    letter-spacing: 3;
+    font-weight: 700;
+}
+
+#experience .resume-timeline {
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+#experience .resume-timeline:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    left: 1.25rem;
+    top: 0;
+    position: absolute;
+}
+
+#experience article {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+#experience .resume-timeline > article:last-child {
+    margin-bottom: 0;
+}
+
+#experience article:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: calc(-1.25rem - 3px);
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #a5b3ce;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+#experience article .company-name {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+#experience article .time {
+    font-size: 0.8rem;
+}
+
+#experience article .company-name {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+#experience article ul {
+    padding-left: 1rem;
+}
+
+#experience article ul li {
+    margin-bottom: 0.5rem;
+}

@@ -5,38 +5,27 @@
     border-bottom: 1px solid var(--bs-border-color);
 }
 
-#education .title {
+#education h4 {
     margin-bottom: 1rem;
     letter-spacing: 3;
     font-weight: 700;
 }
 
 #education .list {
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-#education .list li {
-    margin-bottom: 1rem;
-}
-
-#education .list li:last-child {
-    margin-bottom: 0;
-}
-
-#education li .organization {
+#education article .organization {
     font-weight: 700;
     color: #fff;
 }
 
-#education li .degree {
-}
-
-#education li .time {
+#education article .time {
     font-size: 0.8rem;
 }
 
-#education li .description {
+#education article .description {
     font-size: 0.8rem;
 }

@@ -4,26 +4,27 @@ import { educationArr } from "../../Data.js";
 import "./Education.css";
 
 // Components
-import Item from "./Item.jsx";
+import Item from "./Item";
 
 const Education = () => {
     return (
         educationArr &&
         educationArr.length && (
-            <div id="education">
-                <h4 className="title">Education</h4>
-                <ul className="list">
+            <section id="education">
+                <h4>Education</h4>
+                <div className="list">
                     {educationArr.map((education) => (
                         <Item
                             key={education.organization}
                             organization={education.organization}
                             degree={education.degree}
-                            time={education.time}
+                            dateStart={education.dateStart}
+                            dateEnd={education.dateEnd}
                             description={education.description}
                         />
                     ))}
-                </ul>
-            </div>
+                </div>
+            </section>
         )
     );
 };

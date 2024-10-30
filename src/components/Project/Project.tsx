@@ -1,17 +1,17 @@
-import { projectArr } from "../../Data.js";
+import { projectArr } from "../../Data";
 
 // CSS
 import "./Project.css";
 
 // Components
-import Item from "./Item.jsx";
+import Item from "./Item";
 
 const Project = () => {
     return (
         projectArr &&
         projectArr.length && (
-            <div id="project">
-                <h4 className="title">Projects</h4>
+            <section id="project">
+                <h4>Projects</h4>
                 {projectArr.map((project) => (
                     <Item
                         key={project.name}
@@ -20,7 +20,7 @@ const Project = () => {
                         url={project.url}
                     />
                 ))}
-            </div>
+            </section>
         )
     );
 };

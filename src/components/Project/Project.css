@@ -5,44 +5,44 @@
     border-bottom: 1px solid var(--bs-border-color);
 }
 
-#project .title {
+#project h4 {
     margin-bottom: 1rem;
     letter-spacing: 3;
     font-weight: 700;
 }
 
-#project .item {
+#project article {
     --bs-link-color-rgb: 165, 179, 206;
     --bs-link-hover-color-rgb: 255, 255, 255;
 
     margin-bottom: 1rem;
 }
 
-#project .item:last-child {
+#project article:last-child {
     margin-bottom: 0;
 }
 
-#project .item .heading {
+#project article header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-#project .item .heading a {
+#project article header a {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
 }
 
-#project .item .heading:hover a {
+#project article header:hover a {
     text-decoration: underline;
 }
 
-#project .item .heading .icon {
+#project article header .icon {
     font-size: 0.5rem;
 }
 
-#project .item .description {
+#project article .description {
     --text-line-height: 1.5rem;
     --text-number-line: 2;
 
@@ -53,7 +53,7 @@
     transition: all 0.75s ease-out;
 }
 
-#project .item .description.truncate {
+#project article .description.truncate {
     display: -webkit-box;
     -webkit-line-clamp: var(--text-number-line);
     line-clamp: var(--text-number-line);

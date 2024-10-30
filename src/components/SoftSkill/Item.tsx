@@ -1,7 +1,11 @@
 // CSS
 import "./SoftSkill.css";
 
-const Item = ({ name }) => {
+interface Props {
+    name: string;
+}
+
+const Item = ({ name }: Props) => {
     return (
         <li className="item">
             <span className="badge">{name}</span>

@@ -4,9 +4,9 @@ import CV from "./../../assets/CV.pdf";
 
 const Menu = () => {
     return (
-        <div
+        <aside
             className="offcanvas show"
-            tabIndex="-1"
+            tabIndex={-1}
             id="menu-navigation"
             data-bs-backdrop="false"
             data-bs-scroll="true"
@@ -20,7 +20,7 @@ const Menu = () => {
                     <span className="nav-text">CV</span>
                 </a>
             </div>
-        </div>
+        </aside>
     );
 };
 

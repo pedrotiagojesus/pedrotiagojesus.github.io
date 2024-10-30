@@ -13,7 +13,7 @@ const Header = () => {
                             data-bs-target="#menu-navigation"
                             aria-labelledby="menu-navigation"
                         >
-                            <span className="fa-solid fa-bars fa-fw"></span>
+                            <i className="fa-solid fa-bars fa-fw"></i>
                         </button>
 
                         <div id="social-list">

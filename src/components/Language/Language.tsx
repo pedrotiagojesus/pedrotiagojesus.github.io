@@ -4,14 +4,14 @@ import { languageArr } from "../../Data.js";
 import "./Language.css";
 
 // Components
-import Item from "./Item.jsx";
+import Item from "./Item";
 
 const Language = () => {
     return (
         languageArr &&
         languageArr.length && (
-            <div id="language">
-                <h4 className="title">Languages</h4>
+            <section id="language">
+                <h4>Languages</h4>
                 <ul className="list">
                     {languageArr.map((language) => (
                         <Item
@@ -21,7 +21,7 @@ const Language = () => {
                         />
                     ))}
                 </ul>
-            </div>
+            </section>
         )
     );
 };

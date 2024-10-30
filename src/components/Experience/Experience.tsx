@@ -4,27 +4,28 @@ import { experienceArr } from "../../Data.js";
 import "./Experience.css";
 
 // Components
-import Item from "./Item.jsx";
+import Item from "./Item";
 
 const Experience = () => {
     return (
         experienceArr &&
         experienceArr.length && (
-            <div data-tpl="experience">
-                <h2 data-tpl="title">Experience</h2>
+            <section id="experience">
+                <h2>Experience</h2>
 
-                <div data-tpl="resume-timeline">
+                <div className="resume-timeline">
                     {experienceArr.map((experience, i) => (
                         <Item
                             key={i}
                             company={experience.company}
                             role={experience.role}
-                            date={experience.date}
+                            dateStart={experience.dateStart}
+                            dateEnd={experience.dateEnd}
                             contentArr={experience.content}
                         />
                     ))}
                 </div>
-            </div>
+            </section>
         )
     );
 };

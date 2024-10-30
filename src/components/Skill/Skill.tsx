@@ -4,16 +4,16 @@ import { skillArr } from "../../Data.js";
 import "./Skill.css";
 
 // Components
-import Item from "./Item.jsx";
+import Item from "./Item.js";
 
 const Skill = () => {
     return (
         skillArr &&
         skillArr.length && (
-            <div id="skill">
-                <h4 className="title">Skills</h4>
+            <section id="skill">
+                <h4>Skills</h4>
 
-                <div className="list">
+                <ul className="list">
                     {skillArr.map((skill) => (
                         <Item
                             key={skill.name}
@@ -21,8 +21,8 @@ const Skill = () => {
                             percentage={skill.percentage}
                         />
                     ))}
-                </div>
-            </div>
+                </ul>
+            </section>
         )
     );
 };

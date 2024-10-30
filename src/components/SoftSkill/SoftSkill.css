@@ -5,7 +5,7 @@
     border-bottom: 1px solid var(--bs-border-color);
 }
 
-#skill-topic .title {
+#skill-topic h4 {
     margin-bottom: 1rem;
     letter-spacing: 3;
     font-weight: 700;
