@@ -27,5 +27,33 @@
 }
 
 #education article .description {
-    font-size: 0.8rem;
+    font-size: 1rem;
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+}
+
+/* LG */
+
+@media (min-width: 992px) {
+    #education article .description {
+        font-size: 0.8rem;
+    }
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XXL */
+
+@media (min-width: 1400px) {
 }
