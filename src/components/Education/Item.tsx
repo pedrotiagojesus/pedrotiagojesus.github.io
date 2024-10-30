@@ -18,7 +18,7 @@ const ProjectItem = ({
 }: Props) => {
     return (
         <article className="item">
-            <h6 className="organization">{organization}</h6>
+            <h5 className="organization">{organization}</h5>
             <div className="degree">{degree}</div>
             <div className="time">
                 <time dateTime={dateStart.toString()}>{dateStart}</time> –{" "}
