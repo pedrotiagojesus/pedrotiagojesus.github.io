@@ -20,7 +20,11 @@ const Item = ({ name, percentage }: Props) => {
             />
             <div className="content">
                 <div className="name">{name}</div>
-                <div className="progress" role="progressbar">
+                <div
+                    className="progress"
+                    role="progressbar"
+                    aria-label={`level-${name}`}
+                >
                     <div
                         className="progress-bar"
                         style={{ width: `${percentage}%` }}
