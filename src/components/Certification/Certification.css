@@ -5,40 +5,40 @@
     border-bottom: 1px solid var(--bs-border-color);
 }
 
-#certification .title {
+#certification h4 {
     margin-bottom: 1rem;
     letter-spacing: 3;
     font-weight: 700;
 }
 
-#certification .item {
+#certification article {
     --bs-link-color-rgb: 165, 179, 206;
     --bs-link-hover-color-rgb: 255, 255, 255;
 
     margin-bottom: 1rem;
 }
 
-#certification .item:last-child {
+#certification article:last-child {
     margin-bottom: 0;
 }
 
-#certification .item .heading {
+#certification article header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-#certification .item .heading a {
+#certification article header a {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
 }
 
-#certification .item .heading:hover a {
+#certification article header:hover a {
     text-decoration: underline;
 }
 
-#certification .item .heading .icon {
+#certification article header .icon {
     font-size: 0.5rem;
 }
 

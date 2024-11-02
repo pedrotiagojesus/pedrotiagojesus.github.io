@@ -1,20 +1,32 @@
-import { certificationArr } from "../../Data.js";
-
 // CSS
 import "./Certification.css";
 
 // Components
-import Item from "./Item.jsx";
+import Item from "./Item.js";
 
 // Translation
-import { getVocabularyTranslation } from "../I18n/I18n";
+import {
+    getVocabularyTranslation,
+    getContentTranslation,
+} from "../I18n/I18n.js";
+
+type Certification = {
+    name: string;
+    description: string;
+    date: string;
+    url: string;
+};
 
 const Certification = () => {
+    const certificationArr = getContentTranslation(
+        "certification"
+    ) as Certification[];
+
     return (
         certificationArr &&
         certificationArr.length && (
             <div id="certification">
-                <h4>{getVocabularyTranslation("title.certifications")}</h4>
+                <h4>{getVocabularyTranslation("title.certification")}</h4>
                 {certificationArr.map((certification) => (
                     <Item
                         key={certification.name}

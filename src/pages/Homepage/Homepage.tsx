@@ -10,6 +10,7 @@ import SoftSkill from "../../components/SoftSkill/SoftSkill";
 import Project from "../../components/Project/Project";
 import Education from "../../components/Education/Education";
 import Language from "../../components/Language/Language";
+import Certification from "../../components/Certification/Certification";
 
 const Homepage = () => {
     return (
@@ -28,6 +29,7 @@ const Homepage = () => {
                         <SoftSkill />
                         <Project />
                         <Education />
+                        <Certification />
                         <Language />
                     </div>
                 </div>
