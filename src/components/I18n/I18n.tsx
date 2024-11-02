@@ -29,7 +29,10 @@ const I18n = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
             >
-                <img src={buildFlag(i18n.languages[1].toLocaleUpperCase())} />
+                <img
+                    src={buildFlag(i18n.languages[1].toLocaleUpperCase())}
+                    alt={i18n.languages[1].toLocaleUpperCase()}
+                />
                 {i18n.languages[1]}
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
