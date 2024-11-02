@@ -28,13 +28,18 @@
     gap: 0.5rem;
 }
 
-#certification article header a {
+#certification article header h5 {
     color: #fff;
     font-weight: 700;
+    margin-bottom: 0;
+}
+
+#certification article header a {
+    color: #fff;
     text-decoration: none;
 }
 
-#certification article header:hover a {
+#certification article header:hover h5 {
     text-decoration: underline;
 }
 

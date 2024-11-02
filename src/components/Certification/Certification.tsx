@@ -25,7 +25,7 @@ const Certification = () => {
     return (
         certificationArr &&
         certificationArr.length && (
-            <div id="certification">
+            <section id="certification">
                 <h4>{getVocabularyTranslation("title.certification")}</h4>
                 {certificationArr.map((certification) => (
                     <Item
@@ -36,7 +36,7 @@ const Certification = () => {
                         url={certification.url}
                     />
                 ))}
-            </div>
+            </section>
         )
     );
 };

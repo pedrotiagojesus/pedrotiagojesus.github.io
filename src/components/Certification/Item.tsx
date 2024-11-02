@@ -13,9 +13,11 @@ const Item = ({ name, description, date, url }: Props) => {
         <article>
             <header>
                 <i className="fa-solid fa-square icon"></i>
-                <a target="_blank" href={url}>
-                    {name}
-                </a>
+                <h6>
+                    <a target="_blank" href={url}>
+                        {name}
+                    </a>
+                </h6>
             </header>
             <time className="small" dateTime={date}>
                 {date}
