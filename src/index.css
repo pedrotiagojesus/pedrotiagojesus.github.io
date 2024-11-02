@@ -6,6 +6,14 @@ html {
     --bs-body-bg: #fff;
 }
 
+section .title {
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
 /* SM */
 
 @media (min-width: 576px) {

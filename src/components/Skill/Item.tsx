@@ -19,7 +19,7 @@ const Item = ({ name, percentage }: Props) => {
                 alt={slugify(name)}
             />
             <div className="content">
-                <div className="name">{name}</div>
+                <p className="name">{name}</p>
                 <div
                     className="progress"
                     role="progressbar"

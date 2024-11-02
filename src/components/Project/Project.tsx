@@ -20,7 +20,9 @@ const Project = () => {
         projectArr &&
         projectArr.length && (
             <section id="project">
-                <h4>{getVocabularyTranslation("title.projects")}</h4>
+                <h2 className="title">
+                    {getVocabularyTranslation("title.projects")}
+                </h2>
                 {projectArr.map((project) => (
                     <Item
                         key={project.name}

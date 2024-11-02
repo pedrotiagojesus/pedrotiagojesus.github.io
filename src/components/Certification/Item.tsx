@@ -13,11 +13,11 @@ const Item = ({ name, description, date, url }: Props) => {
         <article>
             <header>
                 <i className="fa-solid fa-square icon"></i>
-                <h6>
+                <h3>
                     <a target="_blank" href={url}>
                         {name}
                     </a>
-                </h6>
+                </h3>
             </header>
             <time className="small" dateTime={date}>
                 {date}

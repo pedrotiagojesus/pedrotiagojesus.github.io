@@ -31,7 +31,7 @@ const I18n = () => {
             >
                 <img
                     src={buildFlag(i18n.languages[1].toLocaleUpperCase())}
-                    alt={i18n.languages[1].toLocaleUpperCase()}
+                    alt={`active-lang-${i18n.languages[1].toLocaleUpperCase()}`}
                 />
                 {i18n.languages[1]}
             </button>
@@ -44,7 +44,7 @@ const I18n = () => {
                     >
                         <img
                             src={buildFlag(language.label.toLocaleUpperCase())}
-                            alt={language.label.toLocaleUpperCase()}
+                            alt={`option-lang-${language.label.toLocaleUpperCase()}`}
                         />
                         {language.label}
                     </li>

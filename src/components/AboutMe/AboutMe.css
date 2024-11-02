@@ -1,13 +1,10 @@
 #about-me {
-    text-align: justify;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--bs-border-color);
+    text-align: left;
 }
 
-#about-me h2 {
-    margin-bottom: 1rem;
-    letter-spacing: 3;
-    font-weight: 700;
-    text-align: left;
+#about-me .title {
+    font-size: 2rem;
 }

@@ -46,7 +46,7 @@ const Item = ({ name, description, url }: Props) => {
             <header>
                 <i className="fa-solid fa-square" data-tpl="icon"></i>
                 <a target="_blank" href={url}>
-                    <h5 className="mb-0">{name}</h5>
+                    <h3 className="mb-0">{name}</h3>
                 </a>
             </header>
             <div

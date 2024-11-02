@@ -19,7 +19,9 @@ const Skill = () => {
         skillArr &&
         skillArr.length && (
             <section id="skill">
-                <h4>{getVocabularyTranslation("title.skills")}</h4>
+                <h2 className="title">
+                    {getVocabularyTranslation("title.skills")}
+                </h2>
                 <ul className="list">
                     {skillArr.map((skill) => (
                         <Item

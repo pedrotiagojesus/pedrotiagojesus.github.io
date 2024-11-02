@@ -22,7 +22,9 @@ const Experience = () => {
         experienceArr &&
         experienceArr.length && (
             <section id="experience">
-                <h2>{getVocabularyTranslation("title.experience")}</h2>
+                <h2 className="title">
+                    {getVocabularyTranslation("title.experience")}
+                </h2>
 
                 <div className="resume-timeline">
                     {experienceArr.map((experience, i) => (

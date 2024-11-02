@@ -26,7 +26,9 @@ const Certification = () => {
         certificationArr &&
         certificationArr.length && (
             <section id="certification">
-                <h4>{getVocabularyTranslation("title.certification")}</h4>
+                <h2 className="title">
+                    {getVocabularyTranslation("title.certification")}
+                </h2>
                 {certificationArr.map((certification) => (
                     <Item
                         key={certification.name}

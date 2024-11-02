@@ -22,7 +22,9 @@ const Education = () => {
         educationArr &&
         educationArr.length && (
             <section id="education">
-                <h4>{getVocabularyTranslation("title.education")}</h4>
+                <h2 className="title">
+                    {getVocabularyTranslation("title.education")}
+                </h2>
                 <div className="list">
                     {educationArr.map((education) => (
                         <Item

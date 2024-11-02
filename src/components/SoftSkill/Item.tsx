@@ -6,11 +6,7 @@ interface Props {
 }
 
 const Item = ({ name }: Props) => {
-    return (
-        <li className="item">
-            <span className="badge">{name}</span>
-        </li>
-    );
+    return <p className="badge">{name}</p>;
 };
 
 export default Item;

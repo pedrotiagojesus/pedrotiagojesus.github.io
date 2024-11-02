@@ -5,12 +5,6 @@
     border-bottom: 1px solid var(--bs-border-color);
 }
 
-#skill-topic h4 {
-    margin-bottom: 1rem;
-    letter-spacing: 3;
-    font-weight: 700;
-}
-
 #skill-topic .list {
     list-style: none;
     padding-left: 0;
@@ -20,12 +14,9 @@
     gap: 0.5rem;
 }
 
-#skill-topic .list .item {
-    display: inline-block;
-}
-
-#skill-topic .list .item .badge {
+#skill-topic .list .badge {
     background-color: rgba(0, 0, 0, 0.1);
     color: rgba(255, 255, 255, 0.8);
     padding: 0.5rem 0.65rem;
+    margin: 0;
 }

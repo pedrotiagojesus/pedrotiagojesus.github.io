@@ -3,12 +3,6 @@
     padding-bottom: 2rem;
 }
 
-#language h4 {
-    margin-bottom: 1rem;
-    letter-spacing: 3;
-    font-weight: 700;
-}
-
 #language .list {
     margin-bottom: 0;
     padding-left: 0;
@@ -17,6 +11,10 @@
 
 #language .list li {
     margin-bottom: 1rem;
+}
+
+#language .list li .name {
+    margin-bottom: 0;
 }
 
 #language .list li:last-child {

@@ -2,10 +2,8 @@
     text-align: left;
 }
 
-#experience h2 {
-    margin-bottom: 1rem;
-    letter-spacing: 3;
-    font-weight: 700;
+#experience .title {
+    font-size: 2rem;
 }
 
 #experience .resume-timeline {
@@ -75,7 +73,6 @@
 
 #experience article ul {
     padding-left: 1rem;
-    text-align: justify;
 }
 
 #experience article ul li {

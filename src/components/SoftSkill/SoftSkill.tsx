@@ -14,12 +14,14 @@ const SoftSkill = () => {
         softSkillArr &&
         softSkillArr.length && (
             <section id="skill-topic">
-                <h4>{getVocabularyTranslation("title.softSkills")}</h4>
-                <ul className="list">
+                <h2 className="title">
+                    {getVocabularyTranslation("title.softSkills")}
+                </h2>
+                <div className="list">
                     {softSkillArr.map((softSkill) => (
                         <Item key={softSkill} name={softSkill} />
                     ))}
-                </ul>
+                </div>
             </section>
         )
     );

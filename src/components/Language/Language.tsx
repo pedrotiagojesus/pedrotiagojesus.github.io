@@ -19,7 +19,9 @@ const Language = () => {
         languageArr &&
         languageArr.length && (
             <section id="language">
-                <h4>{getVocabularyTranslation("title.languages")}</h4>
+                <h2 className="title">
+                    {getVocabularyTranslation("title.languages")}
+                </h2>
                 <ul className="list">
                     {languageArr.map((language) => (
                         <Item

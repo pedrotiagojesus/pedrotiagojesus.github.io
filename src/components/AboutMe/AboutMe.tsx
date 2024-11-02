@@ -9,7 +9,9 @@ function AboutMe() {
 
     return (
         <section id="about-me">
-            <h2>{getVocabularyTranslation("title.aboutMe")}</h2>
+            <h2 className="title">
+                {getVocabularyTranslation("title.aboutMe")}
+            </h2>
             <div className="resume-summary-desc">
                 {aboutMeArr.map((aboutMe, i) => (
                     <p key={i}>{aboutMe}</p>

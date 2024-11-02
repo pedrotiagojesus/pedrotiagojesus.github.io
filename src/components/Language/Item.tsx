@@ -20,7 +20,7 @@ const Item = ({ name, level }: Props) => {
 
     return (
         <li title={getVocabularyTranslation(`languageLevel.${level}`)}>
-            <div className="name">{name}</div>
+            <p className="name">{name}</p>
             <div className="indicator">{levelHtml}</div>
         </li>
     );
