@@ -1,4 +1,8 @@
+// CSS
 import "./Language.css";
+
+// Translation
+import { getVocabularyTranslation } from "../I18n/I18n";
 
 interface Props {
     name: string;
@@ -8,16 +12,6 @@ interface Props {
 const Item = ({ name, level }: Props) => {
     let levelHtml = [];
 
-    const levelName = [
-        "A1 - Beginner",
-        "A2 - Elementary",
-        "B1 - Intermediate",
-        "B2 - Upper-Intermediate",
-        "C1 - Advanced",
-        "C2 - Proficiency",
-        "Native",
-    ];
-
     for (let index = 0; index < 7; index++) {
         levelHtml.push(
             <div key={index} className={index > level ? "empty" : "full"}></div>
@@ -25,7 +19,7 @@ const Item = ({ name, level }: Props) => {
     }
 
     return (
-        <li title={levelName[level]}>
+        <li title={getVocabularyTranslation(`languageLevel.${level}`)}>
             <div className="name">{name}</div>
             <div className="indicator">{levelHtml}</div>
         </li>

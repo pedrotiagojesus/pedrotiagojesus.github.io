@@ -8,9 +8,14 @@ const languageArr = [
     { label: "en", value: "en-US" },
 ];
 
-export const getTranslation = (path: string): string => {
-    const { t } = useTranslation();
-    return t(path);
+export const getVocabularyTranslation = (path: string): string => {
+    const { t } = useTranslation("vocabulary");
+    return t(path, { ns: "vocabulary" });
+};
+
+export const getContentTranslation = (path: string) => {
+    const { t } = useTranslation("content");
+    return t(path, { ns: "content", returnObjects: true });
 };
 
 const I18n = () => {

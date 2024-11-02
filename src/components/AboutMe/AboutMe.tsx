@@ -1,19 +1,20 @@
-import { aboutMeArr } from "../../Data";
-
 // CSS
 import "./AboutMe.css";
 
 // Translation
-import { getTranslation } from "../I18n/I18n";
+import { getVocabularyTranslation, getContentTranslation } from "../I18n/I18n";
 
 function AboutMe() {
-    let aboutMeHtml = new Array();
-    aboutMeArr.map((aboutMe, i) => aboutMeHtml.push(<p key={i}>{aboutMe}</p>));
+    const aboutMeArr = getContentTranslation("aboutMe") as [];
 
     return (
         <section id="about-me">
-            <h2>{getTranslation("title.aboutMe")}</h2>
-            <div className="resume-summary-desc">{aboutMeHtml}</div>
+            <h2>{getVocabularyTranslation("title.aboutMe")}</h2>
+            <div className="resume-summary-desc">
+                {aboutMeArr.map((aboutMe, i) => (
+                    <p key={i}>{aboutMe}</p>
+                ))}
+            </div>
         </section>
     );
 }

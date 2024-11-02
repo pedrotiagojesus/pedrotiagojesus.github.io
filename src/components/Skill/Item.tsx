@@ -6,7 +6,7 @@ import { slugify } from "../../utils/Text";
 
 interface Props {
     name: string;
-    percentage: string;
+    percentage: number;
 }
 
 const Item = ({ name, percentage }: Props) => {

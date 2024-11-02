@@ -1,5 +1,3 @@
-import { languageArr } from "../../Data.js";
-
 // CSS
 import "./Language.css";
 
@@ -7,14 +5,21 @@ import "./Language.css";
 import Item from "./Item";
 
 // Translation
-import { getTranslation } from "../I18n/I18n";
+import { getVocabularyTranslation, getContentTranslation } from "../I18n/I18n";
+
+type Language = {
+    name: string;
+    level: number;
+};
 
 const Language = () => {
+    const languageArr = getContentTranslation("language") as Language[];
+
     return (
         languageArr &&
         languageArr.length && (
             <section id="language">
-                <h4>{getTranslation("title.languages")}</h4>
+                <h4>{getVocabularyTranslation("title.languages")}</h4>
                 <ul className="list">
                     {languageArr.map((language) => (
                         <Item

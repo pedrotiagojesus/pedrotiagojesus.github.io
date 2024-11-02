@@ -1,5 +1,3 @@
-import { educationArr } from "../../Data.js";
-
 // CSS
 import "./Education.css";
 
@@ -7,14 +5,24 @@ import "./Education.css";
 import Item from "./Item";
 
 // Translation
-import { getTranslation } from "../I18n/I18n";
+import { getVocabularyTranslation, getContentTranslation } from "../I18n/I18n";
+
+type Education = {
+    organization: string;
+    degree: string;
+    dateStart: number;
+    dateEnd: number;
+    description: string;
+};
 
 const Education = () => {
+    const educationArr = getContentTranslation("education") as Education[];
+
     return (
         educationArr &&
         educationArr.length && (
             <section id="education">
-                <h4>{getTranslation("title.education")}</h4>
+                <h4>{getVocabularyTranslation("title.education")}</h4>
                 <div className="list">
                     {educationArr.map((education) => (
                         <Item

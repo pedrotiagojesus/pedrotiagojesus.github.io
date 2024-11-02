@@ -1,5 +1,3 @@
-import { softSkillArr } from "../../Data.js";
-
 // CSS
 import "./SoftSkill.css";
 
@@ -7,14 +5,16 @@ import "./SoftSkill.css";
 import Item from "./Item.js";
 
 // Translation
-import { getTranslation } from "../I18n/I18n";
+import { getVocabularyTranslation, getContentTranslation } from "../I18n/I18n";
 
 const SoftSkill = () => {
+    const softSkillArr = getContentTranslation("softSkill") as [];
+
     return (
         softSkillArr &&
         softSkillArr.length && (
             <section id="skill-topic">
-                <h4>{getTranslation("title.softSkills")}</h4>
+                <h4>{getVocabularyTranslation("title.softSkills")}</h4>
                 <ul className="list">
                     {softSkillArr.map((softSkill) => (
                         <Item key={softSkill} name={softSkill} />

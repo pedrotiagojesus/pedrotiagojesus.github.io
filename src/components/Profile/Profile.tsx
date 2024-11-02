@@ -5,7 +5,7 @@ import "./Profile.css";
 import Avatar from "./../../assets/avatar.webp";
 
 // Translation
-import { getTranslation } from "../I18n/I18n";
+import { getVocabularyTranslation } from "../I18n/I18n";
 
 function Profile() {
     return (
@@ -13,7 +13,7 @@ function Profile() {
             <img
                 className="profile-image rounded-circle"
                 src={Avatar}
-                alt={getTranslation("profile.image")}
+                alt={getVocabularyTranslation("profile.image")}
             />
             <h1>Pedro Jesus</h1>
             <p>Web Developer</p>

@@ -8,7 +8,9 @@ import translations from "./locales";
 const i18nConfig = {
     resources: translations, // our translation
     fallbackLng: "pt-PT", // default language
-    defaultNS: "translations", // translations
+    ns: ["vocabulary", "content"], // Define os namespaces
+    defaultNS: "vocabulary",
+    debug: false,
 };
 
 i18n.use(LanguageDetector).use(initReactI18next).init(i18nConfig);

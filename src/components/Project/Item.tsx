@@ -3,6 +3,9 @@ import { useState, useRef, useEffect } from "react";
 // CSS
 import "./Project.css";
 
+// Translation
+import { getVocabularyTranslation } from "../I18n/I18n";
+
 interface Props {
     name: string;
     description: string;
@@ -36,6 +39,8 @@ const Item = ({ name, description, url }: Props) => {
         return () => window.removeEventListener("resize", verifyLine);
     }, []);
 
+    const seeMoreLabel = getVocabularyTranslation("common.seeMore");
+
     return (
         <article>
             <header>
@@ -57,7 +62,7 @@ const Item = ({ name, description, url }: Props) => {
                     className="btn see-more"
                     onClick={() => setShowAll(!showAll)}
                 >
-                    ver mais
+                    {seeMoreLabel}
                 </button>
             )}
         </article>

@@ -1,5 +1,3 @@
-import { projectArr } from "../../Data";
-
 // CSS
 import "./Project.css";
 
@@ -7,14 +5,22 @@ import "./Project.css";
 import Item from "./Item";
 
 // Translation
-import { getTranslation } from "../I18n/I18n";
+import { getVocabularyTranslation, getContentTranslation } from "../I18n/I18n";
+
+type Project = {
+    name: string;
+    description: string;
+    url: string;
+};
 
 const Project = () => {
+    const projectArr = getContentTranslation("project") as Project[];
+
     return (
         projectArr &&
         projectArr.length && (
             <section id="project">
-                <h4>{getTranslation("title.projects")}</h4>
+                <h4>{getVocabularyTranslation("title.projects")}</h4>
                 {projectArr.map((project) => (
                     <Item
                         key={project.name}

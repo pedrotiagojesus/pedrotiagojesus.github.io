@@ -1,5 +1,3 @@
-import { skillArr } from "../../Data.js";
-
 // CSS
 import "./Skill.css";
 
@@ -7,14 +5,21 @@ import "./Skill.css";
 import Item from "./Item.js";
 
 // Translation
-import { getTranslation } from "../I18n/I18n";
+import { getVocabularyTranslation, getContentTranslation } from "../I18n/I18n";
+
+type Skill = {
+    name: string;
+    percentage: number;
+};
 
 const Skill = () => {
+    const skillArr = getContentTranslation("skill") as Skill[];
+
     return (
         skillArr &&
         skillArr.length && (
             <section id="skill">
-                <h4>{getTranslation("title.skills")}</h4>
+                <h4>{getVocabularyTranslation("title.skills")}</h4>
                 <ul className="list">
                     {skillArr.map((skill) => (
                         <Item
