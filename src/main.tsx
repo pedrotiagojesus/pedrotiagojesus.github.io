@@ -17,6 +17,9 @@ import "./index.css";
 import App from "./App.tsx";
 import Homepage from "./pages/Homepage/Homepage.tsx";
 
+// I18n
+import "./i18n";
+
 const router = createBrowserRouter([
     {
         path: "/",

@@ -60,6 +60,13 @@ header.top-bar .menu-toggler:hover {
     transform: translateY(-50%);
 }
 
+header.top-bar #language-picker {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
 /* SM */
 
 @media (min-width: 576px) {

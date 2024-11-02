@@ -6,12 +6,15 @@ import "./Certification.css";
 // Components
 import Item from "./Item.jsx";
 
+// Translation
+import { getTranslation } from "../I18n/I18n";
+
 const Certification = () => {
     return (
         certificationArr &&
         certificationArr.length && (
             <div id="certification">
-                <h4 className="title">Certifications</h4>
+                <h4>{getTranslation("title.certifications")}</h4>
                 {certificationArr.map((certification) => (
                     <Item
                         key={certification.name}

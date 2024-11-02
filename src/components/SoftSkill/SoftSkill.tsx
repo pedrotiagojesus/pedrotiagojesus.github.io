@@ -6,12 +6,15 @@ import "./SoftSkill.css";
 // Components
 import Item from "./Item.js";
 
+// Translation
+import { getTranslation } from "../I18n/I18n";
+
 const SoftSkill = () => {
     return (
         softSkillArr &&
         softSkillArr.length && (
             <section id="skill-topic">
-                <h4>Soft Skills</h4>
+                <h4>{getTranslation("title.softSkills")}</h4>
                 <ul className="list">
                     {softSkillArr.map((softSkill) => (
                         <Item key={softSkill} name={softSkill} />

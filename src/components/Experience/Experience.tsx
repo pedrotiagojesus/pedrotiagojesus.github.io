@@ -6,12 +6,15 @@ import "./Experience.css";
 // Components
 import Item from "./Item";
 
+// Translation
+import { getTranslation } from "../I18n/I18n";
+
 const Experience = () => {
     return (
         experienceArr &&
         experienceArr.length && (
             <section id="experience">
-                <h2>Experience</h2>
+                <h2>{getTranslation("title.experience")}</h2>
 
                 <div className="resume-timeline">
                     {experienceArr.map((experience, i) => (

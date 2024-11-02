@@ -1,3 +1,4 @@
+import I18n from "../I18n/I18n";
 import "./Header.css";
 
 const Header = () => {
@@ -36,6 +37,8 @@ const Header = () => {
                             <i className="fa-brands fa-linkedin-in fa-fw"></i>
                         </a>
                     </div>
+
+                    <I18n />
                 </nav>
             </div>
         </header>

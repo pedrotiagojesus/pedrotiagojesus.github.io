@@ -1,6 +1,10 @@
+import { aboutMeArr } from "../../Data";
+
+// CSS
 import "./AboutMe.css";
 
-import { aboutMeArr } from "../../Data";
+// Translation
+import { getTranslation } from "../I18n/I18n";
 
 function AboutMe() {
     let aboutMeHtml = new Array();
@@ -8,7 +12,7 @@ function AboutMe() {
 
     return (
         <section id="about-me">
-            <h2>About me</h2>
+            <h2>{getTranslation("title.aboutMe")}</h2>
             <div className="resume-summary-desc">{aboutMeHtml}</div>
         </section>
     );

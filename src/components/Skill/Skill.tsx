@@ -6,13 +6,15 @@ import "./Skill.css";
 // Components
 import Item from "./Item.js";
 
+// Translation
+import { getTranslation } from "../I18n/I18n";
+
 const Skill = () => {
     return (
         skillArr &&
         skillArr.length && (
             <section id="skill">
-                <h4>Skills</h4>
-
+                <h4>{getTranslation("title.skills")}</h4>
                 <ul className="list">
                     {skillArr.map((skill) => (
                         <Item
