@@ -41,6 +41,7 @@ const I18n = () => {
                     >
                         <img
                             src={buildFlag(language.label.toLocaleUpperCase())}
+                            alt={language.label.toLocaleUpperCase()}
                         />
                         {language.label}
                     </li>
