@@ -5,8 +5,8 @@ export default {
     title: {
         aboutMe: "Sobre mim",
         experience: "Experiencia",
-        skills: "Skills",
-        softSkills: "Soft Skills",
+        skills: "Competências",
+        softSkills: "Competências interpessoais",
         projects: "Projetos",
         education: "Educação",
         languages: "Idiomas",

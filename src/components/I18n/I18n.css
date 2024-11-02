@@ -17,6 +17,9 @@
     --bs-btn-font-size: 1rem;
 
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 #language-picker .dropdown-menu {
@@ -31,6 +34,11 @@
 #language-picker .dropdown-item {
     --bs-dropdown-link-color: #a5b3ce;
     --bs-dropdown-link-hover-color: #fff;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
 }
 
 #language-picker .dropdown-item:focus,

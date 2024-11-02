@@ -29,23 +29,40 @@ const I18n = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
             >
+                <img src={buildFlag(i18n.languages[1].toLocaleUpperCase())} />
                 {i18n.languages[1]}
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
                 {languageArr.map((language) => (
-                    <li key={language.value}>
-                        <a
-                            className="dropdown-item"
-                            href="javascript:void(0);"
-                            onClick={() => i18n.changeLanguage(language.value)}
-                        >
-                            {language.label}
-                        </a>
+                    <li
+                        key={language.value}
+                        className="dropdown-item"
+                        onClick={() => i18n.changeLanguage(language.value)}
+                    >
+                        <img
+                            src={buildFlag(language.label.toLocaleUpperCase())}
+                        />
+                        {language.label}
                     </li>
                 ))}
             </ul>
         </div>
     );
+};
+
+const buildFlag = (iso2: string) => {
+    const urlCfg = {
+        country_code: iso2,
+        style: "flat",
+        size: 24,
+    };
+
+    if (urlCfg.country_code == "EN") {
+        urlCfg.country_code = "US";
+    }
+
+    const url = `https://flagsapi.com/${urlCfg.country_code}/${urlCfg.style}/${urlCfg.size}.png`;
+    return url;
 };
 
 export default I18n;
