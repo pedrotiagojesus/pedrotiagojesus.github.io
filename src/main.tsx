@@ -11,11 +11,13 @@ import "./assets/fontawesome-free-6.6.0-web/css/all.min.css";
 
 // CSS
 import "./root.css";
+import "./btn.css";
 import "./index.css";
 
 // Pages
 import App from "./App.tsx";
 import Homepage from "./pages/Homepage/Homepage.tsx";
+import Contact from "./pages/Contact/Contact.tsx";
 
 // I18n
 import "./i18n";
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Homepage />,
+            },
+            {
+                path: "/contact",
+                element: <Contact />,
             },
         ],
     },

@@ -1,16 +1,12 @@
 #homepage {
+    margin: calc(8rem * 0.8) auto 2.5rem;
+}
+
+#homepage .card-body {
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
-    padding: 1.5rem;
-    margin: calc(8rem * 0.8) auto 2.5rem;
-    background-color: #1e2738;
-    border-radius: 0.5rem;
-    max-width: 960px;
-    text-align: center;
-    position: relative;
-    box-shadow: var(--bs-box-shadow);
 }
 
 /* SM */
@@ -28,6 +24,9 @@
 @media (min-width: 992px) {
     #homepage {
         margin: 5rem auto 2.5rem;
+    }
+
+    #homepage .card-body {
         padding: 6rem 3rem 3rem 3rem;
     }
 }

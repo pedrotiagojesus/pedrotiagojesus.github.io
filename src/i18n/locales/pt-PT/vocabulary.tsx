@@ -24,4 +24,21 @@ export default {
         5: "C2 - Domínio pleno",
         6: "Nativo",
     },
+    menu: {
+        homepage: "Início",
+        contact: "Contacto",
+    },
+    contact: {
+        title: "Contactos",
+        text: "Precisa de entrar em contacto ou apenas quer enviar-me uma mensagem? Utilize este formulário:",
+        labelName: "Nome",
+        descriptionName: "Nome do contacto",
+        labelEmail: "Email",
+        descriptionEmail: "Email do contacto",
+        labelSubject: "Assunto",
+        descriptionSubject: "Assunto do contacto",
+        labelMessage: "Mensagem",
+        descriptionMessage: "Mensagem do contacto",
+        submit: "Enviar",
+    },
 };

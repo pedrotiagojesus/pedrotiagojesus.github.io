@@ -10,8 +10,20 @@ section .title {
     margin-bottom: 1rem;
     letter-spacing: 2px;
     font-weight: 700;
-    text-align: left;
     font-size: 1.5rem;
+}
+
+.card {
+    --bs-card-border-radius: 0.5rem;
+    --bs-card-bg: #1e2738;
+
+    max-width: 960px;
+    margin: calc(8rem * 0.8) auto 2.5rem;
+    box-shadow: var(--bs-box-shadow);
+}
+
+.card .card-body {
+    padding: 1.5rem;
 }
 
 /* SM */
@@ -27,6 +39,13 @@ section .title {
 /* LG */
 
 @media (min-width: 992px) {
+    .card {
+        margin: 5rem auto 2.5rem;
+    }
+
+    .card .card-body {
+        padding: 3rem 3rem 3rem 3rem;
+    }
 }
 
 /* XL */

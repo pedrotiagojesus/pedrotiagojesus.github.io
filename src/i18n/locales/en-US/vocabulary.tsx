@@ -24,4 +24,21 @@ export default {
         5: "C2 - Proficiency",
         6: "Native",
     },
+    menu: {
+        homepage: "Homepage",
+        contact: "Contact",
+    },
+    contact: {
+        title: "Contacts",
+        text: "Need to get in contact or just want to send a message my way? Use this form:",
+        labelName: "Name",
+        descriptionName: "Contact name",
+        labelEmail: "Email",
+        descriptionEmail: "Contact email",
+        labelSubject: "Subject",
+        descriptionSubject: "Contact subject",
+        labelMessage: "Message",
+        descriptionMessage: "Contact message",
+        submit: "Submit",
+    },
 };

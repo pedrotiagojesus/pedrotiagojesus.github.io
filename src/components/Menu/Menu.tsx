@@ -1,6 +1,12 @@
+import { Link } from "react-router-dom";
+
+// CSS
 import "./Menu.css";
 
 import CV from "./../../assets/CV.pdf";
+
+// Translation
+import { getVocabularyTranslation } from "../I18n/I18n.js";
 
 const Menu = () => {
     return (
@@ -14,7 +20,23 @@ const Menu = () => {
         >
             <h1 className="nocontent outline d-none">Menu</h1>
             <div className="offcanvas-body">
-                <a className="link active" href={CV} target="_blank">
+                <Link className="link " to={"/"}>
+                    <span className="icon-holder">
+                        <i className="fa-solid fa-house"></i>
+                    </span>
+                    <span className="nav-text">
+                        {getVocabularyTranslation("menu.homepage")}
+                    </span>
+                </Link>
+                <Link className="link " to={"contact"}>
+                    <span className="icon-holder">
+                        <i className="fa-solid fa-address-card"></i>
+                    </span>
+                    <span className="nav-text">
+                        {getVocabularyTranslation("menu.contact")}
+                    </span>
+                </Link>
+                <a className="link" href={CV} target="_blank">
                     <span className="icon-holder">
                         <i className="fa-solid fa-circle-user"></i>
                     </span>
