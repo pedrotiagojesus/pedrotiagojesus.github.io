@@ -24,23 +24,23 @@ const Menu = () => {
                     <span className="icon-holder">
                         <i className="fa-solid fa-house"></i>
                     </span>
-                    <span className="nav-text">
+                    <p className="nav-text">
                         {getVocabularyTranslation("menu.homepage")}
-                    </span>
+                    </p>
                 </Link>
                 <Link className="link " to={"contact"}>
                     <span className="icon-holder">
                         <i className="fa-solid fa-address-card"></i>
                     </span>
-                    <span className="nav-text">
+                    <p className="nav-text">
                         {getVocabularyTranslation("menu.contact")}
-                    </span>
+                    </p>
                 </Link>
                 <a className="link" href={CV} target="_blank">
                     <span className="icon-holder">
                         <i className="fa-solid fa-circle-user"></i>
                     </span>
-                    <span className="nav-text">CV</span>
+                    <p className="nav-text">CV</p>
                 </a>
             </div>
         </aside>

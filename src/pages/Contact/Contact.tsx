@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 // CSS
 import "./Contact.css";
@@ -9,75 +9,69 @@ import { getVocabularyTranslation } from "../../components/I18n/I18n";
 // Emailjs
 import emailjs from "@emailjs/browser";
 
+// Sweetalert 2
+import Swal from "sweetalert2";
+
 const Contact = () => {
     const [contactName, setContactName] = useState("");
     const [contactEmail, setContactEmail] = useState("");
     const [contactSubject, setContactSubject] = useState("");
     const [contactMessage, setContactMessage] = useState("");
 
-    const captchaRef = useRef(null);
-    const [captchaToken, setCaptchaToken] = useState("");
-
-    const handleCaptchaLoad = () => {
-        if (window.grecaptcha && captchaRef.current) {
-            window.grecaptcha.render(captchaRef.current, {
-                sitekey: "6LdarXMqAAAAAFqf7rFsBplQq-uXdGgeQTegqdam", //
-                callback: setCaptchaToken,
-            });
-        }
-    };
-
     const submitForm = async (e: any) => {
         e.preventDefault();
 
-        if (!captchaToken) {
-            alert("Por favor, complete o reCAPTCHA");
-            return;
-        }
+        sendEmail(e);
+    };
 
-        try {
-            // Envia o token diretamente ao servidor do Google para verificação
-            const response = await fetch(
-                `https://www.google.com/recaptcha/api/siteverify?secret=SUA_SECRET_KEY_AQUI&response=${captchaToken}`,
-                {
-                    method: "POST",
+    const resetForm = () => {
+        setContactName("");
+        setContactEmail("");
+        setContactSubject("");
+        setContactMessage("");
+    };
+
+    // Send email
+    const sendEmail = (e: any) => {
+        emailjs
+            .sendForm(
+                "service_rgiw3sh",
+                "template_6oi1nbt",
+                e.target,
+                "wNI4sprjKu_5ZAx8R"
+            )
+            .then(
+                () => {
+                    Swal.fire({
+                        title: "Mensagem enviada!",
+                        text: "",
+                        icon: "success",
+                        confirmButtonText: "Ok",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                        },
+                    }).then((result: any) => {
+                        if (result.isConfirmed) {
+                            // Reset form
+                            resetForm();
+                        }
+                    });
+                },
+                () => {
+                    Swal.fire({
+                        title: "Ups!",
+                        text: "Ocorreu um erro, volte a tentar mais tarde",
+                        icon: "error",
+                        confirmButtonText: "Ok",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                        },
+                    }).then((result: any) => {
+                        if (result.isConfirmed) {
+                        }
+                    });
                 }
             );
-
-            const data = await response.json();
-
-            if (data.success) {
-                emailjs
-                    .sendForm(
-                        "service_rgiw3sh",
-                        "template_6oi1nbt",
-                        e.target,
-                        "wNI4sprjKu_5ZAx8R"
-                    )
-                    .then(
-                        (response) => {
-                            console.log(
-                                "SUCCESS!",
-                                response.status,
-                                response.text
-                            );
-                        },
-                        (error) => {
-                            console.log("FAILED...", error);
-                        }
-                    );
-
-                // Reset form
-                setContactName("");
-                setContactEmail("");
-                setContactSubject("");
-                setContactMessage("");
-            } else {
-                alert("Falha na verificação do reCAPTCHA. Tente novamente.");
-            }
-        } catch (error) {
-            console.error("Erro na verificação do reCAPTCHA:", error);
-        }
     };
 
     return (
@@ -110,6 +104,7 @@ const Contact = () => {
                                             setContactName(e.target.value)
                                         }
                                         value={contactName}
+                                        required
                                     />
                                 </div>
                             </div>
@@ -135,6 +130,7 @@ const Contact = () => {
                                             setContactEmail(e.target.value)
                                         }
                                         value={contactEmail}
+                                        required
                                     />
                                 </div>
                             </div>
@@ -160,6 +156,7 @@ const Contact = () => {
                                     setContactSubject(e.target.value)
                                 }
                                 value={contactSubject}
+                                required
                             />
                         </div>
                         <div className="mb-3">
@@ -183,9 +180,9 @@ const Contact = () => {
                                     setContactMessage(e.target.value)
                                 }
                                 value={contactMessage}
+                                required
                             ></textarea>
                         </div>
-                        <div ref={captchaRef} onLoad={handleCaptchaLoad}></div>
                         <button type="submit" className="btn btn-primary">
                             {getVocabularyTranslation("contact.submit")}
                         </button>

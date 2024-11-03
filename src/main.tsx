@@ -13,6 +13,7 @@ import "./assets/fontawesome-free-6.6.0-web/css/all.min.css";
 import "./root.css";
 import "./btn.css";
 import "./index.css";
+import "./sweetalert.css";
 
 // Pages
 import App from "./App.tsx";
