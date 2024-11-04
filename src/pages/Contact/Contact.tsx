@@ -18,6 +18,11 @@ const Contact = () => {
     const [contactSubject, setContactSubject] = useState("");
     const [contactMessage, setContactMessage] = useState("");
 
+    const messageSuccess = getVocabularyTranslation(
+        "contact.messageSuccessTitle"
+    );
+    const messageError = getVocabularyTranslation("contact.messageErrorText");
+
     const submitForm = async (e: any) => {
         e.preventDefault();
 
@@ -43,7 +48,7 @@ const Contact = () => {
             .then(
                 () => {
                     Swal.fire({
-                        title: "Mensagem enviada!",
+                        title: messageSuccess,
                         text: "",
                         icon: "success",
                         confirmButtonText: "Ok",
@@ -60,7 +65,7 @@ const Contact = () => {
                 () => {
                     Swal.fire({
                         title: "Ups!",
-                        text: "Ocorreu um erro, volte a tentar mais tarde",
+                        text: messageError,
                         icon: "error",
                         confirmButtonText: "Ok",
                         customClass: {

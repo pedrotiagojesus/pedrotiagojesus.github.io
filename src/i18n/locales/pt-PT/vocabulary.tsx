@@ -40,5 +40,7 @@ export default {
         labelMessage: "Mensagem",
         descriptionMessage: "Mensagem do contacto",
         submit: "Enviar",
+        messageSuccessTitle: "Mensagem enviada!",
+        messageErrorText: "Ocorreu um erro, volte a tentar mais tarde",
     },
 };

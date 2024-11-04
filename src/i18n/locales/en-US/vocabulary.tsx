@@ -40,5 +40,7 @@ export default {
         labelMessage: "Message",
         descriptionMessage: "Contact message",
         submit: "Submit",
+        messageSuccessTitle: "Message sent!",
+        messageErrorText: "An error occurred, please try again later",
     },
 };
