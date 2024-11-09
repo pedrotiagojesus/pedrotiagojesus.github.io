@@ -1,17 +1,10 @@
-import { Link } from "react-router-dom";
-
 // CSS
 import "./About.css";
-
-// Contexts
-import { useActivePage } from "../../contexts/ActivePageContext";
 
 // I18N
 import { getVocabulary, getContent } from "../../components/I18n/I18n";
 
 // Components
-import Stars from "../../components/BackgrounAnimation/Stars/Stars";
-import Light from "../../components/BackgrounAnimation/Light/Light";
 import Block from "../../components/Block/Block";
 
 type About = {

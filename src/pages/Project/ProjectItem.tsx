@@ -4,7 +4,7 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import "./ProjectItem.css";
 
 // I18N
-import { getVocabulary, getContent } from "../../components/I18n/I18n";
+import { getContent } from "../../components/I18n/I18n";
 
 // Utils
 import { slugify } from "../../utils/Text";

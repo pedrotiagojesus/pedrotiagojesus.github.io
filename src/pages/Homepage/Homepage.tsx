@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 // CSS
 import "./Homepage.css";
 
-// Contexts
-import { useActivePage } from "../../contexts/ActivePageContext";
-
 // I18N
 import { getVocabulary, getContent } from "../../components/I18n/I18n";
 
