@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 // CSS
 import "./ProjectItem.css";
 
-// Contexts
-import { useActivePage } from "../../contexts/ActivePageContext";
-
 // Utils
 import { slugify } from "../../utils/Text";
 
