@@ -1,0 +1,84 @@
+#block .block-list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+#block article {
+    position: relative;
+    background-color: #1c1c1c;
+    border: 1px solid #242424;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+#block article i {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    z-index: 1;
+    position: relative;
+}
+
+#block article h3 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+}
+
+#block article p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    margin: 0 0 1.5rem;
+    color: var(--theme-color-muted);
+    z-index: 1;
+    position: relative;
+}
+
+#block article .btn {
+    z-index: 1;
+    position: relative;
+}
+
+#block article .background {
+    position: absolute;
+    inset: 0;
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+    #block .block-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* LG */
+
+@media (min-width: 992px) {
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XXL */
+
+@media (min-width: 1400px) {
+}

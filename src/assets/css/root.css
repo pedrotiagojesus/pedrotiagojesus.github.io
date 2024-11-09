@@ -1,0 +1,49 @@
+:root {
+    --theme-navigation-width: 17rem;
+    --theme-navigation-collapse-width: 4.5rem;
+    --theme-color-muted: #858585;
+    --theme-font-size: 14px;
+
+    --theme-transition-duration: 0.5s;
+    --theme-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --theme-transition-property: all;
+    --theme-transition: var(--theme-transition-duration)
+        var(--theme-transition-property) var(--theme-transition-timing-function);
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+    :root {
+        --theme-font-size: 14px;
+    }
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+    :root {
+        --theme-font-size: 14px;
+    }
+}
+
+/* LG  */
+
+@media (min-width: 992px) {
+    :root {
+        --theme-font-size: 15px;
+    }
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+    :root {
+        --theme-font-size: 16px;
+    }
+}
+
+/* XL */
+
+@media (min-width: 1400px) {
+}

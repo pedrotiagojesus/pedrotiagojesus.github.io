@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Roboto";
+    font-weight: 100;
+    font-style: normal;
+    src: local("Roboto"), url(./Roboto-Thin.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-style: normal;
+    src: local("Roboto"), url(./Roboto-Light.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Roboto"), url(./Roboto-Regular.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-style: normal;
+    src: local("Roboto"), url(./Roboto-Medium.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: normal;
+    src: local("Roboto"), url(./Roboto-Bold.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-style: normal;
+    src: local("Roboto"), url(./Roboto-Black.ttf) format("opentype");
+    font-display: swap;
+}
+
+/* Italic */
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 100;
+    font-style: italic;
+    src: local("Roboto"), url(./Roboto-ThinItalic.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-style: italic;
+    src: local("Roboto"), url(./Roboto-LightItalic.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: italic;
+    src: local("Roboto"), url(./Roboto-Italic.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-style: italic;
+    src: local("Roboto"), url(./Roboto-MediumItalic.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: italic;
+    src: local("Roboto"), url(./Roboto-BoldItalic.ttf) format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-style: italic;
+    src: local("Roboto"), url(./Roboto-BlackItalic.ttf) format("opentype");
+    font-display: swap;
+}

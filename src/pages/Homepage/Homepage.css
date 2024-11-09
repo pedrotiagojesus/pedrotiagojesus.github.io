@@ -1,0 +1,75 @@
+#homepage-about h1 {
+    line-height: 1.25;
+}
+
+#homepage-about .page-title span {
+    color: var(--theme-color-muted);
+}
+
+#homepage-about .page-summary {
+    max-width: 41rem;
+    margin-bottom: 1.25rem;
+}
+
+#homepage-about .group-button {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#homepage-about .group-button .btn {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+#homepage-about .group-button .btn.email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#last-project {
+    margin-top: 2rem;
+}
+
+#last-project h3 {
+    margin: 0 0 1.25rem;
+}
+
+#last-project .project-list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-bottom: 2rem;
+}
+
+.homepage-hr {
+    margin-bottom: 2rem;
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+    #last-project .project-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* LG */
+
+@media (min-width: 992px) {
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XXL */
+
+@media (min-width: 1400px) {
+}

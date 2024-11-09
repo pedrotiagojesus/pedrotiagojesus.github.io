@@ -1,0 +1,44 @@
+#language-picker {
+    position: relative;
+}
+
+#language-picker button {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+}
+
+#language-picker ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid #383838;
+    border-radius: 3px;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background-color: #1c1c1c;
+    transition: var(--theme-transition);
+}
+
+#language-picker ul:not(.show) {
+    display: none;
+}
+
+#language-picker li {
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+}
+
+#language-picker li:hover {
+    background-color: #2b2b2b;
+}
