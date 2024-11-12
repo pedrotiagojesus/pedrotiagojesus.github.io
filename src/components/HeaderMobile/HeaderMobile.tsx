@@ -148,6 +148,12 @@ const HeaderMobile = () => {
                                 </span>
                             </Link>
                         </li>
+                        <li>
+                            <a href="/CV.pdf" target="_blank">
+                                <i className="fa-regular fa-file"></i>
+                                <span className="label">CV</span>
+                            </a>
+                        </li>
                     </ul>
                     <hr />
                     <ul className="social-network">

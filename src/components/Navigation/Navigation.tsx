@@ -89,6 +89,12 @@ const Navigation = () => {
                             </span>
                         </Link>
                     </li>
+                    <li>
+                        <a href="/CV.pdf" target="_blank">
+                            <i className="fa-regular fa-file fa-fw"></i>
+                            <span className="label">CV</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <hr />
