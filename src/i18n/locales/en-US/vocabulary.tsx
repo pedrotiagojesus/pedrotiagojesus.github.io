@@ -25,6 +25,12 @@ export default {
     project: {
         title: "Project",
         summary: "Crafting memorable digital experiences.",
+        allProjects: "All projects",
+        demoCode: "Demo & Code",
+        demoCodeSummary:
+            "Would you like to take a quick demo or view the source code?",
+        demo: "Demo",
+        source: "Source",
     },
     about: {
         title: "About",

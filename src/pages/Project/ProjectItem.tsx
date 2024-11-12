@@ -4,7 +4,7 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import "./ProjectItem.css";
 
 // I18N
-import { getContent } from "../../components/I18n/I18n";
+import { getVocabulary, getContent } from "../../components/I18n/I18n";
 
 // Utils
 import { slugify } from "../../utils/Text";
@@ -32,18 +32,15 @@ const ProjectItem = () => {
         <section id="project-item-content">
             <Link to="/project" className="all-project-link">
                 <i className="fa-solid fa-arrow-left"></i>
-                All projects
+                {getVocabulary("project.allProjects")}
             </Link>
             <h1 className="page-title">{project.name}</h1>
             <p className="page-summary">{project.description}</p>
             <img src={`/projects/${project.coverImage}`} alt="" />
             <div className="wrapper-link">
                 <div className="text">
-                    <h3>Demo & Code</h3>
-                    <p>
-                        Would you like to take a quick demo or view the source
-                        code?
-                    </p>
+                    <h3>{getVocabulary("project.demoCode")}</h3>
+                    <p>{getVocabulary("project.demoCodeSummary")}</p>
                 </div>
                 <div className="links">
                     {project.urlDemo != "" ? (
@@ -52,7 +49,7 @@ const ProjectItem = () => {
                             target="_blank"
                             className="btn"
                         >
-                            Demo
+                            {getVocabulary("project.demo")}
                         </a>
                     ) : (
                         ""
@@ -64,7 +61,7 @@ const ProjectItem = () => {
                             target="_blank"
                             className="btn btn-secondary"
                         >
-                            Source
+                            {getVocabulary("project.source")}
                         </a>
                     ) : (
                         ""
