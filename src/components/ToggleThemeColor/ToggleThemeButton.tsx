@@ -7,7 +7,13 @@ import "./ToggleThemeButton.css";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
 const ToggleThemeButton = () => {
-    const { toggleTheme, theme } = useContext(ThemeContext);
+    const themeContext = useContext(ThemeContext);
+
+    if (!themeContext) {
+        throw new Error("ThemeContext must be used within a ThemeProvider");
+    }
+
+    const { toggleTheme, theme } = themeContext;
 
     return (
         <label htmlFor="check" className="toggle-theme-container">
