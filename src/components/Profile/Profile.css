@@ -45,7 +45,7 @@
 
 #widget-profile address {
     margin: 0;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 0.875rem;
     color: var(--theme-color-muted);
     display: flex;
