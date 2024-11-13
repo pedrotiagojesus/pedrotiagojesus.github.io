@@ -1,13 +1,14 @@
 #navigation {
-    display: none;
-    height: 100dvh;
-    border-right: 1px solid #242424;
-    width: var(--theme-navigation-width);
-    background-color: #1c1c1c;
-    position: relative;
-    transition: var(--theme-transition);
     position: sticky;
     top: 0;
+    display: none;
+    height: 100dvh;
+    border-right: 1px solid var(--theme-border-color);
+    width: var(--theme-navigation-width);
+    background-color: var(--theme-foreground-background-color-1);
+
+    transition: var(--theme-transition-duration) width
+        var(--theme-transition-timing-function);
 }
 
 #navigation.collapse {
@@ -30,11 +31,12 @@
 }
 
 #collapse-navigation i {
-    transition: var(--theme-transition);
+    transition: var(--theme-transition-duration) transform
+        var(--theme-transition-timing-function);
 }
 
 #collapse-navigation:hover {
-    color: #fff;
+    color: var(--theme-color-body);
 }
 
 #navigation.collapse #collapse-navigation i {
@@ -43,6 +45,10 @@
 
 #navigation .navigation-block {
     padding: 0.65rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    overflow: hidden;
 }
 
 #navigation.collapse .navigation-block {
@@ -71,13 +77,13 @@
 }
 
 #navigation .navigation-block a:hover {
-    color: #fff;
+    color: var(--theme-color-body);
 }
 
 #navigation .navigation-block a.active {
-    color: #f5f5f5;
-    background-color: #2b2b2b;
-    border: 1px solid #383838;
+    color: var(--theme-color-body);
+    background-color: var(--theme-foreground-background-color-2);
+    border: 1px solid var(--theme-border-color);
 }
 
 #navigation.collapse .navigation-block a {
@@ -139,6 +145,21 @@
 #navigation.collapse #language-picker button span {
     width: 0;
     opacity: 0;
+}
+
+#navigation.collapse .toggle-theme-container {
+    width: min(100%, 2rem);
+}
+
+#navigation.collapse .toggle-theme-container .toggle + .icons {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#navigation.collapse .toggle-theme-container .toggle:checked + .icons {
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* SM */

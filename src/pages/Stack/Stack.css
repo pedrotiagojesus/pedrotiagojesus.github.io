@@ -12,8 +12,8 @@
 
 #skill-content .skill-list .item .image-wrapper {
     width: 3rem;
-    background-color: #1c1c1c;
-    border: 1px solid #242424;
+    background-color: var(--theme-foreground-background-color-1);
+    border: 1px solid var(--theme-border-color);
     display: flex;
     justify-content: center;
     align-items: center;

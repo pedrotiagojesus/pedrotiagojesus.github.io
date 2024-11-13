@@ -29,7 +29,7 @@
     width: auto;
     transition: var(--theme-transition);
     text-wrap: nowrap;
-    color: #fff;
+    color: var(--theme-color-body);
     line-height: 1;
 }
 

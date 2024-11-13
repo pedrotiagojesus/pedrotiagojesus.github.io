@@ -6,8 +6,8 @@
 
 #block article {
     position: relative;
-    background-color: #1c1c1c;
-    border: 1px solid #242424;
+    background-color: var(--theme-foreground-background-color-1);
+    border: 1px solid var(--theme-border-color);
     border-radius: 0.75rem;
     overflow: hidden;
     padding: 1.5rem;
@@ -16,7 +16,7 @@
 #block article i {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #2b2b2b;
+    background-color: var(--theme-foreground-background-color-2);
     display: flex;
     justify-content: center;
     align-items: center;

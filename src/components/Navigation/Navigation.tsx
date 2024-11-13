@@ -13,6 +13,7 @@ import I18n from "../I18n/I18n";
 
 // I18N
 import { getVocabulary } from "../../components/I18n/I18n";
+import ToggleThemeButton from "../ToggleThemeColor/ToggleThemeButton";
 
 const Navigation = () => {
     const { activePage } = useActivePage();
@@ -24,6 +25,7 @@ const Navigation = () => {
             <button
                 type="button"
                 id="collapse-navigation"
+                className="btn"
                 onClick={() => setNavigationCollapse(!navigationCollapse)}
             >
                 <i className="fa-solid fa-angle-left"></i>
@@ -138,6 +140,7 @@ const Navigation = () => {
             <hr />
             <div className="navigation-block">
                 <I18n />
+                <ToggleThemeButton />
             </div>
         </nav>
     );

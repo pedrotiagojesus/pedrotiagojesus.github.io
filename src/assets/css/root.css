@@ -1,7 +1,16 @@
 :root {
+    --theme-background-color: #171717;
+    --theme-foreground-background-color-1: #1c1c1c;
+    --theme-foreground-background-color-2: #2b2b2b;
+
+    --theme-color-body: #f5f5f5;
+    --theme-color-muted: #858585;
+
+    --theme-border-color: #242424;
+
     --theme-navigation-width: 17rem;
     --theme-navigation-collapse-width: 4.5rem;
-    --theme-color-muted: #858585;
+
     --theme-font-size: 14px;
 
     --theme-transition-duration: 0.5s;
@@ -9,6 +18,17 @@
     --theme-transition-property: all;
     --theme-transition: var(--theme-transition-duration)
         var(--theme-transition-property) var(--theme-transition-timing-function);
+}
+
+body[data-theme="light"] {
+    --theme-background-color: #ffffff;
+    --theme-foreground-background-color-1: #f5f5f5;
+    --theme-foreground-background-color-2: #e0e0e0;
+
+    --theme-color-body: #2d2d2d;
+    --theme-color-muted: #666666;
+
+    --theme-border-color: #d3d3d3;
 }
 
 /* SM */

@@ -13,6 +13,7 @@ import I18n from "../I18n/I18n";
 
 // I18N
 import { getVocabulary } from "../../components/I18n/I18n";
+import ToggleThemeButton from "../ToggleThemeColor/ToggleThemeButton";
 
 const HeaderMobile = () => {
     const { activePage } = useActivePage();
@@ -68,7 +69,7 @@ const HeaderMobile = () => {
             <button
                 type="button"
                 id="header-collapse"
-                className={navCollapse ? "collapsed" : ""}
+                className={`btn ${navCollapse ? "collapsed" : ""}`}
                 onClick={() => {
                     handleCollapsing();
                 }}
@@ -192,6 +193,7 @@ const HeaderMobile = () => {
                     </ul>
                     <hr />
                     <I18n />
+                    <ToggleThemeButton />
                 </div>
             </nav>
         </header>
