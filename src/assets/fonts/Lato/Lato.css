@@ -26,7 +26,7 @@
     font-family: "Lato";
     font-weight: 500;
     font-style: normal;
-    src: local("Lato"), url(./Lato.ttf) format("opentype");
+    src: local("Lato"), url(./Lato-Regular.ttf) format("opentype");
     font-display: swap;
 }
 
