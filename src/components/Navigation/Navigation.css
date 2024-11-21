@@ -48,7 +48,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
-    overflow: hidden;
 }
 
 #navigation.collapse .navigation-block {
