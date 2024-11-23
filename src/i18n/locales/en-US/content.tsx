@@ -1,6 +1,15 @@
 export default {
     project: [
         {
+            name: "Slugify",
+            description:
+                "The Slugify Tool allows you to enter any text, choose your preferred separator (- or _), and instantly generate a clean, URL-friendly slug. With a single click, you can copy the slug to your clipboard.",
+            urlDemo: "https://slugify-nine.vercel.app/",
+            urlSource: "https://github.com/pedrotiagojesus/slugify",
+            coverImage: "slugify.webp",
+            imageArr: [],
+        },
+        {
             name: "Dev Chat",
             description:
                 "This is a real-time chat app that I developed using React and Firebase. It allows instant conversations with a modern and responsive interface, leveraging the power of React for a dynamic experience and Firebase for real-time data management.",
