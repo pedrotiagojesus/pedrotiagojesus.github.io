@@ -24,7 +24,7 @@
 }
 
 #about-skill-content span {
-    background-color: #2b2b2b;
+    background-color: var(--theme-foreground-background-color-2);
     padding: 0.25rem 0.75rem;
     border-radius: 7px;
     font-size: 0.85rem;
@@ -42,7 +42,7 @@
 }
 
 #soft-skill-content span {
-    background-color: #2b2b2b;
+    background-color: var(--theme-foreground-background-color-2);
     padding: 0.25rem 0.75rem;
     border-radius: 7px;
     font-size: 0.85rem;
@@ -93,8 +93,8 @@
 #education article {
     flex: 1 1 auto;
     position: relative;
-    background-color: #1c1c1c;
-    border: 1px solid #242424;
+    background-color: var(--theme-foreground-background-color-1);
+    border: 1px solid var(--theme-border-color);
     border-radius: 0.75rem;
     overflow: hidden;
     padding: 1.5rem;
@@ -136,8 +136,8 @@
 #certification article {
     flex: 1 1 auto;
     position: relative;
-    background-color: #1c1c1c;
-    border: 1px solid #242424;
+    background-color: var(--theme-foreground-background-color-1);
+    border: 1px solid var(--theme-border-color);
     border-radius: 0.75rem;
     overflow: hidden;
     padding: 1.5rem;

@@ -5,8 +5,8 @@ body {
 
 body {
     margin: 0;
-    background-color: #171717;
-    color: #f5f5f5;
+    background-color: var(--theme-background-color);
+    color: var(--theme-color-body);
     font-family: "Roboto", sans-serif;
 }
 
@@ -26,25 +26,16 @@ a {
     text-decoration: none;
 }
 
-button {
-    transition: var(--theme-transition);
-    background-color: #1c1c1c;
-    border: 1px solid #242424;
-    color: var(--theme-color-muted);
-    cursor: pointer;
-    border-radius: 3px;
-}
-
 .btn {
-    --theme-transition-property: color,background-color,border
-    transition: var(--theme-transition);
-    color: #f5f5f5;
+    transition: var(--theme-transition-duration) opacity
+        var(--theme-transition-timing-function);
+    color: var(--theme-color-body);
     font-weight: 600;
     font-size: 0.75rem;
     line-height: 1.25rem;
     padding: 0.5rem 1rem;
-    background-color: #2b2b2b;
-    border: 1px solid #383838;
+    background-color: var(--theme-foreground-background-color-2);
+    border: 1px solid var(--theme-border-color);
     cursor: pointer;
     border-radius: 7px;
 }
@@ -54,8 +45,8 @@ button {
 }
 
 .btn.btn-secondary {
-    background-color: #1c1c1c;
-    border: 1px solid #242424;
+    background-color: var(--theme-foreground-background-color-1);
+    border: 1px solid var(--theme-border-color);
 }
 
 .btn:hover {
@@ -75,14 +66,14 @@ main {
 main .container {
     width: 100%;
     max-width: 900px;
-    margin: 7.25rem auto;
+    margin: 3.25rem auto;
     padding: 0 1.5rem;
 }
 
 hr {
     border-top: 0;
     border-right: 0;
-    border-bottom: 1px solid #242424;
+    border-bottom: 1px solid var(--theme-border-color);
     border-left: 0;
     margin: 0;
 }
@@ -111,6 +102,10 @@ hr {
     #root {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    main .container {
+        margin: 7.25rem auto;
     }
 }
 

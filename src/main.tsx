@@ -10,7 +10,8 @@ import "./assets/css/index.css";
 import "./assets/css/root.css";
 
 // Contexts
-import { ActivePageProvider } from "./contexts/ActivePageContext.tsx";
+import { ActivePageProvider } from "./contexts/ActivePageContext";
+import { ThemeContextProvider } from "./contexts/ThemeContext";
 
 // I18n
 import "./i18n";
@@ -60,7 +61,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <ActivePageProvider>
-            <RouterProvider router={router} />
+            <ThemeContextProvider>
+                <RouterProvider router={router} />
+            </ThemeContextProvider>
         </ActivePageProvider>
     </StrictMode>
 );

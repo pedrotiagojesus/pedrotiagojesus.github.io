@@ -1,0 +1,28 @@
+.toggle-theme-container {
+    display: inline-block;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1rem;
+    background-color: var(--theme-foreground-background-color-2);
+    margin-right: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-theme-container .toggle {
+    visibility: hidden;
+}
+
+.toggle-theme-container .toggle + .icons {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: var(--theme-transition-duration) left,
+        transform var(--theme-transition-timing-function);
+}
+
+.toggle-theme-container .toggle:checked + .icons {
+    left: calc(100% - 0.5rem);
+    transform: translate(-100%, -50%);
+}

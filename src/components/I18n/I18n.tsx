@@ -25,7 +25,11 @@ const I18n = () => {
 
     return (
         <div id="language-picker">
-            <button type="button" onClick={() => setShowPicker(!showPicker)}>
+            <button
+                type="button"
+                className="btn"
+                onClick={() => setShowPicker(!showPicker)}
+            >
                 <img
                     src={buildFlag(i18n.languages[1].toLocaleUpperCase())}
                     alt={`active-lang-${i18n.languages[1].toLocaleUpperCase()}`}

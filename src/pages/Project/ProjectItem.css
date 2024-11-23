@@ -22,8 +22,8 @@
 
 #project-item-content .wrapper-link {
     position: relative;
-    background-color: #1c1c1c;
-    border: 1px solid #242424;
+    background-color: var(--theme-foreground-background-color-1);
+    border: 1px solid var(--theme-border-color);
     border-radius: 0.75rem;
     overflow: hidden;
     padding: 1.5rem;

@@ -1,7 +1,7 @@
 .project-item {
     position: relative;
-    background-color: #1c1c1c;
-    border: 1px solid #242424;
+    background-color: var(--theme-foreground-background-color-1);
+    border: 1px solid var(--theme-border-color);
     border-radius: 0.75rem;
     overflow: hidden;
 }
@@ -43,13 +43,13 @@
 
 .project-item h4 {
     margin: 0;
-    color: #fafafa;
+    color: var(--theme-color-body);
     font-weight: 500;
 }
 
 .project-item p {
     margin: 0;
-    color: #858585;
+    color: var(--theme-color-muted);
     font-weight: 500;
     font-size: 0.75rem;
     line-height: 1rem;
