@@ -1,6 +1,15 @@
 export default {
     project: [
         {
+            name: "HTML download",
+            description:
+                "Page that allows you to create html and customize with css and then download the png file.",
+            urlDemo: "https://pedrotiagojesus.github.io/html-download/",
+            urlSource: "https://github.com/pedrotiagojesus/html-download",
+            coverImage: "html-download.webp",
+            imageArr: [],
+        },
+        {
             name: "Dev Chat",
             description:
                 "This is a real-time chat app that I developed using React and Firebase. It allows instant conversations with a modern and responsive interface, leveraging the power of React for a dynamic experience and Firebase for real-time data management.",
