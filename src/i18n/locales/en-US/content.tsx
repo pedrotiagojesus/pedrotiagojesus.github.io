@@ -1,6 +1,15 @@
 export default {
     project: [
         {
+            name: "HTML download",
+            description:
+                "Page that allows you to create html and customize with css and then download the png file.",
+            urlDemo: "https://pedrotiagojesus.github.io/html-download/",
+            urlSource: "https://github.com/pedrotiagojesus/html-download",
+            coverImage: "html-download.webp",
+            imageArr: [],
+        },
+        {
             name: "Slugify",
             description:
                 "The Slugify Tool allows you to enter any text, choose your preferred separator (- or _), and instantly generate a clean, URL-friendly slug. With a single click, you can copy the slug to your clipboard.",
