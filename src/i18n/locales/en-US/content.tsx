@@ -1,7 +1,7 @@
 export default {
     project: [
         {
-            name: "HTML download",
+            name: "HTML Download",
             description:
                 "Page that allows you to create html and customize with css and then download the png file.",
             urlDemo: "https://pedrotiagojesus.github.io/html-download/",
