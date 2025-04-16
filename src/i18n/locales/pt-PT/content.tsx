@@ -2,11 +2,19 @@ export default {
     project: [
         {
             name: "HTML Download",
-            description:
-                "Página que permite criar html e personalizar com css e depois baixar o ficheiro png.",
+            description: "Página que permite criar html e personalizar com css e depois baixar o ficheiro png.",
             urlDemo: "https://pedrotiagojesus.github.io/html-download/",
             urlSource: "https://github.com/pedrotiagojesus/html-download",
             coverImage: "html-download.webp",
+            imageArr: [],
+        },
+        {
+            name: "Slugify",
+            description:
+                "A ferramenta Slugify permite introduzir qualquer texto, escolher o seu separador preferido (- ou _) e gerar instantaneamente um slug limpo e amigável para URL. Com um único clique, pode copiar o slug para a área de transferência.",
+            urlDemo: "https://slugify-nine.vercel.app/",
+            urlSource: "https://github.com/pedrotiagojesus/slugify",
+            coverImage: "slugify.webp",
             imageArr: [],
         },
         {
@@ -47,8 +55,7 @@ export default {
         },
         {
             name: "Secret Word",
-            description:
-                "Minijogo para adivinhar a palavra. Foi a primeira vez que utilizei o framework React.",
+            description: "Minijogo para adivinhar a palavra. Foi a primeira vez que utilizei o framework React.",
             urlDemo: "https://pedrotiagojesus.github.io/secret-word/",
             urlSource: "https://github.com/pedrotiagojesus/secret-word",
             coverImage: "secret-word.webp",
@@ -128,13 +135,7 @@ export default {
             "Explorar novas tecnologias, fazendo cursos e lendo as várias ideias que existem nas várias comunidades.",
         hobby: "Passear, viajar e estar com os amigos.",
     },
-    softSkill: [
-        "Proatividade",
-        "Flexibilidade",
-        "Resiliência",
-        "Adaptabilidade",
-        "Colaborador",
-    ],
+    softSkill: ["Proatividade", "Flexibilidade", "Resiliência", "Adaptabilidade", "Colaborador"],
     education: [
         {
             organization: "Coimbra Business School | ISCAC",
@@ -150,8 +151,7 @@ export default {
             name: "20+ Projetos em React JS aprenda Redux, Bootstrap, APIs",
             date: "July 2024",
             url: "https://ude.my/UC-472d3bab-5f50-46b3-b9c5-767ffa1dde9e/",
-            description:
-                "Foi um excelente curso para aplicar os conhecimentos adquiridos no último curso.",
+            description: "Foi um excelente curso para aplicar os conhecimentos adquiridos no último curso.",
         },
         {
             name: "React do Zero a Maestria (c/ hooks, router, API, Projetos)",
