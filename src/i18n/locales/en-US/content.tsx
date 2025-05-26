@@ -1,6 +1,14 @@
 export default {
     project: [
         {
+            name: "Image Converter",
+            description: "Frontend of a web application that allows you to convert images to different formats, including raster formats (JPEG, PNG, WEBP, TIFF, AVIF). Ideal for those who need to convert multiple images quickly and easily.",
+            urlDemo: "https://pedrotiagojesus.github.io/convert-images/",
+            urlSource: "https://github.com/pedrotiagojesus/convert-images",
+            coverImage: "convert-image.webp",
+            imageArr: [],
+        },
+        {
             name: "Resize Image",
             description: "React web interface to upload multiple images and resize them via API. The backend processes the images and returns a .zip file with the resized images.",
             urlDemo: "https://pedrotiagojesus.github.io/resize-images/",
