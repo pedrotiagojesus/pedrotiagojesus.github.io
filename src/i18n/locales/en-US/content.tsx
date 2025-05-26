@@ -1,6 +1,14 @@
 export default {
     project: [
         {
+            name: "Resize Image",
+            description: "React web interface to upload multiple images and resize them via API. The backend processes the images and returns a .zip file with the resized images.",
+            urlDemo: "https://pedrotiagojesus.github.io/resize-images/",
+            urlSource: "https://github.com/pedrotiagojesus/resize-images",
+            coverImage: "resize-image.webp",
+            imageArr: [],
+        },
+        {
             name: "HTML Download",
             description:
                 "Page that allows you to create html and customize with css and then download the png file.",

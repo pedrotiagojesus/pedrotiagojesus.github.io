@@ -1,6 +1,14 @@
 export default {
     project: [
         {
+            name: "Redimensionar Imagem",
+            description: "Interface web em React para fazer upload de várias imagens e redimensioná-las via API. O backend processa as imagens e retorna um ficheiro .zip com as imagens redimensionadas.",
+            urlDemo: "https://pedrotiagojesus.github.io/resize-images/",
+            urlSource: "https://github.com/pedrotiagojesus/resize-images",
+            coverImage: "resize-image.webp",
+            imageArr: [],
+        },
+        {
             name: "HTML Download",
             description: "Página que permite criar html e personalizar com css e depois baixar o ficheiro png.",
             urlDemo: "https://pedrotiagojesus.github.io/html-download/",
