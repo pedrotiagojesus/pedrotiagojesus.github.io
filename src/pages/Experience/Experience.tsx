@@ -11,7 +11,7 @@ type Experience = {
     company: string;
     role: string;
     dateStart: number;
-    dateEnd: number;
+    dateEnd: number | string;
     content: [];
 };
 
@@ -22,12 +22,8 @@ const Experience = () => {
     return (
         <>
             <section id="experience-content">
-                <h1 className="page-title">
-                    {getVocabulary("experience.title")}
-                </h1>
-                <p className="page-summary">
-                    {getVocabulary("experience.summary")}
-                </p>
+                <h1 className="page-title">{getVocabulary("experience.title")}</h1>
+                <p className="page-summary">{getVocabulary("experience.summary")}</p>
                 <div className="experience-block">
                     {experienceArr.map((experience, index) => (
                         <article key={index}>
@@ -36,17 +32,8 @@ const Experience = () => {
                                 <p>{experience.company}</p>
                                 <span>|</span>
                                 <div className="date">
-                                    <time
-                                        dateTime={experience.dateStart.toString()}
-                                    >
-                                        {experience.dateStart}
-                                    </time>
-                                    -
-                                    <time
-                                        dateTime={experience.dateEnd.toString()}
-                                    >
-                                        {experience.dateEnd}
-                                    </time>
+                                    <time dateTime={experience.dateStart.toString()}>{experience.dateStart}</time>-
+                                    <time dateTime={experience.dateEnd.toString()}>{experience.dateEnd}</time>
                                 </div>
                             </div>
                             <ul>

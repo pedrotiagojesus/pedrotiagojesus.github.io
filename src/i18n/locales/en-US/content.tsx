@@ -83,6 +83,14 @@ export default {
     ],
     experience: [
         {
+            company: "Seamlink",
+            role: "Programador de software",
+            dateStart: 2025,
+            dateEnd: "present",
+            content: [
+            ],
+        },
+        {
             company: "MagicBrain®",
             role: "Web Developer",
             dateStart: 2017,
