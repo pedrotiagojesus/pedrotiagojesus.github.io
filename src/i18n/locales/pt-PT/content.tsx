@@ -1,19 +1,11 @@
 export default {
     project: [
         {
-            name: "Conversor de Imagens",
-            description: "Frontend de uma aplicação web que permite converter imagens para diversos formatos, incluindo formatos raster (JPEG, PNG, WEBP, TIFF, AVIF). Ideal para quem precisa converter múltiplas imagens de forma simples e rápida.",
-            urlDemo: "https://pedrotiagojesus.github.io/convert-images/",
-            urlSource: "https://github.com/pedrotiagojesus/convert-images",
-            coverImage: "convert-image.webp",
-            imageArr: [],
-        },
-        {
-            name: "Redimensionar Imagem",
-            description: "Interface web em React para fazer upload de várias imagens e redimensioná-las via API. O backend processa as imagens e retorna um ficheiro .zip com as imagens redimensionadas.",
-            urlDemo: "https://pedrotiagojesus.github.io/resize-images/",
-            urlSource: "https://github.com/pedrotiagojesus/resize-images",
-            coverImage: "resize-image.webp",
+            name: "Ferramentas de imagem",
+            description: "Frontend de uma aplicação web que permite utilizar várias ferramentas de imagens. Ideal para quem precisa converter, altera o dpi, alterar as dimensões de múltiplas imagens de forma simples e rápida.",
+            urlDemo: "https://pedrotiagojesus.github.io/imgtools/",
+            urlSource: "https://github.com/pedrotiagojesus/imgtools",
+            coverImage: "imgtools.webp",
             imageArr: [],
         },
         {
