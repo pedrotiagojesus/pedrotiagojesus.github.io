@@ -2,7 +2,8 @@ export default {
     project: [
         {
             name: "IMG Tools",
-            description: "Frontend of a web application that allows you to use various image tools. Ideal for those who need to convert, change the dpi, and change the dimensions of multiple images quickly and easily.",
+            description:
+                "Frontend of a web application that allows you to use various image tools. Ideal for those who need to convert, change the dpi, and change the dimensions of multiple images quickly and easily.",
             urlDemo: "https://pedrotiagojesus.github.io/imgtools/",
             urlSource: "https://github.com/pedrotiagojesus/imgtools",
             coverImage: "imgtools.webp",
@@ -10,8 +11,7 @@ export default {
         },
         {
             name: "HTML Download",
-            description:
-                "Page that allows you to create html and customize with css and then download the png file.",
+            description: "Page that allows you to create html and customize with css and then download the png file.",
             urlDemo: "https://pedrotiagojesus.github.io/html-download/",
             urlSource: "https://github.com/pedrotiagojesus/html-download",
             coverImage: "html-download.webp",
@@ -64,8 +64,7 @@ export default {
         },
         {
             name: "Secret Word",
-            description:
-                "Mini game to guess the word. It was the first time to use the React framework.",
+            description: "Mini game to guess the word. It was the first time to use the React framework.",
             urlDemo: "https://pedrotiagojesus.github.io/secret-word/",
             urlSource: "https://github.com/pedrotiagojesus/secret-word",
             coverImage: "secret-word.webp",
@@ -88,6 +87,9 @@ export default {
             dateStart: 2025,
             dateEnd: "present",
             content: [
+                "Collection and transformation of data to be presented in an application.",
+                "Parameterization of notification sending channels, via push on mobile, sending emails, sending SMS.",
+                "Preparation of pages to be available in the application.",
             ],
         },
         {
@@ -153,13 +155,7 @@ export default {
             "Explore new technologies, take courses and read the different ideas that exist in various communities.",
         hobby: "Hanging out, traveling and being with friends.",
     },
-    softSkill: [
-        "Proactivity",
-        "Flexibility",
-        "Resilience",
-        "Adaptability",
-        "Collaborator",
-    ],
+    softSkill: ["Proactivity", "Flexibility", "Resilience", "Adaptability", "Collaborator"],
     education: [
         {
             organization: "Coimbra Business School | ISCAC",
@@ -175,8 +171,7 @@ export default {
             name: "20+ Projetos em React JS aprenda Redux, Bootstrap, APIs",
             date: "July 2024",
             url: "https://ude.my/UC-472d3bab-5f50-46b3-b9c5-767ffa1dde9e/",
-            description:
-                "It was an excellent course to apply my knowledge acquired in the last course.",
+            description: "It was an excellent course to apply my knowledge acquired in the last course.",
         },
         {
             name: "React do Zero a Maestria (c/ hooks, router, API, Projetos)",

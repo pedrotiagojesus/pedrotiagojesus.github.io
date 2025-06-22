@@ -86,6 +86,9 @@ export default {
             dateStart: 2025,
             dateEnd: "presente",
             content: [
+                "Recolha e transformação de dados para serem apresentados numa aplicação.",
+                "Parametrizações de canais de envio de notificações, via push no mobile, envio de email, envio de sms.",
+                "Preparação de páginas para ficarem disponiveis na aplicação."
             ],
         },
         {
