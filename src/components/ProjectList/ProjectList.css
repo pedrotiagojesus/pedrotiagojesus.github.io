@@ -1,0 +1,48 @@
+#project-list {
+    margin-top: 2rem;
+}
+
+#project-list h3 {
+    margin: 0 0 1.25rem;
+}
+
+#project-list .list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-bottom: 2rem;
+}
+
+#project-list .view-all-button {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+/* SM */
+
+@media (min-width: 576px) {
+}
+
+/* MD */
+
+@media (min-width: 768px) {
+    #project-list .list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* LG */
+
+@media (min-width: 992px) {
+}
+
+/* XL */
+
+@media (min-width: 1200px) {
+}
+
+/* XXL */
+
+@media (min-width: 1400px) {
+}

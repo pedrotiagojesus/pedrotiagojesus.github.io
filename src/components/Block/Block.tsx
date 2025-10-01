@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 // CSS
 import "./Block.css";
 
-// I18N
-import { getVocabulary } from "../../components/I18n/I18n";
+// Hooks
+import { getVocabulary } from "@hooks/useTranslationHelpers";
 
 // Components
-import Stars from "../../components/BackgrounAnimation/Stars/Stars";
-import Light from "../../components/BackgrounAnimation/Light/Light";
+import Stars from "@components/BackgrounAnimation/Stars/Stars";
+import Light from "@components/BackgrounAnimation/Light/Light";
 
 const Block = () => {
     return (

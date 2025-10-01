@@ -3,36 +3,20 @@ import { Link } from "react-router-dom";
 // CSS
 import "./Homepage.css";
 
-// I18N
-import { getVocabulary, getContent } from "../../components/I18n/I18n";
-
 // Components
-import CopyButton from "../../components/CopyButton/CopyButton";
-import ProjectItem from "../../components/ProjectItem/ProjectItem";
-import Block from "../../components/Block/Block";
+import CopyButton from "@components/CopyButton/CopyButton";
+import Block from "@components/Block/Block";
+import ProjectList from "@components/ProjectList/ProjectList.tsx";
 
-type Project = {
-    name: string;
-    description: string;
-    coverImage: string;
-};
+// Hooks
+import { getVocabulary } from "@hooks/useTranslationHelpers";
 
 const Homepage = () => {
-    // Projects
-    const projectArr = getContent("project") as Project[];
-
     return (
         <>
             <section id="homepage-about">
-                <h1 className="page-title">
-                    {getVocabulary("homepage.about.title")}
-                    <br />
-                    {getVocabulary("homepage.about.title2")}
-                    <span>{getVocabulary("homepage.about.title3")}</span>
-                </h1>
-                <p className="page-summary">
-                    {getVocabulary("homepage.about.text")}
-                </p>
+                <h1 className="page-title">{getVocabulary("homepage.about.title")}</h1>
+                <p className="page-summary">{getVocabulary("homepage.about.text")}</p>
                 <div className="group-button">
                     <Link to="/about" className="btn">
                         {getVocabulary("navigation.about")}
@@ -44,19 +28,7 @@ const Homepage = () => {
                     />
                 </div>
             </section>
-            <section id="last-project">
-                <h3>{getVocabulary("homepage.project.title")}</h3>
-                <div className="project-list">
-                    {projectArr.slice(0, 2).map((project, index) => (
-                        <ProjectItem
-                            name={project.name}
-                            description={project.description}
-                            image={project.coverImage}
-                            key={index}
-                        />
-                    ))}
-                </div>
-            </section>
+            <ProjectList title={getVocabulary("homepage.project.title")} limit={2} />
             <hr className="homepage-hr" />
             <Block />
         </>

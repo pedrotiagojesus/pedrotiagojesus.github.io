@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./ProjectItem.css";
 
 // Utils
-import { slugify } from "../../utils/Text";
+import { slugify } from "@utils/Text";
 
 type Props = {
     name: string;

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 // Contexts
-import { useActivePage } from "../contexts/ActivePageContext";
+import { useActivePage } from "@contexts/ActivePageContext";
 
 const ActivePage: React.FC = () => {
     const { pathname } = useLocation();

@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 import "./Navigation.css";
 
 // Contexts
-import { useActivePage } from "../../contexts/ActivePageContext";
+import { useActivePage } from "@contexts/ActivePageContext";
 
 // Components
-import Profile from "../Profile/Profile";
-import I18n from "../I18n/I18n";
+import Profile from "@components/Profile/Profile";
+import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
+import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
 
-// I18N
-import { getVocabulary } from "../../components/I18n/I18n";
-import ToggleThemeButton from "../ToggleThemeColor/ToggleThemeButton";
+// Hooks
+import { getVocabulary } from "@hooks/useTranslationHelpers";
 
 const Navigation = () => {
     const { activePage } = useActivePage();
@@ -139,7 +139,7 @@ const Navigation = () => {
             </div>
             <hr />
             <div className="navigation-block">
-                <I18n />
+                <LanguagePicker />
                 <ToggleThemeButton />
             </div>
         </nav>

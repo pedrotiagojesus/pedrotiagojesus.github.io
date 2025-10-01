@@ -1,11 +1,11 @@
 // CSS
 import "./Project.css";
 
-// I18N
-import { getVocabulary, getContent } from "../../components/I18n/I18n";
-
 // Components
-import ProjectItem from "../../components/ProjectItem/ProjectItem";
+import ProjectList from "@components/ProjectList/ProjectList";
+
+// Hooks
+import { getVocabulary } from "@hooks/useTranslationHelpers";
 
 type Project = {
     name: string;
@@ -14,23 +14,11 @@ type Project = {
 };
 
 const Project = () => {
-    // Projects
-    const projectArr = getContent("project") as Project[];
-
     return (
         <section id="project-list-content">
             <h1 className="page-title">{getVocabulary("project.title")}</h1>
             <p className="page-summary">{getVocabulary("project.summary")}</p>
-            <div className="project-list">
-                {projectArr.map((project, index) => (
-                    <ProjectItem
-                        name={project.name}
-                        description={project.description}
-                        image={project.coverImage}
-                        key={index}
-                    />
-                ))}
-            </div>
+            <ProjectList title="" showViewAllButton={false} />
         </section>
     );
 };

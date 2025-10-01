@@ -8,10 +8,8 @@ export default {
     },
     homepage: {
         about: {
-            title: "Hey, I'm Pedro,",
-            title2: "A ",
-            title3: "Full-Stack Developer.",
-            text: "Developer with a knack for creating dynamic web applications, exploring cutting-edge technologies, and engaging in outdoor adventures.",
+            title: "Olá, sou o Pedro 👋",
+            text: "Desenvolvedor frontend focado em React, TypeScript e experiências modernas.",
         },
         project: {
             title: "New Drops",
@@ -31,6 +29,7 @@ export default {
             "Would you like to take a quick demo or view the source code?",
         demo: "Demo",
         source: "Source",
+        seeAll: "Ver todos os projetos"
     },
     about: {
         title: "About",

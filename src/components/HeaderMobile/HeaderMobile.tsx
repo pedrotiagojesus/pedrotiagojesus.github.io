@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 import "./HeaderMobile.css";
 
 // Contexts
-import { useActivePage } from "../../contexts/ActivePageContext";
+import { useActivePage } from "@contexts/ActivePageContext";
 
 // Components
-import Profile from "../Profile/Profile";
-import I18n from "../I18n/I18n";
+import Profile from "@components/Profile/Profile";
+import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
+import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 
-// I18N
-import { getVocabulary } from "../../components/I18n/I18n";
-import ToggleThemeButton from "../ToggleThemeColor/ToggleThemeButton";
+// Hooks
+import { getVocabulary } from "@hooks/useTranslationHelpers";
 
 const HeaderMobile = () => {
     const { activePage } = useActivePage();
@@ -192,7 +192,7 @@ const HeaderMobile = () => {
                         </li>
                     </ul>
                     <hr />
-                    <I18n />
+                    <LanguagePicker />
                     <ToggleThemeButton />
                 </div>
             </nav>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Profile.css";
 
 // Image
-import Avatar from "./../../assets/img/avatar.webp";
+import Avatar from "@assets/img/avatar.webp";
 
 const Profile = () => {
     return (

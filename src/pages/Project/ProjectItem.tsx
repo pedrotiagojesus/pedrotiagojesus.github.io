@@ -3,11 +3,11 @@ import { useParams, Navigate, Link } from "react-router-dom";
 // CSS
 import "./ProjectItem.css";
 
-// I18N
-import { getVocabulary, getContent } from "../../components/I18n/I18n";
+// Hooks
+import { getContent, getVocabulary } from "@hooks/useTranslationHelpers";
 
 // Utils
-import { slugify } from "../../utils/Text";
+import { slugify } from "@utils/Text";
 
 type Project = {
     name: string;

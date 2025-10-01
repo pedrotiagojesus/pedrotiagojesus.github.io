@@ -1,11 +1,11 @@
 // CSS
 import "./About.css";
 
-// I18N
-import { getVocabulary, getContent } from "../../components/I18n/I18n";
+// Hooks
+import { getContent, getVocabulary } from "@hooks/useTranslationHelpers";
 
 // Components
-import Block from "../../components/Block/Block";
+import Block from "@components/Block/Block";
 
 type About = {
     summary: string;

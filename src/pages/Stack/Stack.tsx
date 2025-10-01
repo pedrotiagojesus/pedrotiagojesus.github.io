@@ -1,11 +1,11 @@
 // CSS
 import "./Stack.css";
 
-// I18N
-import { getVocabulary, getContent } from "../../components/I18n/I18n";
+// Hooks
+import { getContent, getVocabulary } from "@hooks/useTranslationHelpers";
 
 // Utils
-import { slugify } from "../../utils/Text";
+import { slugify } from "@utils/Text";
 
 type Skill = {
     name: string;
