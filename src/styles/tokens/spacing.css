@@ -1,0 +1,76 @@
+:root {
+    /* Base Spacing Scale - 4px base unit with consistent multipliers */
+    --space-0: 0rem;
+    --space-px: 0.0625rem;  /* 1px */
+    --space-0-5: 0.125rem;  /* 2px */
+    --space-1: 0.25rem;     /* 4px */
+    --space-1-5: 0.375rem;  /* 6px */
+    --space-2: 0.5rem;      /* 8px */
+    --space-2-5: 0.625rem;  /* 10px */
+    --space-3: 0.75rem;     /* 12px */
+    --space-3-5: 0.875rem;  /* 14px */
+    --space-4: 1rem;        /* 16px */
+    --space-5: 1.25rem;     /* 20px */
+    --space-6: 1.5rem;      /* 24px */
+    --space-7: 1.75rem;     /* 28px */
+    --space-8: 2rem;        /* 32px */
+    --space-9: 2.25rem;     /* 36px */
+    --space-10: 2.5rem;     /* 40px */
+    --space-11: 2.75rem;    /* 44px */
+    --space-12: 3rem;       /* 48px */
+    --space-14: 3.5rem;     /* 56px */
+    --space-16: 4rem;       /* 64px */
+    --space-20: 5rem;       /* 80px */
+    --space-24: 6rem;       /* 96px */
+    --space-28: 7rem;       /* 112px */
+    --space-32: 8rem;       /* 128px */
+
+    /* Semantic Spacing Tokens */
+    --space-component-padding-sm: var(--space-3);
+    --space-component-padding-md: var(--space-4);
+    --space-component-padding-lg: var(--space-6);
+    --space-component-padding-xl: var(--space-8);
+
+    --space-component-gap-sm: var(--space-2);
+    --space-component-gap-md: var(--space-4);
+    --space-component-gap-lg: var(--space-6);
+    --space-component-gap-xl: var(--space-8);
+
+    --space-section-padding-sm: var(--space-8);
+    --space-section-padding-md: var(--space-12);
+    --space-section-padding-lg: var(--space-16);
+    --space-section-padding-xl: var(--space-24);
+
+    --space-container-padding-sm: var(--space-4);
+    --space-container-padding-md: var(--space-6);
+    --space-container-padding-lg: var(--space-8);
+    --space-container-padding-xl: var(--space-12);
+
+    /* Legacy aliases for backward compatibility */
+    --space-2xs: var(--space-1);
+    --space-xs: var(--space-2);
+    --space-sm: var(--space-3);
+    --space-md: var(--space-4);
+    --space-lg: var(--space-6);
+    --space-xl: var(--space-8);
+    --space-2xl: var(--space-12);
+}
+
+/* Responsive Spacing Adjustments */
+@media (min-width: 768px) {
+    :root {
+        --space-section-padding-sm: var(--space-12);
+        --space-section-padding-md: var(--space-16);
+        --space-section-padding-lg: var(--space-24);
+        --space-section-padding-xl: var(--space-32);
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --space-container-padding-sm: var(--space-6);
+        --space-container-padding-md: var(--space-8);
+        --space-container-padding-lg: var(--space-12);
+        --space-container-padding-xl: var(--space-16);
+    }
+}

@@ -2,8 +2,8 @@
     position: absolute;
     width: 0px;
     opacity: 0.75;
-    background-color: var(--theme-color-body);
-    box-shadow: var(--theme-color-body) 0px 0px 4px 1px;
+    background-color: var(--color-text);
+    box-shadow: var(--color-text) 0px 0px 4px 1px;
     opacity: 0;
     top: 100vh;
     bottom: 0px;

@@ -3,10 +3,24 @@
     height: 2rem;
     width: 4rem;
     border-radius: 1rem;
-    background-color: var(--theme-foreground-background-color-2);
+    background-color: var(--color-neutral-300);
     margin-right: 0;
     cursor: pointer;
     position: relative;
+    border: 2px solid var(--color-border-subtle);
+    transition: var(--transition-colors);
+}
+
+body[data-theme="dark"] .toggle-theme-container {
+    background-color: var(--color-neutral-700);
+}
+
+.toggle-theme-container:hover {
+    background-color: var(--color-secondary-100);
+}
+
+body[data-theme="dark"] .toggle-theme-container:hover {
+    background-color: var(--color-secondary-800);
 }
 
 .toggle-theme-container .toggle {
@@ -15,14 +29,23 @@
 
 .toggle-theme-container .toggle + .icons {
     position: absolute;
-    left: 0.5rem;
+    left: 0.25rem;
     top: 50%;
     transform: translate(0, -50%);
-    transition: var(--theme-transition-duration) left,
-        transform var(--theme-transition-timing-function);
+    transition: var(--motion-base) left, transform var(--ease-standard);
+    background-color: var(--color-accent-orange-500);
+    color: white;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
 }
 
 .toggle-theme-container .toggle:checked + .icons {
-    left: calc(100% - 0.5rem);
-    transform: translate(-100%, -50%);
+    left: calc(100% - 1.5rem);
+    transform: translate(0, -50%);
+    background-color: var(--color-primary);
 }

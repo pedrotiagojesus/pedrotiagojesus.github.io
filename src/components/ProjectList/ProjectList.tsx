@@ -4,43 +4,67 @@ import { Link } from "react-router-dom";
 import "./ProjectList.css";
 
 // Components
-import ProjectItem from "@components/ProjectItem/ProjectItem";
+import CardSkeleton from "@components/Card/Skeleton/CardSkeleton";
 
 // Types
-import type { Project } from "@typesLocal/project";
+import type { ProjectList as ProjectListProps } from "@typesLocal/index";
 
-// Hooks
-import { getContent, getVocabulary } from "@hooks/useTranslationHelpers";
+// Utils
+import { vocabulary } from "@utils/vocabulary";
+import Button from "@components/Button/Button";
+import Card from "@components/Card/Card";
+import { getProjectImage } from "@utils/image";
+import { slugify } from "@utils/text";
 
-type ProjectListProps = {
-    title: string;
-    limit?: number;
-    showViewAllButton?: boolean;
-    viewAllLink?: string;
-};
+const SkeletonList = ({ count }: { count: number }) => (
+    <div className="list">
+        {Array.from({ length: count }).map((_, i) => (
+            <CardSkeleton key={i} title={true} description={true} image={true} />
+        ))}
+    </div>
+);
 
-const ProjectList = ({ title, limit, showViewAllButton = true, viewAllLink = "/project" }: ProjectListProps) => {
+const ProjectList = ({
+    title = "",
+    projects = [],
+    showViewAllButton = true,
+    isLoading,
+    itemLimit,
+    keyPrefix = "project",
+}: ProjectListProps) => {
+    // Vocabulary
+    const seeAll = vocabulary("common.seeAll");
+    const skeletonCount = itemLimit ?? 4;
 
-    const projectArr = getContent("project") as Project[];
-    const projectsToShow = limit ? projectArr.slice(0, limit) : projectArr;
+    if (isLoading) {
+        return (
+            <section id="project-list" aria-labelledby="project-list-title">
+                {title && <h2 id="project-list-title">{title}</h2>}
+                <SkeletonList count={skeletonCount} />
+            </section>
+        );
+    }
 
     return (
-        <section id="project-list" aria-label={title}>
-            <h3>{title}</h3>
+        <section id="project-list" aria-labelledby="project-list-title">
+            {title && <h2 id="project-list-title">{title}</h2>}
             <div className="list">
-                {projectsToShow.map((project) => (
-                    <ProjectItem
-                        key={project.name}
-                        name={project.name}
+                {projects.map((project) => (
+                    <Card
+                        key={`${keyPrefix}-${project.id}`}
+                        htmlElement="article"
+                        title={project.name}
                         description={project.description}
-                        image={project.coverImage}
+                        image={getProjectImage(project.coverImage)}
+                        link={`/project/${slugify(project.name)}`}
+                        linkCover={true}
                     />
                 ))}
             </div>
-            {showViewAllButton && (
-                <Link to={viewAllLink} className="btn btn-secondary view-all-button">
-                    {getVocabulary("project.seeAll")}
-                </Link>
+            {showViewAllButton && projects.length > 0 && (
+                <Button variant="secondary" as={Link} to="/project" className="view-all-button">
+                    {seeAll}
+                </Button>
             )}
         </section>
     );

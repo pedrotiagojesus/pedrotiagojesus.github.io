@@ -8,7 +8,7 @@ import Avatar from "@assets/img/avatar.webp";
 
 const Profile = () => {
     return (
-        <Link to="/" id="widget-profile">
+        <Link id="widget-profile" to="/">
             <div className="avatar-wrapper">
                 <img src={Avatar} alt="avatar" />
             </div>

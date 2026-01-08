@@ -6,15 +6,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "@assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css";
 
 // CSS
-import "@assets/css/index.css";
-import "@assets/css/root.css";
+import "@styles/base.css";
+import "@styles/globals.css";
+
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "./queryClient";
 
 // Contexts
 import { ActivePageProvider } from "@contexts/ActivePageContext";
 import { ThemeContextProvider } from "@contexts/ThemeContext";
+import { HelmetProvider } from "react-helmet-async";
 
 // I18n
-import "./i18n";
+import "@config/i18n";
 
 // Pages
 import App from "./App";
@@ -22,8 +26,8 @@ import Homepage from "@pages/Homepage/Homepage";
 import Experience from "@pages/Experience/Experience";
 import Project from "@pages/Project/Project";
 import About from "@pages/About/About";
-import Stack from "@pages/Stack/Stack";
 import ProjectItem from "@pages/Project/ProjectItem";
+import { VocabularyProvider } from "@contexts/VocabularyContext";
 
 const router = createBrowserRouter([
     {
@@ -50,20 +54,22 @@ const router = createBrowserRouter([
                 path: "/about",
                 element: <About />,
             },
-            {
-                path: "/stack",
-                element: <Stack />,
-            },
         ],
     },
 ]);
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <ActivePageProvider>
-            <ThemeContextProvider>
-                <RouterProvider router={router} />
-            </ThemeContextProvider>
-        </ActivePageProvider>
+        <HelmetProvider>
+            <QueryClientProvider client={queryClient}>
+                <ActivePageProvider>
+                    <ThemeContextProvider>
+                        <VocabularyProvider>
+                            <RouterProvider router={router} />
+                        </VocabularyProvider>
+                    </ThemeContextProvider>
+                </ActivePageProvider>
+            </QueryClientProvider>
+        </HelmetProvider>
     </StrictMode>
 );

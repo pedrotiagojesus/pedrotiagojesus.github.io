@@ -3,23 +3,36 @@ import "./Project.css";
 
 // Components
 import ProjectList from "@components/ProjectList/ProjectList";
+import Seo from "@components/Seo";
+
+// Utils
+import { vocabulary } from "@utils/vocabulary";
 
 // Hooks
-import { getVocabulary } from "@hooks/useTranslationHelpers";
-
-type Project = {
-    name: string;
-    description: string;
-    coverImage: string;
-};
+import { useContents } from "@hooks/useContents";
 
 const Project = () => {
+    // Seo
+    const { data, isLoading } = useContents(["seo", "projects"]);
+    const projects = data?.projects ?? [];
+    const seo = data?.seo?.projects;
+
     return (
-        <section id="project-list-content">
-            <h1 className="page-title">{getVocabulary("project.title")}</h1>
-            <p className="page-summary">{getVocabulary("project.summary")}</p>
-            <ProjectList title="" showViewAllButton={false} />
-        </section>
+        <>
+            <Seo title={seo?.title} description={seo?.description} />
+            <section id="project-list-content">
+                <h1 className="page-title">{vocabulary("pages.projects.title")}</h1>
+                <p className="page-summary">{vocabulary("pages.projects.summary")}</p>
+                <ProjectList
+                    title=""
+                    projects={projects}
+                    isLoading={isLoading}
+                    showViewAllButton={false}
+                    itemLimit={4}
+                    keyPrefix="project-page"
+                />
+            </section>
+        </>
     );
 };
 

@@ -24,18 +24,18 @@ const LanguagePicker = () => {
     };
 
     const languageArr = [
-        { label: "pt", value: "pt-PT" },
-        { label: "en", value: "en-US" },
+        { label: "pt", value: "pt" },
+        { label: "en", value: "en" },
     ];
 
     return (
         <div id="language-picker">
             <button type="button" className="btn" onClick={() => setShowPicker(!showPicker)}>
                 <img
-                    src={buildFlag(i18n.languages[1].toLocaleUpperCase())}
-                    alt={`active-lang-${i18n.languages[1].toLocaleUpperCase()}`}
+                    src={buildFlag(i18n.language.toLocaleUpperCase())}
+                    alt={`active-lang-${i18n.language.toLocaleUpperCase()}`}
                 />
-                <span>{i18n.languages[1]}</span>
+                <span>{i18n.language}</span>
             </button>
             <ul className={showPicker ? "show" : ""}>
                 {languageArr.map((language) => (

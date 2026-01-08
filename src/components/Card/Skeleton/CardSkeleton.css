@@ -1,0 +1,39 @@
+.card.skeleton .card-body .card-title {
+    width: 60%;
+    height: 20px;
+    background: linear-gradient(
+        90deg,
+        var(--color-surface-3) 25%,
+        var(--color-surface-4) 50%,
+        var(--color-surface-3) 75%
+    );
+    background-size: 200% 100%;
+
+    animation: motion-shimmer var(--motion-duration-loading-slow) var(--ease-linear) infinite;
+
+    border-radius: 4px;
+}
+
+.card.skeleton .card-body .card-description {
+    height: 1rem;
+    background: linear-gradient(
+        90deg,
+        var(--color-surface-3) 25%,
+        var(--color-surface-4) 50%,
+        var(--color-surface-3) 75%
+    );
+    background-size: 200% 100%;
+
+    animation: motion-shimmer var(--motion-duration-loading-slow) var(--ease-linear) infinite;
+
+    border-radius: 4px;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}

@@ -1,0 +1,84 @@
+.card {
+    --lines: 2;
+
+    position: relative;
+    background-color: var(--color-surface);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: var(--transition-base);
+    border: 1px solid var(--color-border-subtle);
+}
+
+.card.link-cover:hover {
+    box-shadow: var(--shadow-card-elevated);
+    border-color: var(--color-primary-200);
+    transform: translateY(-2px);
+}
+
+body[data-theme="dark"] .card.link-cover:hover {
+    border-color: var(--color-primary-800);
+}
+
+.card .card-body {
+    padding: var(--space-component-padding-md);
+}
+
+.card .card-body .card-title {
+    margin: 0 0 var(--space-2);
+}
+
+.card .card-body .card-description {
+    margin: 0;
+    color: var(--color-text-muted);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--lines);
+}
+
+.card .card-image-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    background: linear-gradient(
+        45deg,
+        var(--color-secondary-100) 25%,
+        var(--color-secondary-200) 50%,
+        var(--color-secondary-100) 75%
+    );
+    background-size: 200% 100%;
+
+    animation: motion-shimmer var(--motion-duration-loading-loop) var(--ease-linear) infinite;
+}
+
+body[data-theme="dark"] .card .card-image-wrapper {
+    background: linear-gradient(
+        45deg,
+        var(--color-secondary-900) 25%,
+        var(--color-secondary-800) 50%,
+        var(--color-secondary-900) 75%
+    );
+}
+
+.card .card-image-wrapper::before {
+    display: block;
+    padding-top: 56.25%;
+    content: "";
+}
+
+.card .card-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-all);
+}
+
+.card .card-link.cover {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    cursor: pointer;
+}

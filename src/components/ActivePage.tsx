@@ -1,5 +1,4 @@
-// src/components/ScrollToTop.tsx
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 
 // Contexts
@@ -9,16 +8,14 @@ const ActivePage: React.FC = () => {
     const { pathname } = useLocation();
     const { setActivePage } = useActivePage();
 
-    const pathnameArr = pathname.split("/");
-    let page = pathnameArr[1];
-
-    if (page == "") {
-        page = "home";
-    }
+    const page = useMemo(() => {
+        const segment = pathname.split("/")[1];
+        return segment || "home";
+    }, [pathname]);
 
     useEffect(() => {
         setActivePage(page);
-    }, [page]);
+    }, [page, setActivePage]);
 
     return null;
 };

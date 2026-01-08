@@ -1,0 +1,112 @@
+:root {
+    /* Breakpoint Values */
+    --bp-xs: 475px;
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+    --bp-2xl: 1536px;
+
+    /* Container Max Widths */
+    --container-xs: 100%;
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1536px;
+
+    /* Content Max Widths */
+    --content-sm: 640px;
+    --content-md: 768px;
+    --content-lg: 1024px;
+    --content-xl: 1280px;
+    --content-prose: 65ch; /* Optimal reading width */
+
+    /* Grid Columns */
+    --grid-cols-1: repeat(1, minmax(0, 1fr));
+    --grid-cols-2: repeat(2, minmax(0, 1fr));
+    --grid-cols-3: repeat(3, minmax(0, 1fr));
+    --grid-cols-4: repeat(4, minmax(0, 1fr));
+    --grid-cols-6: repeat(6, minmax(0, 1fr));
+    --grid-cols-12: repeat(12, minmax(0, 1fr));
+}
+
+/* Responsive Container Queries */
+@container (min-width: 475px) {
+    .container-responsive {
+        --current-container: var(--container-xs);
+    }
+}
+
+@container (min-width: 640px) {
+    .container-responsive {
+        --current-container: var(--container-sm);
+    }
+}
+
+@container (min-width: 768px) {
+    .container-responsive {
+        --current-container: var(--container-md);
+    }
+}
+
+@container (min-width: 1024px) {
+    .container-responsive {
+        --current-container: var(--container-lg);
+    }
+}
+
+@container (min-width: 1280px) {
+    .container-responsive {
+        --current-container: var(--container-xl);
+    }
+}
+
+@container (min-width: 1536px) {
+    .container-responsive {
+        --current-container: var(--container-2xl);
+    }
+}
+
+/* Media Query Mixins as CSS Custom Properties */
+/* XS ≥ 475px */
+@media (min-width: 475px) {
+    :root {
+        --current-breakpoint: 'xs';
+    }
+}
+
+/* SM ≥ 640px */
+@media (min-width: 640px) {
+    :root {
+        --current-breakpoint: 'sm';
+    }
+}
+
+/* MD ≥ 768px */
+@media (min-width: 768px) {
+    :root {
+        --current-breakpoint: 'md';
+    }
+}
+
+/* LG ≥ 1024px */
+@media (min-width: 1024px) {
+    :root {
+        --current-breakpoint: 'lg';
+    }
+}
+
+/* XL ≥ 1280px */
+@media (min-width: 1280px) {
+    :root {
+        --current-breakpoint: 'xl';
+    }
+}
+
+/* 2XL ≥ 1536px */
+@media (min-width: 1536px) {
+    :root {
+        --current-breakpoint: '2xl';
+    }
+}

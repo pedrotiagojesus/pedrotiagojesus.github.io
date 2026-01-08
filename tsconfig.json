@@ -24,7 +24,10 @@
             "@contexts/*": ["src/contexts/*"],
             "@assets/*": ["src/assets/*"],
             "@utils/*": ["src/utils/*"],
-            "@hooks/*": ["src/hooks/*"]
+            "@hooks/*": ["src/hooks/*"],
+            "@config/*": ["src/config/*"],
+            "@service/*": ["src/service/*"],
+            "@styles/*": ["src/styles/*"]
         }
     },
     "include": ["src", "vite.config.ts"]

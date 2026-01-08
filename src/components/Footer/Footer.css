@@ -1,7 +1,7 @@
 footer {
     padding: 0.75rem;
-    background-color: var(--theme-foreground-background-color-1);
-    border-top: 1px solid var(--theme-border-color);
+    background-color: var(--color-surface-1);
+    border-top: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -11,7 +11,7 @@ footer {
 }
 
 footer p {
-    color: var(--theme-color-muted);
+    color: var(--color-text-muted);
     margin: 0;
     font-size: 0.875rem;
 }

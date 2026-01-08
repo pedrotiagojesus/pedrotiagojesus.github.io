@@ -12,12 +12,11 @@ import Profile from "@components/Profile/Profile";
 import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
 
-// Hooks
-import { getVocabulary } from "@hooks/useTranslationHelpers";
+// Utils
+import { vocabulary } from "@utils/vocabulary";
 
 const Navigation = () => {
     const { activePage } = useActivePage();
-
     const [navigationCollapse, setNavigationCollapse] = useState(false);
 
     return (
@@ -35,87 +34,58 @@ const Navigation = () => {
             <div className="navigation-block">
                 <ul className="navigation-list">
                     <li>
-                        <Link
-                            to="/"
-                            className={activePage === "home" ? "active" : ""}
-                        >
+                        <Link to="/" className={activePage === "home" ? "active" : ""}>
                             <i className="fa-regular fa-compass fa-fw"></i>
                             <span className="label">
-                                {getVocabulary("navigation.homepage")}
+                                <span className="label-inner">{vocabulary("navigation.home")}</span>
                             </span>
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            to="/experience"
-                            className={
-                                activePage === "experience" ? "active" : ""
-                            }
-                        >
+                        <Link to="/experience" className={activePage === "experience" ? "active" : ""}>
                             <i className="fa-solid fa-suitcase fa-fw"></i>
                             <span className="label">
-                                {getVocabulary("navigation.experience")}
+                                <span className="label-inner">{vocabulary("navigation.experience")}</span>
                             </span>
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            to="/project"
-                            className={activePage === "project" ? "active" : ""}
-                        >
+                        <Link to="/project" className={activePage === "project" ? "active" : ""}>
                             <i className="fa-solid fa-pencil fa-fw"></i>
                             <span className="label">
-                                {getVocabulary("navigation.project")}
+                                <span className="label-inner">{vocabulary("navigation.projects")}</span>
                             </span>
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            to="/about"
-                            className={activePage === "about" ? "active" : ""}
-                        >
+                        <Link to="/about" className={activePage === "about" ? "active" : ""}>
                             <i className="fa-regular fa-user fa-fw"></i>
                             <span className="label">
-                                {getVocabulary("navigation.about")}
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/stack"
-                            className={activePage === "stack" ? "active" : ""}
-                        >
-                            <i className="fa-solid fa-layer-group fa-fw"></i>
-                            <span className="label">
-                                {getVocabulary("navigation.stack")}
+                                <span className="label-inner">{vocabulary("navigation.about")}</span>
                             </span>
                         </Link>
                     </li>
                     <li>
                         <a href="/CV.pdf" target="_blank">
                             <i className="fa-regular fa-file fa-fw"></i>
-                            <span className="label">CV</span>
+                            <span className="label">
+                                <span className="label-inner">CV</span>
+                            </span>
                         </a>
                     </li>
                 </ul>
             </div>
             <hr />
-            <div className="navigation-block">
+            <div className="navigation-block social-media">
                 <ul className="navigation-list">
                     <li>
-                        <a
-                            href="https://www.linkedin.com/in/pedro-jesus-7a1654140/"
-                            target="_blank"
-                        >
+                        <a href="https://www.linkedin.com/in/pedro-jesus-7a1654140/" target="_blank">
                             <i className="fa-brands fa-linkedin-in"></i>
                             <span className="label">LinkedIn</span>
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="https://github.com/pedrotiagojesus"
-                            target="_blank"
-                        >
+                        <a href="https://github.com/pedrotiagojesus" target="_blank">
                             <i className="fa-brands fa-github"></i>
                             <span className="label">Github</span>
                         </a>
@@ -127,18 +97,14 @@ const Navigation = () => {
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="mailto:pedrotiagojesus1995@gmail.com"
-                            target="_blank"
-                        >
+                        <a href="mailto:pedrotiagojesus1995@gmail.com" target="_blank">
                             <i className="fa-regular fa-envelope"></i>
                             <span className="label">Email</span>
                         </a>
                     </li>
                 </ul>
             </div>
-            <hr />
-            <div className="navigation-block">
+            <div className="navigation-block settings">
                 <LanguagePicker />
                 <ToggleThemeButton />
             </div>

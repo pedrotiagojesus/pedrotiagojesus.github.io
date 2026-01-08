@@ -12,37 +12,50 @@ import Profile from "@components/Profile/Profile";
 import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
 import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 
-// Hooks
-import { getVocabulary } from "@hooks/useTranslationHelpers";
+// Utils
+import { vocabulary } from "@utils/vocabulary";
+import { c } from "node_modules/vite/dist/node/types.d-aGj9QkWt";
+import { use } from "i18next";
 
 const HeaderMobile = () => {
     const { activePage } = useActivePage();
 
-    const [navCollapse, setNavCollapse] = useState(true);
-    const [collapsing, setCollapsing] = useState(false);
-    const [navHeight, setNavHeight] = useState<number | undefined>(0);
-    const listNavRef = useRef<HTMLInputElement>(null);
+    const contentRef = useRef<HTMLDivElement>(null);
+    const isClosingRef = useRef(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [height, setHeight] = useState<number | undefined>(0);
     const [scrolled, setScrolled] = useState(false);
 
-    const handleCollapsing = () => {
-        if (listNavRef.current) {
-            setNavHeight(listNavRef.current.getBoundingClientRect().height);
+    const toggleMenu = () => {
+        if (!contentRef.current) return;
+
+        const contentHeight = contentRef.current.scrollHeight;
+
+        if (!isOpen) {
+            // ABRIR
+            isClosingRef.current = false;
+            setHeight(contentHeight);
+            setIsOpen(true);
+        } else {
+            // FECHAR
+            isClosingRef.current = true;
+            setHeight(contentHeight); // força ponto inicial
+            requestAnimationFrame(() => {
+                setHeight(0);
+            });
+            setIsOpen(false);
         }
-
-        setCollapsing(true);
-
-        setTimeout(() => {
-            setCollapsing(false);
-
-            if (navCollapse) {
-                setNavHeight(undefined);
-            } else {
-                setNavHeight(0);
-            }
-
-            setNavCollapse(!navCollapse);
-        }, 500);
     };
+
+    useEffect(() => {
+        if (!isOpen || isClosingRef.current) return;
+
+        const timeout = setTimeout(() => {
+            setHeight(undefined); // height: auto apenas após abrir
+        }, 300);
+
+        return () => clearTimeout(timeout);
+    }, [isOpen]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,99 +67,47 @@ const HeaderMobile = () => {
                 setScrolled(false);
             }
         };
-
         window.addEventListener("scroll", handleScroll);
-
-        // Limpa o evento de scroll ao desmontar o componente
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
+    useEffect(() => {
+        setIsOpen(false);
+    }, [activePage]);
+
     return (
         <header id="header-mobile" className={scrolled ? "scrolled" : ""}>
             <Profile />
-            <button
-                type="button"
-                id="header-collapse"
-                className={`btn ${navCollapse ? "collapsed" : ""}`}
-                onClick={() => {
-                    handleCollapsing();
-                }}
-            >
+            <button type="button" id="header-collapse" className="btn" onClick={toggleMenu}>
                 <i className="fa-solid fa-bars"></i>
             </button>
-            <nav
-                className={`collapse nav-collapse ${
-                    navCollapse ? "" : "show"
-                } ${collapsing ? "collapsing" : ""}`}
-                style={{ height: navHeight }}
-            >
-                <div className="content" ref={listNavRef}>
+            <nav className={`nav-collapse ${isOpen ? "show" : ""}`} style={{ height }}>
+                <div className="content" ref={contentRef}>
                     <ul>
                         <li>
-                            <Link
-                                to="/"
-                                className={
-                                    activePage === "home" ? "active" : ""
-                                }
-                            >
+                            <Link to="/" className={activePage === "home" ? "active" : ""}>
                                 <i className="fa-regular fa-compass"></i>
-                                <span className="label">
-                                    {getVocabulary("navigation.homepage")}
-                                </span>
+                                <span className="label">{vocabulary("navigation.home")}</span>
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="/experience"
-                                className={
-                                    activePage === "experience" ? "active" : ""
-                                }
-                            >
+                            <Link to="/experience" className={activePage === "experience" ? "active" : ""}>
                                 <i className="fa-solid fa-suitcase"></i>
-                                <span className="label">
-                                    {getVocabulary("navigation.experience")}
-                                </span>
+                                <span className="label">{vocabulary("navigation.experience")}</span>
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="/project"
-                                className={
-                                    activePage === "project" ? "active" : ""
-                                }
-                            >
+                            <Link to="/project" className={activePage === "project" ? "active" : ""}>
                                 <i className="fa-solid fa-pencil"></i>
-                                <span className="label">
-                                    {getVocabulary("navigation.project")}
-                                </span>
+                                <span className="label">{vocabulary("navigation.projects")}</span>
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="/about"
-                                className={
-                                    activePage === "about" ? "active" : ""
-                                }
-                            >
+                            <Link to="/about" className={activePage === "about" ? "active" : ""}>
                                 <i className="fa-regular fa-user"></i>
-                                <span className="label">
-                                    {getVocabulary("navigation.about")}
-                                </span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/stack"
-                                className={
-                                    activePage === "stack" ? "active" : ""
-                                }
-                            >
-                                <i className="fa-solid fa-layer-group"></i>
-                                <span className="label">
-                                    {getVocabulary("navigation.stack")}
-                                </span>
+                                <span className="label">{vocabulary("navigation.about")}</span>
                             </Link>
                         </li>
                         <li>
@@ -159,41 +120,31 @@ const HeaderMobile = () => {
                     <hr />
                     <ul className="social-network">
                         <li>
-                            <a
-                                href="https://www.linkedin.com/in/pedro-jesus-7a1654140/"
-                                target="_blank"
-                            >
+                            <a href="https://www.linkedin.com/in/pedro-jesus-7a1654140/" target="_blank">
                                 <i className="fa-brands fa-linkedin-in"></i>
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="https://github.com/pedrotiagojesus"
-                                target="_blank"
-                            >
+                            <a href="https://github.com/pedrotiagojesus" target="_blank">
                                 <i className="fa-brands fa-github"></i>
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="https://x.com/PedroJe07463775"
-                                target="_blank"
-                            >
+                            <a href="https://x.com/PedroJe07463775" target="_blank">
                                 <i className="fa-brands fa-x-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="mailto:pedrotiagojesus1995@gmail.com"
-                                target="_blank"
-                            >
+                            <a href="mailto:pedrotiagojesus1995@gmail.com" target="_blank">
                                 <i className="fa-regular fa-envelope"></i>
                             </a>
                         </li>
                     </ul>
                     <hr />
-                    <LanguagePicker />
-                    <ToggleThemeButton />
+                    <div className="settings">
+                        <LanguagePicker />
+                        <ToggleThemeButton />
+                    </div>
                 </div>
             </nav>
         </header>

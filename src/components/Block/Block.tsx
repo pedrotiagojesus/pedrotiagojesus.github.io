@@ -3,35 +3,32 @@ import { Link } from "react-router-dom";
 // CSS
 import "./Block.css";
 
-// Hooks
-import { getVocabulary } from "@hooks/useTranslationHelpers";
-
 // Components
-import Stars from "@components/BackgrounAnimation/Stars/Stars";
 import Light from "@components/BackgrounAnimation/Light/Light";
 
+// Utils
+import { vocabulary } from "@utils/vocabulary";
+import Button from "@components/Button/Button";
+
 const Block = () => {
+
+    // Vocabulary
+    const i18n = {
+        title: vocabulary("sections.projectsPreview.title"),
+        summary: vocabulary("sections.projectsPreview.summary"),
+        cta: vocabulary("sections.projectsPreview.cta"),
+    };
+
     return (
         <section id="block">
             <div className="block-list">
                 <article>
-                    <i className="fa-solid fa-layer-group"></i>
-                    <h3>{getVocabulary("block.title2")}</h3>
-                    <p>{getVocabulary("block.summary2")}</p>
-                    <Link to="/stack" className="btn">
-                        {getVocabulary("block.button2")}
-                    </Link>
-                    <div className="background">
-                        <Stars />
-                    </div>
-                </article>
-                <article>
                     <i className="fa-solid fa-pencil"></i>
-                    <h3>{getVocabulary("block.title1")}</h3>
-                    <p>{getVocabulary("block.summary1")}</p>
-                    <Link to="/project" className="btn">
-                        {getVocabulary("block.button1")}
-                    </Link>
+                    <h2>{i18n.title}</h2>
+                    <p>{i18n.summary}</p>
+                    <Button as={Link} to="/project">
+                        {i18n.cta}
+                    </Button>
                     <div className="background">
                         <Light />
                     </div>
