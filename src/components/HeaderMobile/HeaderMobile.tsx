@@ -14,8 +14,6 @@ import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 
 // Utils
 import { vocabulary } from "@utils/vocabulary";
-import { c } from "node_modules/vite/dist/node/types.d-aGj9QkWt";
-import { use } from "i18next";
 
 const HeaderMobile = () => {
     const { activePage } = useActivePage();
