@@ -63,6 +63,7 @@ const Contact = () => {
             setName("");
             setEmail("");
             setMessage("");
+            console.log(res);
         } catch (err: any) {
             alert("Erro ao enviar mensagem: " + (err?.response?.data?.error || err.message));
         }
