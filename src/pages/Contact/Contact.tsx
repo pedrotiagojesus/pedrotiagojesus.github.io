@@ -13,8 +13,12 @@ import { useContents } from "@hooks/useContents";
 import { env } from "@config/env";
 import { useEffect, useState } from "react";
 import { postEmail } from "@service/emailService";
+import { useToast } from "@contexts/ToastContext";
+import { i } from "node_modules/vite/dist/node/types.d-aGj9QkWt";
 
 const Contact = () => {
+    const { showToast } = useToast();
+
     // Vocabulary
     const i18n = {
         title: vocabulary("pages.contact.title"),
@@ -23,6 +27,8 @@ const Contact = () => {
         email: vocabulary("pages.contact.email"),
         message: vocabulary("pages.contact.message"),
         send: vocabulary("pages.contact.send"),
+        messageSuccess: vocabulary("pages.contact.messageSuccess"),
+        messageError: vocabulary("pages.contact.messageError"),
     };
 
     const { data } = useContents(["seo"]);
@@ -51,21 +57,20 @@ const Contact = () => {
         e.preventDefault();
 
         if (!window.grecaptcha) {
-            alert("reCAPTCHA ainda não carregado, tente novamente");
+            showToast(i18n.messageSuccess, "success");
             return;
         }
 
         const token = await window.grecaptcha.execute(env.VITE_GOOGLE_RECAPTCHA_SITE_KEY, { action: "contact" });
 
         try {
-            const res = await postEmail({ name, email, message, recaptchaToken: token });
-            alert("Mensagem enviada com sucesso!");
+            await postEmail({ name, email, message, recaptchaToken: token });
+            showToast(i18n.messageSuccess, "success");
             setName("");
             setEmail("");
             setMessage("");
-            console.log(res);
         } catch (err: any) {
-            alert("Erro ao enviar mensagem: " + (err?.response?.data?.error || err.message));
+            showToast(i18n.messageError, "error");
         }
     };
 
@@ -78,7 +83,13 @@ const Contact = () => {
                 <form className="contact-form" method="POST" id="contact-form" onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">{i18n.name}</label>
-                        <input type="text" id="name" name="name" required onChange={(e) => setName(e.target.value)} />
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">{i18n.email}</label>
@@ -86,8 +97,8 @@ const Contact = () => {
                             type="email"
                             id="email"
                             name="email"
-                            required
                             onChange={(e) => setEmail(e.target.value)}
+                            value={email}
                         />
                     </div>
                     <div className="form-group">
@@ -96,8 +107,8 @@ const Contact = () => {
                             id="message"
                             name="message"
                             rows={8}
-                            required
                             onChange={(e) => setMessage(e.target.value)}
+                            value={message}
                         ></textarea>
                     </div>
                     <button className="btn btn-primary" type="submit">

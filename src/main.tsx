@@ -17,6 +17,7 @@ import { ActivePageProvider } from "@contexts/ActivePageContext";
 import { ThemeContextProvider } from "@contexts/ThemeContext";
 import { HelmetProvider } from "react-helmet-async";
 import { VocabularyProvider } from "@contexts/VocabularyContext";
+import { ToastProvider } from "@contexts/ToastContext";
 
 // I18n
 import "@config/i18n";
@@ -69,9 +70,11 @@ createRoot(document.getElementById("root")!).render(
             <QueryClientProvider client={queryClient}>
                 <ActivePageProvider>
                     <ThemeContextProvider>
-                        <VocabularyProvider>
-                            <RouterProvider router={router} />
-                        </VocabularyProvider>
+                        <ToastProvider>
+                            <VocabularyProvider>
+                                <RouterProvider router={router} />
+                            </VocabularyProvider>
+                        </ToastProvider>
                     </ThemeContextProvider>
                 </ActivePageProvider>
             </QueryClientProvider>
