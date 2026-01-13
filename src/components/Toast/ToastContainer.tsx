@@ -1,6 +1,6 @@
 import { Toast } from "./toast.types";
 import { ToastItem } from "./ToastItem";
-import "./toast.css";
+import "./Toast.css";
 
 interface Props {
     toasts: Toast[];
