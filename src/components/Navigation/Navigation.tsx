@@ -65,7 +65,7 @@ const Navigation = () => {
                             </span>
                         </Link>
                     </li>
-                    <li style={{ display: 'none' }}>
+                    <li>
                         <Link to="/contact" className={activePage === "contact" ? "active" : ""}>
                             <i className="fa-solid fa-phone fa-fw"></i>
                             <span className="label">

@@ -109,6 +109,12 @@ const HeaderMobile = () => {
                             </Link>
                         </li>
                         <li>
+                            <Link to="/contact" className={activePage === "contact" ? "active" : ""}>
+                                <i className="fa-solid fa-phone"></i>
+                                <span className="label">{vocabulary("navigation.contact")}</span>
+                            </Link>
+                        </li>
+                        <li>
                             <a href="/CV.pdf" target="_blank">
                                 <i className="fa-regular fa-file"></i>
                                 <span className="label">CV</span>
