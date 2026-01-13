@@ -81,3 +81,9 @@ export type SEOProps = {
     type?: "website" | "article" | "profile";
     noIndex?: boolean;
 };
+declare global {
+    interface Window {
+        grecaptcha: any;
+    }
+}
+export {};

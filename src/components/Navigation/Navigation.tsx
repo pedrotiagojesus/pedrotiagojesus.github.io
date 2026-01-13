@@ -66,6 +66,14 @@ const Navigation = () => {
                         </Link>
                     </li>
                     <li>
+                        <Link to="/contact" className={activePage === "contact" ? "active" : ""}>
+                            <i className="fa-solid fa-phone fa-fw"></i>
+                            <span className="label">
+                                <span className="label-inner">{vocabulary("navigation.contact")}</span>
+                            </span>
+                        </Link>
+                    </li>
+                    <li>
                         <a href="/CV.pdf" target="_blank">
                             <i className="fa-regular fa-file fa-fw"></i>
                             <span className="label">

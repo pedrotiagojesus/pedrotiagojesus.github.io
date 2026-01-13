@@ -4,6 +4,7 @@ const API_ENDPOINTS = {
     PROFILE: "/profile",
     EXPERIENCE: "/experience",
     PROJECT: "/project",
+    EMAIL: "/email/send",
 };
 
 export default API_ENDPOINTS;

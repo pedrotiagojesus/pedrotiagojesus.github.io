@@ -40,6 +40,50 @@ hr {
     margin: 0;
 }
 
+form {
+    margin-bottom: var(--space-8);
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-4);
+}
+
+form .form-group label {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-2);
+    font-weight: var(--font-weight-medium);
+}
+
+form .form-group input,
+form .form-group textarea {
+    padding: var(--space-2);
+    font-size: var(--text-base);
+    border: 2px solid var(--color-border);
+    border-radius: 3px;
+    background-color: hsl(0, 0%, 90%);
+}
+
+form .form-group input:focus,
+form .form-group textarea:focus {
+    border-color: var(--color-primary);
+}
+
+form .form-group input:focus-visible,
+form .form-group textarea:focus-visible {
+    outline: none;
+}
+
+form .form-group textarea {
+    resize: vertical;
+}
+
+form .form-group input::placeholder,
+form .form-group textarea::placeholder {
+    color: hsl(0, 0%, 70%);
+}
+
 /* SM ≥ 576px */
 @media (min-width: 576px) {
     /* ... */

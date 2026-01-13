@@ -16,6 +16,7 @@ import { queryClient } from "./queryClient";
 import { ActivePageProvider } from "@contexts/ActivePageContext";
 import { ThemeContextProvider } from "@contexts/ThemeContext";
 import { HelmetProvider } from "react-helmet-async";
+import { VocabularyProvider } from "@contexts/VocabularyContext";
 
 // I18n
 import "@config/i18n";
@@ -27,7 +28,7 @@ import Experience from "@pages/Experience/Experience";
 import Project from "@pages/Project/Project";
 import About from "@pages/About/About";
 import ProjectItem from "@pages/Project/ProjectItem";
-import { VocabularyProvider } from "@contexts/VocabularyContext";
+import Contact from "@pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
             {
                 path: "/about",
                 element: <About />,
+            },
+            {
+                path: "/contact",
+                element: <Contact />,
             },
         ],
     },
