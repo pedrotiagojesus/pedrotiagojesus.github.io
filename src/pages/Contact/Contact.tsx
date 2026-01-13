@@ -89,6 +89,7 @@ const Contact = () => {
                             name="name"
                             onChange={(e) => setName(e.target.value)}
                             value={name}
+                            required
                         />
                     </div>
                     <div className="form-group">
@@ -99,6 +100,7 @@ const Contact = () => {
                             name="email"
                             onChange={(e) => setEmail(e.target.value)}
                             value={email}
+                            required
                         />
                     </div>
                     <div className="form-group">
@@ -109,6 +111,7 @@ const Contact = () => {
                             rows={8}
                             onChange={(e) => setMessage(e.target.value)}
                             value={message}
+                            required
                         ></textarea>
                     </div>
                     <button className="btn btn-primary" type="submit">
