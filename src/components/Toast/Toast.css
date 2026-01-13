@@ -1,20 +1,21 @@
 .toast-container {
     position: fixed;
-    top: 16px;
-    right: 16px;
+    top: 6rem;
+    right: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--space-component-gap-md);
     z-index: 9999;
+    align-items: end;
 }
 
 .toast {
     position: relative;
-    min-width: 280px;
-    padding: 14px 40px 18px 16px;
-    border-radius: 6px;
+    max-width: calc(100% - 2rem);
+    padding: 1rem 2.25rem 1rem 1rem;
+    border-radius: 3px;
     color: #fff;
-    font-weight: 500;
+    font-weight: var(--font-weight-regular);
     animation: slideIn 0.3s ease forwards;
     overflow: hidden;
 }
@@ -34,12 +35,11 @@
 
 .toast-close {
     position: absolute;
-    top: 6px;
-    right: 8px;
+    top: 0.8rem;
+    right: 0.5rem;
     background: transparent;
     border: none;
     color: #fff;
-    font-size: 16px;
     cursor: pointer;
     opacity: 0.8;
 }
@@ -72,4 +72,34 @@
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+/* SM ≥ 576px */
+@media (min-width: 576px) {
+}
+
+/* MD ≥ 768px */
+@media (min-width: 768px) {
+    .toast-container {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .toast {
+        min-width: 280px;
+        max-width: unset;
+        font-weight: var(--font-weight-medium);
+    }
+}
+
+/* LG ≥ 992px */
+@media (min-width: 992px) {
+}
+
+/* XL ≥ 1200px */
+@media (min-width: 1200px) {
+}
+
+/* XXL ≥ 1400px */
+@media (min-width: 1400px) {
 }
