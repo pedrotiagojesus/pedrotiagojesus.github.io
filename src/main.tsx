@@ -30,6 +30,9 @@ import Contact from "@pages/Contact/Contact";
 
 // Load FontAwesome asynchronously to avoid blocking render
 const loadFontAwesome = () => {
+    // Load optimized font-face declarations first (with font-display: swap)
+    import("@styles/fontawesome-optimized.css");
+    // Then load the icon classes
     import("@assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css");
 };
 
