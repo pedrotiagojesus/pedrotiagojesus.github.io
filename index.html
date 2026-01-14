@@ -51,6 +51,41 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
+    <!-- Critical CSS inline for faster initial render -->
+    <style>
+      :root {
+        --color-bg: #ffffff;
+        --color-text: #1a1a1a;
+        --font-family-base:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+      }
+      body {
+        margin: 0;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: var(--font-family-base);
+        line-height: 1.5;
+      }
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      #root {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        flex: 1;
+      }
+    </style>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.google.com" crossorigin="" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // MIT License
@@ -82,17 +117,33 @@
     <script
       type="module"
       crossorigin=""
-      src="/assets/index-DdANlq_M.js"
+      src="/assets/index-CunXCVk6.js"
     ></script>
-    <link rel="stylesheet" crossorigin="" href="/assets/index-DKIUSLxo.css" />
+    <link
+      rel="modulepreload"
+      crossorigin=""
+      href="/assets/react-vendor-CQ56Ggv1.js"
+    />
+    <link
+      rel="modulepreload"
+      crossorigin=""
+      href="/assets/query-vendor-CJ_TD6AH.js"
+    />
+    <link rel="stylesheet" crossorigin="" href="/assets/index-BAgz_V-e.css" />
+    <link rel="stylesheet" href="/assets/all-BmeudMjs.css" />
   </head>
 
   <body>
     <div id="root"></div>
-    <script
-      src="https://www.google.com/recaptcha/api.js"
-      async=""
-      defer=""
-    ></script>
+    <script>
+      // Load reCAPTCHA asynchronously after page load
+      window.addEventListener("load", function () {
+        const script = document.createElement("script");
+        script.src = "https://www.google.com/recaptcha/api.js";
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+      });
+    </script>
   </body>
 </html>
