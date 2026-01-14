@@ -16,6 +16,8 @@ const Card = ({ htmlElement, title, description, image, link, linkCover, isLcp }
                     <img
                         src={image}
                         alt={`image - ${slugify(title)}`}
+                        width="1920"
+                        height="1080"
                         fetchPriority={isLcp ? "high" : "auto"}
                         loading={isLcp ? "eager" : "lazy"}
                         decoding="async"
@@ -26,7 +28,11 @@ const Card = ({ htmlElement, title, description, image, link, linkCover, isLcp }
                 <h3 className="card-title">{title}</h3>
                 <div className="card-description">{description}</div>
             </div>
-            {link && linkCover && <a href={link} className="card-link cover"></a>}
+            {link && linkCover && (
+                <a href={link} className="card-link cover" aria-label={`View ${title}`}>
+                    <span className="sr-only">View {title}</span>
+                </a>
+            )}
         </Element>
     );
 };

@@ -84,6 +84,19 @@ form .form-group textarea::placeholder {
     color: hsl(0, 0%, 70%);
 }
 
+/* Accessibility: Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 /* SM ≥ 576px */
 @media (min-width: 576px) {
     /* ... */
