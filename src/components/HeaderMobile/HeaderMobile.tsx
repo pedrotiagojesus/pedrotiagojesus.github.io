@@ -78,7 +78,14 @@ const HeaderMobile = () => {
     return (
         <header id="header-mobile" className={scrolled ? "scrolled" : ""}>
             <Profile />
-            <button type="button" id="header-collapse" className="btn" onClick={toggleMenu}>
+            <button
+                type="button"
+                id="header-collapse"
+                className="btn"
+                onClick={toggleMenu}
+                aria-label={isOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isOpen}
+            >
                 <i className="fa-solid fa-bars"></i>
             </button>
             <nav className={`nav-collapse ${isOpen ? "show" : ""}`} style={{ height }}>
@@ -115,7 +122,7 @@ const HeaderMobile = () => {
                             </Link>
                         </li>
                         <li>
-                            <a href="/CV.pdf" target="_blank">
+                            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
                                 <i className="fa-regular fa-file"></i>
                                 <span className="label">CV</span>
                             </a>
@@ -124,22 +131,42 @@ const HeaderMobile = () => {
                     <hr />
                     <ul className="social-network">
                         <li>
-                            <a href="https://www.linkedin.com/in/pedro-jesus-7a1654140/" target="_blank">
+                            <a
+                                href="https://www.linkedin.com/in/pedro-jesus-7a1654140/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn profile"
+                            >
                                 <i className="fa-brands fa-linkedin-in"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/pedrotiagojesus" target="_blank">
+                            <a
+                                href="https://github.com/pedrotiagojesus"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub profile"
+                            >
                                 <i className="fa-brands fa-github"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://x.com/PedroJe07463775" target="_blank">
+                            <a
+                                href="https://x.com/PedroJe07463775"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="X (Twitter) profile"
+                            >
                                 <i className="fa-brands fa-x-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:pedrotiagojesus1995@gmail.com" target="_blank">
+                            <a
+                                href="mailto:pedrotiagojesus1995@gmail.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Send email"
+                            >
                                 <i className="fa-regular fa-envelope"></i>
                             </a>
                         </li>

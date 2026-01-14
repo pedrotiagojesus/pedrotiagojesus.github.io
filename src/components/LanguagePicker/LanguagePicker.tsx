@@ -30,7 +30,13 @@ const LanguagePicker = () => {
 
     return (
         <div id="language-picker">
-            <button type="button" className="btn" onClick={() => setShowPicker(!showPicker)}>
+            <button
+                type="button"
+                className="btn"
+                onClick={() => setShowPicker(!showPicker)}
+                aria-label={`Change language, current: ${i18n.language}`}
+                aria-expanded={showPicker}
+            >
                 <img
                     src={buildFlag(i18n.language.toLocaleUpperCase())}
                     alt={`active-lang-${i18n.language.toLocaleUpperCase()}`}

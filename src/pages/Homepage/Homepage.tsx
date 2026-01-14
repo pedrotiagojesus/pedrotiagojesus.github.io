@@ -49,7 +49,7 @@ const Homepage = () => {
 
     return (
         <>
-            <Seo title={seo?.title} description={seo?.description} noIndex={true} />
+            <Seo title={seo?.title} description={seo?.description} />
             <section id="homepage-about" aria-labelledby="homepage-title">
                 <h1 id="homepage-title" className="page-title">
                     {i18n.heroTitle}

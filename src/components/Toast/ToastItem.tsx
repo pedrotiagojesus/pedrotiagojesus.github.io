@@ -22,7 +22,11 @@ export function ToastItem({ toast, onClose }: Props) {
 
     return (
         <div className={`toast toast-${toast.type}`}>
-            <button className="toast-close" onClick={() => onClose(toast.id)}>
+            <button
+                className="toast-close"
+                onClick={() => onClose(toast.id)}
+                aria-label="Close notification"
+            >
                 ✕
             </button>
 

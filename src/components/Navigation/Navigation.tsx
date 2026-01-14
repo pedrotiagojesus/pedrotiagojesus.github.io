@@ -26,6 +26,8 @@ const Navigation = () => {
                 id="collapse-navigation"
                 className="btn"
                 onClick={() => setNavigationCollapse(!navigationCollapse)}
+                aria-label={navigationCollapse ? "Expand navigation" : "Collapse navigation"}
+                aria-expanded={!navigationCollapse}
             >
                 <i className="fa-solid fa-angle-left"></i>
             </button>
@@ -74,7 +76,7 @@ const Navigation = () => {
                         </Link>
                     </li>
                     <li>
-                        <a href="/CV.pdf" target="_blank">
+                        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
                             <i className="fa-regular fa-file fa-fw"></i>
                             <span className="label">
                                 <span className="label-inner">CV</span>
@@ -87,25 +89,45 @@ const Navigation = () => {
             <div className="navigation-block social-media">
                 <ul className="navigation-list">
                     <li>
-                        <a href="https://www.linkedin.com/in/pedro-jesus-7a1654140/" target="_blank">
+                        <a
+                            href="https://www.linkedin.com/in/pedro-jesus-7a1654140/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn profile"
+                        >
                             <i className="fa-brands fa-linkedin-in"></i>
                             <span className="label">LinkedIn</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/pedrotiagojesus" target="_blank">
+                        <a
+                            href="https://github.com/pedrotiagojesus"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub profile"
+                        >
                             <i className="fa-brands fa-github"></i>
                             <span className="label">Github</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://x.com/PedroJe07463775" target="_blank">
+                        <a
+                            href="https://x.com/PedroJe07463775"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="X (Twitter) profile"
+                        >
                             <i className="fa-brands fa-x-twitter"></i>
                             <span className="label">X</span>
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:pedrotiagojesus1995@gmail.com" target="_blank">
+                        <a
+                            href="mailto:pedrotiagojesus1995@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Send email"
+                        >
                             <i className="fa-regular fa-envelope"></i>
                             <span className="label">Email</span>
                         </a>
