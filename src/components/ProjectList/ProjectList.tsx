@@ -49,7 +49,7 @@ const ProjectList = ({
         <section id="project-list" aria-labelledby="project-list-title">
             {title && <h2 id="project-list-title">{title}</h2>}
             <div className="list">
-                {projects.map((project) => (
+                {projects.map((project, index) => (
                     <Card
                         key={`${keyPrefix}-${project.id}`}
                         htmlElement="article"
@@ -58,6 +58,7 @@ const ProjectList = ({
                         image={getProjectImage(project.coverImage)}
                         link={`/project/${slugify(project.name)}`}
                         linkCover={true}
+                        isLcp={index === 0}
                     />
                 ))}
             </div>

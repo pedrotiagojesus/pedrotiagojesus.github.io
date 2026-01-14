@@ -28,7 +28,7 @@ import About from "@pages/About/About";
 import ProjectItem from "@pages/Project/ProjectItem";
 import Contact from "@pages/Contact/Contact";
 
-// Load FontAwesome asynchronously to avoid blocking render
+// Load FontAwesome after initial render to avoid blocking critical path
 const loadFontAwesome = () => {
     // Load optimized font-face declarations first (with font-display: swap)
     import("@styles/fontawesome-optimized.css");
@@ -36,8 +36,13 @@ const loadFontAwesome = () => {
     import("@assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css");
 };
 
-// Start loading FontAwesome after a short delay
-setTimeout(loadFontAwesome, 100);
+// Load FontAwesome when browser is idle
+if (typeof requestIdleCallback !== "undefined") {
+    requestIdleCallback(loadFontAwesome);
+} else {
+    // Fallback: load after a delay
+    setTimeout(loadFontAwesome, 500);
+}
 
 const router = createBrowserRouter([
     {
