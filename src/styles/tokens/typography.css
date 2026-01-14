@@ -1,3 +1,27 @@
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("/assets/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fa-regular-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Font Awesome 6 Brands";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fa-brands-400.woff2") format("woff2");
+}
+
 :root {
     /* Font Families */
     --font-family-base: "Roboto", sans-serif;
@@ -12,16 +36,16 @@
     --font-weight-bold: 700;
 
     /* Font Size Scale - Mathematical progression (1.25 ratio) */
-    --text-xs: 0.75rem;    /* 12px */
-    --text-sm: 0.875rem;   /* 14px */
-    --text-base: 1rem;     /* 16px */
-    --text-lg: 1.125rem;   /* 18px */
-    --text-xl: 1.25rem;    /* 20px */
-    --text-2xl: 1.5rem;    /* 24px */
-    --text-3xl: 1.875rem;  /* 30px */
-    --text-4xl: 2.25rem;   /* 36px */
-    --text-5xl: 3rem;      /* 48px */
-    --text-6xl: 3.75rem;   /* 60px */
+    --text-xs: 0.75rem; /* 12px */
+    --text-sm: 0.875rem; /* 14px */
+    --text-base: 1rem; /* 16px */
+    --text-lg: 1.125rem; /* 18px */
+    --text-xl: 1.25rem; /* 20px */
+    --text-2xl: 1.5rem; /* 24px */
+    --text-3xl: 1.875rem; /* 30px */
+    --text-4xl: 2.25rem; /* 36px */
+    --text-5xl: 3rem; /* 48px */
+    --text-6xl: 3.75rem; /* 60px */
 
     /* Line Heights - Optimized for different content types */
     --line-height-tight: 1.25;
@@ -61,39 +85,39 @@
 /* SM ≥ 576px */
 @media (min-width: 576px) {
     :root {
-        --text-5xl: 3.5rem;   /* 56px */
-        --text-6xl: 4.5rem;   /* 72px */
+        --text-5xl: 3.5rem; /* 56px */
+        --text-6xl: 4.5rem; /* 72px */
     }
 }
 
 /* MD ≥ 768px */
 @media (min-width: 768px) {
     :root {
-        --text-5xl: 4rem;     /* 64px */
-        --text-6xl: 5rem;     /* 80px */
+        --text-5xl: 4rem; /* 64px */
+        --text-6xl: 5rem; /* 80px */
     }
 }
 
 /* LG ≥ 992px */
 @media (min-width: 992px) {
     :root {
-        --text-5xl: 4.5rem;   /* 72px */
-        --text-6xl: 6rem;     /* 96px */
+        --text-5xl: 4.5rem; /* 72px */
+        --text-6xl: 6rem; /* 96px */
     }
 }
 
 /* XL ≥ 1200px */
 @media (min-width: 1200px) {
     :root {
-        --text-5xl: 5rem;     /* 80px */
-        --text-6xl: 7rem;     /* 112px */
+        --text-5xl: 5rem; /* 80px */
+        --text-6xl: 7rem; /* 112px */
     }
 }
 
 /* XXL ≥ 1400px */
 @media (min-width: 1400px) {
     :root {
-        --text-5xl: 5.5rem;   /* 88px */
-        --text-6xl: 8rem;     /* 128px */
+        --text-5xl: 5.5rem; /* 88px */
+        --text-6xl: 8rem; /* 128px */
     }
 }

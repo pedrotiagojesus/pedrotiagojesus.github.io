@@ -7,13 +7,19 @@ import { slugify } from "@utils/text";
 // Types
 import { Card as CardProps } from "@typesLocal/index";
 
-const Card = ({ htmlElement, title, description, image, link, linkCover }: CardProps) => {
+const Card = ({ htmlElement, title, description, image, link, linkCover, isLcp }: CardProps) => {
     const Element = htmlElement || "div";
     return (
         <Element className={`card ${linkCover ? "link-cover" : ""}`}>
             {image && (
                 <div className="card-image-wrapper">
-                    <img src={image} alt={`image - ${slugify(title)}`} />
+                    <img
+                        src={image}
+                        alt={`image - ${slugify(title)}`}
+                        fetchPriority={isLcp ? "high" : "auto"}
+                        loading={isLcp ? "eager" : "lazy"}
+                        decoding="async"
+                    />
                 </div>
             )}
             <div className="card-body">

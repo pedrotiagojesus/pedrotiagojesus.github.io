@@ -11,6 +11,7 @@ export type Card = {
     image?: string;
     link?: string;
     linkCover?: boolean;
+    isLcp?: boolean;
 };
 
 export type CardSkeleton = {
