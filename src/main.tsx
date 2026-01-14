@@ -2,9 +2,6 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Fontawesome
-import "@assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css";
-
 // CSS
 import "@styles/base.css";
 import "@styles/globals.css";
@@ -30,6 +27,14 @@ import Project from "@pages/Project/Project";
 import About from "@pages/About/About";
 import ProjectItem from "@pages/Project/ProjectItem";
 import Contact from "@pages/Contact/Contact";
+
+// Load FontAwesome asynchronously to avoid blocking render
+const loadFontAwesome = () => {
+    import("@assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css");
+};
+
+// Start loading FontAwesome after a short delay
+setTimeout(loadFontAwesome, 100);
 
 const router = createBrowserRouter([
     {

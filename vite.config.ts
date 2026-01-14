@@ -24,4 +24,15 @@ export default defineConfig({
             "@styles": path.resolve(__dirname, "src/styles"),
         },
     },
+    build: {
+        cssCodeSplit: true,
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+                    'query-vendor': ['@tanstack/react-query'],
+                },
+            },
+        },
+    },
 });
