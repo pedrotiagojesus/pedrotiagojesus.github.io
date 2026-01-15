@@ -29,6 +29,8 @@ jobs:
           VITE_ENDPOINT_PUBLIC: ${{ secrets.VITE_ENDPOINT_PUBLIC }}
           VITE_TIMEOUT: ${{ secrets.VITE_TIMEOUT }}
           VITE_GOOGLE_RECAPTCHA_SITE_KEY: ${{ secrets.VITE_GOOGLE_RECAPTCHA_SITE_KEY }}
+          VITE_GA_ID: ${{ secrets.VITE_GA_ID }}
+          VITE_PRODUCTION: ${{ secrets.VITE_PRODUCTION }}
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
