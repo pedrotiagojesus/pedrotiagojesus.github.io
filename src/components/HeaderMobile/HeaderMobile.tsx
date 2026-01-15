@@ -14,7 +14,7 @@ import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 
 // Utils
 import { vocabulary } from "@utils/vocabulary";
-import { trackCVClick, trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick } from "src/analytics/events";
+import { trackCVClick, trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick } from "@analytics/events";
 
 const HeaderMobile = () => {
     const { activePage } = useActivePage();

@@ -16,7 +16,7 @@ import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
 import { vocabulary } from "@utils/vocabulary";
 
 // Analytics
-import { trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick, trackCVClick } from "src/analytics/events";
+import { trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick, trackCVClick } from "@analytics/events";
 
 const Navigation = () => {
     const { activePage } = useActivePage();

@@ -22,6 +22,7 @@ export default defineConfig({
             "@service": path.resolve(__dirname, "src/service"),
             "@config": path.resolve(__dirname, "src/config"),
             "@styles": path.resolve(__dirname, "src/styles"),
+            "@analytics": path.resolve(__dirname, "src/analytics"),
         },
     },
     build: {

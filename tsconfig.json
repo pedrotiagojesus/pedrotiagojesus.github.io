@@ -27,7 +27,8 @@
             "@hooks/*": ["src/hooks/*"],
             "@config/*": ["src/config/*"],
             "@service/*": ["src/service/*"],
-            "@styles/*": ["src/styles/*"]
+            "@styles/*": ["src/styles/*"],
+            "@analytics/*": ["src/analytics/*"]
         }
     },
     "include": ["src", "vite.config.ts"]
