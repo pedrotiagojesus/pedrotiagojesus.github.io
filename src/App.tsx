@@ -12,15 +12,16 @@ import Loading from "@components/Loading/Loading";
 import { useVocabulary } from "@contexts/VocabularyContext";
 
 // Analytics
-import { initGA } from "./analytics";
 import { usePageTracking } from "./analytics/usePageTracking";
 
 function App() {
     const { isLoading } = useVocabulary();
+
+    // Track page views
+    usePageTracking();
+
     if (isLoading) return <Loading />;
 
-    initGA();
-    usePageTracking();
     return (
         <>
             <ScrollToTop />

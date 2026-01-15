@@ -22,6 +22,12 @@ const NotFound = lazy(() => import("@pages/NotFound/NotFound"));
 // Providers
 import { AppProviders } from "./providers/AppProviders";
 
+// Analytics
+import { initGA } from "./analytics";
+
+// Initialize Google Analytics once
+initGA();
+
 // Load FontAwesome after initial render to avoid blocking critical path
 const loadFontAwesome = () => {
     // Load optimized font-face declarations first (with font-display: swap)
