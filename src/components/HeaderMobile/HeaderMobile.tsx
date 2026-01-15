@@ -14,6 +14,7 @@ import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 
 // Utils
 import { vocabulary } from "@utils/vocabulary";
+import { trackCVClick, trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick } from "src/analytics/events";
 
 const HeaderMobile = () => {
     const { activePage } = useActivePage();
@@ -122,7 +123,7 @@ const HeaderMobile = () => {
                             </Link>
                         </li>
                         <li>
-                            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+                            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV" onClick={() => trackCVClick("header_mobile")}>
                                 <i className="fa-regular fa-file"></i>
                                 <span className="label">CV</span>
                             </a>
@@ -136,6 +137,7 @@ const HeaderMobile = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="LinkedIn profile"
+                                onClick={() => trackLinkedinClick("header_mobile")}
                             >
                                 <i className="fa-brands fa-linkedin-in"></i>
                             </a>
@@ -146,6 +148,7 @@ const HeaderMobile = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="GitHub profile"
+                                onClick={() => trackGithubClick("header_mobile")}
                             >
                                 <i className="fa-brands fa-github"></i>
                             </a>
@@ -156,6 +159,7 @@ const HeaderMobile = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="X (Twitter) profile"
+                                onClick={() => trackXClick("header_mobile")}
                             >
                                 <i className="fa-brands fa-x-twitter"></i>
                             </a>
@@ -166,6 +170,7 @@ const HeaderMobile = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Send email"
+                                onClick={() => trackEmailClick("header_mobile")}
                             >
                                 <i className="fa-regular fa-envelope"></i>
                             </a>

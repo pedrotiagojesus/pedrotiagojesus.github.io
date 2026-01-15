@@ -15,6 +15,9 @@ import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
 // Utils
 import { vocabulary } from "@utils/vocabulary";
 
+// Analytics
+import { trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick, trackCVClick } from "src/analytics/events";
+
 const Navigation = () => {
     const { activePage } = useActivePage();
     const [navigationCollapse, setNavigationCollapse] = useState(false);
@@ -76,7 +79,8 @@ const Navigation = () => {
                         </Link>
                     </li>
                     <li>
-                        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+                        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV"
+                            onClick={() => trackCVClick("navigation")}>
                             <i className="fa-regular fa-file fa-fw"></i>
                             <span className="label">
                                 <span className="label-inner">CV</span>
@@ -94,6 +98,7 @@ const Navigation = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn profile"
+                            onClick={() => trackLinkedinClick("navigation")}
                         >
                             <i className="fa-brands fa-linkedin-in"></i>
                             <span className="label">LinkedIn</span>
@@ -105,6 +110,7 @@ const Navigation = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="GitHub profile"
+                            onClick={() => trackGithubClick("navigation")}
                         >
                             <i className="fa-brands fa-github"></i>
                             <span className="label">Github</span>
@@ -116,6 +122,7 @@ const Navigation = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="X (Twitter) profile"
+                            onClick={() => trackXClick("navigation")}
                         >
                             <i className="fa-brands fa-x-twitter"></i>
                             <span className="label">X</span>
@@ -127,6 +134,7 @@ const Navigation = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Send email"
+                            onClick={() => trackEmailClick("navigation")}
                         >
                             <i className="fa-regular fa-envelope"></i>
                             <span className="label">Email</span>
