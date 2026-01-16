@@ -7,7 +7,6 @@ export const usePageTracking = () => {
     const location = useLocation();
     useEffect(() => {
         if (env.VITE_PRODUCTION && env.VITE_GA_ID) {
-            console.log("pageview", location.pathname);
             ReactGA.send({
                 hitType: "pageview",
                 page: location.pathname,

@@ -25,6 +25,9 @@ import { AppProviders } from "./providers/AppProviders";
 // Analytics
 import { initGA } from "./analytics";
 
+// Components
+import Loading from "@components/Loading/Loading";
+
 // Initialize Google Analytics once
 initGA();
 
@@ -84,7 +87,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <AppProviders>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
                 <RouterProvider router={router} />
             </Suspense>
         </AppProviders>
