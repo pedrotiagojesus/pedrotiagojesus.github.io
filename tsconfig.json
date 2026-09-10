@@ -18,6 +18,7 @@
         "baseUrl": ".",
         "types": ["node"],
         "paths": {
+            "@api/*": ["src/api/*"],
             "@components/*": ["src/components/*"],
             "@pages/*": ["src/pages/*"],
             "@typesLocal/*": ["src/types/*"],

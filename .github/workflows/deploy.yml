@@ -27,6 +27,7 @@ jobs:
         env:
           VITE_ENDPOINT: ${{ secrets.VITE_ENDPOINT }}
           VITE_ENDPOINT_PUBLIC: ${{ secrets.VITE_ENDPOINT_PUBLIC }}
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
           VITE_TIMEOUT: ${{ secrets.VITE_TIMEOUT }}
           VITE_GOOGLE_RECAPTCHA_SITE_KEY: ${{ secrets.VITE_GOOGLE_RECAPTCHA_SITE_KEY }}
           VITE_GA_ID: ${{ secrets.VITE_GA_ID }}

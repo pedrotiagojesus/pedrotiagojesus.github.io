@@ -4,6 +4,7 @@ const envSchema = z.object({
     // Basic Configuration
     VITE_ENDPOINT: z.string().default(""),
     VITE_ENDPOINT_PUBLIC: z.string().default(""),
+    VITE_API_KEY: z.string().default(""),
     VITE_TIMEOUT: z.string().default("30000").transform(Number).pipe(z.number().positive()),
     VITE_GOOGLE_RECAPTCHA_SITE_KEY: z.string().default(""),
     VITE_PRODUCTION: z.string().default("false").transform(Boolean).pipe(z.boolean()),

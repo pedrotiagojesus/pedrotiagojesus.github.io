@@ -17,6 +17,9 @@ import { env } from "@config/env";
 import { useEffect, useState } from "react";
 import { postEmail } from "@service/emailService";
 
+// Api
+import { ApiError } from "@api/errors";
+
 const Contact = () => {
     const { showToast } = useToast();
 
@@ -40,38 +43,54 @@ const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [recaptchaReady, setRecaptchaReady] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
         const scriptId = "recaptcha-script";
-        if (!document.getElementById(scriptId)) {
-            const script = document.createElement("script");
-            script.id = scriptId;
-            script.src = `https://www.google.com/recaptcha/api.js?render=${env.VITE_GOOGLE_RECAPTCHA_SITE_KEY}`;
-            script.async = true;
-            script.defer = true;
-            script.onload = () => console.log("reCAPTCHA carregado");
-            document.body.appendChild(script);
+        const existingScript = document.getElementById(scriptId) as HTMLScriptElement | null;
+
+        if (existingScript) {
+            if (window.grecaptcha) setRecaptchaReady(true);
+            else existingScript.addEventListener("load", () => setRecaptchaReady(true));
+            return;
         }
+
+        const script = document.createElement("script");
+        script.id = scriptId;
+        script.src = `https://www.google.com/recaptcha/api.js?render=${env.VITE_GOOGLE_RECAPTCHA_SITE_KEY}`;
+        script.async = true;
+        script.defer = true;
+        script.onload = () => setRecaptchaReady(true);
+        script.onerror = () => setRecaptchaReady(false);
+        document.body.appendChild(script);
     }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!window.grecaptcha) {
-            showToast(i18n.messageSuccess, "success");
+        if (!recaptchaReady || !window.grecaptcha) {
+            showToast(i18n.messageError, "error");
             return;
         }
 
-        const token = await window.grecaptcha.execute(env.VITE_GOOGLE_RECAPTCHA_SITE_KEY, { action: "contact" });
+        setIsSubmitting(true);
 
         try {
+            const token = await window.grecaptcha.execute(env.VITE_GOOGLE_RECAPTCHA_SITE_KEY, { action: "contact" });
             await postEmail({ name, email, message, recaptchaToken: token });
             showToast(i18n.messageSuccess, "success");
             setName("");
             setEmail("");
             setMessage("");
-        } catch (err: any) {
+        } catch (err) {
+            const apiError = err as ApiError;
+            if (apiError?.requestId && import.meta.env.DEV) {
+                console.error(`Contact form submission failed (requestId: ${apiError.requestId})`);
+            }
             showToast(i18n.messageError, "error");
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -115,7 +134,7 @@ const Contact = () => {
                             required
                         ></textarea>
                     </div>
-                    <button className="btn btn-primary" type="submit">
+                    <button className="btn btn-primary" type="submit" disabled={isSubmitting}>
                         {i18n.send}
                     </button>
                 </form>

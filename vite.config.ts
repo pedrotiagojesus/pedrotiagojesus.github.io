@@ -12,6 +12,7 @@ export default defineConfig({
     plugins: [react(), preload()],
     resolve: {
         alias: {
+            "@api": path.resolve(__dirname, "src/api"),
             "@components": path.resolve(__dirname, "src/components"),
             "@pages": path.resolve(__dirname, "src/pages"),
             "@typesLocal": path.resolve(__dirname, "src/typesLocal"),
