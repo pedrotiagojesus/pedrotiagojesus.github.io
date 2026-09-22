@@ -7,6 +7,9 @@ import { useVocabularyText } from "@utils/vocabulary";
 // Hooks
 import { useContents } from "@hooks/useContents";
 
+// Config
+import { SITE_URL } from "@config/site";
+
 // Components
 import Block from "@components/Block/Block";
 import Loading from "@components/Loading/Loading";
@@ -55,7 +58,7 @@ const About = () => {
 
     return (
         <>
-            <Seo title={seo?.title} description={seo?.description} />
+            <Seo title={seo?.title} description={seo?.description} url={SITE_URL + "/about"} />
             <section id="about-content">
                 <h1 className="page-title">{i18n.title}</h1>
                 <p className="page-summary">{aboutMe.summary}</p>

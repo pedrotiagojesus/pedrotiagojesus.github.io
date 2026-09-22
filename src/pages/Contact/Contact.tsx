@@ -14,6 +14,7 @@ import { useToast } from "@contexts/ToastContext";
 // Hooks
 import { useContents } from "@hooks/useContents";
 import { env } from "@config/env";
+import { SITE_URL } from "@config/site";
 import { useEffect, useState } from "react";
 import { postEmail } from "@service/emailService";
 
@@ -96,7 +97,7 @@ const Contact = () => {
 
     return (
         <>
-            <Seo title={seo?.title} description={seo?.description} />
+            <Seo title={seo?.title} description={seo?.description} url={SITE_URL + "/contact"} />
             <section id="contact-content">
                 <h1 className="page-title">{i18n.title}</h1>
                 <p className="page-summary">{i18n.summary}</p>

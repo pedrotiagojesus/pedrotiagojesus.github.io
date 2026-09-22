@@ -10,6 +10,9 @@ import { getProjectImage } from "@utils/image";
 // Hooks
 import { useContents } from "@hooks/useContents";
 
+// Config
+import { SITE_URL } from "@config/site";
+
 // Components
 import Loading from "@components/Loading/Loading";
 import Seo from "@components/Seo";
@@ -40,7 +43,11 @@ const ProjectItem = () => {
 
     return (
         <>
-            <Seo title={project.name + "" + seo?.title} description={seo?.description} />
+            <Seo
+                title={project.name + "" + seo?.title}
+                description={seo?.description}
+                url={`${SITE_URL}/project/${project.slug}`}
+            />
             <section id="project-item-content">
                 <Button as={Link} to="/project" className="all-project-link">
                     <i className="fa-solid fa-arrow-left"></i>

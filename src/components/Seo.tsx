@@ -11,6 +11,7 @@ const Seo = ({ title, description, image, url, type = "website", noIndex = false
             {/* Basic */}
             {title && <title>{title}</title>}
             {description && <meta name="description" content={description} />}
+            {url && <link rel="canonical" href={url} />}
 
             {/* Robots */}
             <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />

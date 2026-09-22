@@ -11,6 +11,9 @@ import { useVocabularyText } from "@utils/vocabulary";
 // Hooks
 import { useContents } from "@hooks/useContents";
 
+// Config
+import { SITE_URL } from "@config/site";
+
 const Project = () => {
     // Seo
     const { data, isLoading } = useContents(["seo", "projects"]);
@@ -19,7 +22,7 @@ const Project = () => {
 
     return (
         <>
-            <Seo title={seo?.title} description={seo?.description} />
+            <Seo title={seo?.title} description={seo?.description} url={SITE_URL + "/project"} />
             <section id="project-list-content">
                 <h1 className="page-title">{useVocabularyText("pages.projects.title")}</h1>
                 <p className="page-summary">{useVocabularyText("pages.projects.summary")}</p>

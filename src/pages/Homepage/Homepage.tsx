@@ -16,6 +16,9 @@ import { useVocabularyText } from "@utils/vocabulary";
 // Hooks
 import { useContents } from "@hooks/useContents";
 
+// Config
+import { SITE_URL } from "@config/site";
+
 const Homepage = () => {
     // Vocabulary
     const i18n = {
@@ -49,7 +52,7 @@ const Homepage = () => {
 
     return (
         <>
-            <Seo title={seo?.title} description={seo?.description} />
+            <Seo title={seo?.title} description={seo?.description} url={SITE_URL + "/"} />
             <section id="homepage-about" aria-labelledby="homepage-title">
                 <h1 id="homepage-title" className="page-title">
                     {i18n.heroTitle}

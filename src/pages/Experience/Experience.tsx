@@ -15,6 +15,9 @@ import type { Experience } from "@typesLocal/index";
 // Hooks
 import { useContents } from "@hooks/useContents";
 
+// Config
+import { SITE_URL } from "@config/site";
+
 const Experience = () => {
     // Vocabulary
     const i18n = {
@@ -37,7 +40,7 @@ const Experience = () => {
 
     return (
         <>
-            <Seo title={seo?.title} description={seo?.description} />
+            <Seo title={seo?.title} description={seo?.description} url={SITE_URL + "/experience"} />
             <section id="experience-content">
                 <h1 className="page-title">{i18n.title}</h1>
                 <p className="page-summary">{i18n.summary}</p>
