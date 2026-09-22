@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://pedrotiagojesus.github.io/sitemap.xml
