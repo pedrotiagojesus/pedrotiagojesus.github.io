@@ -30,7 +30,10 @@
     display: none;
 }
 
-#language-picker li {
+#language-picker .dropdown-item {
+    all: unset;
+    box-sizing: border-box;
+    width: 100%;
     cursor: pointer;
     padding: 0.2rem 0.5rem;
     display: flex;
@@ -39,9 +42,9 @@
     text-transform: uppercase;
     font-size: var(--text-sm);
     color: var(--color-text-muted);
-
 }
 
-#language-picker li:hover {
+#language-picker .dropdown-item:hover,
+#language-picker .dropdown-item:focus-visible {
     background-color: var(--color-surface-2);
 }

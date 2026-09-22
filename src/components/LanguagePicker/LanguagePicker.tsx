@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // CSS
@@ -7,6 +7,28 @@ import "./LanguagePicker.css";
 const LanguagePicker = () => {
     const { i18n } = useTranslation();
     const [showPicker, setShowPicker] = useState<boolean>(false);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (!showPicker) return;
+
+        const handleClickOutside = (event: MouseEvent) => {
+            if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+                setShowPicker(false);
+            }
+        };
+
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape") setShowPicker(false);
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("keydown", handleKeyDown);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [showPicker]);
 
     const buildFlag = (iso2: string) => {
         const urlCfg = {
@@ -28,8 +50,13 @@ const LanguagePicker = () => {
         { label: "en", value: "en" },
     ];
 
+    const selectLanguage = (value: string) => {
+        i18n.changeLanguage(value);
+        setShowPicker(false);
+    };
+
     return (
-        <div id="language-picker">
+        <div id="language-picker" ref={containerRef}>
             <button
                 type="button"
                 className="btn"
@@ -45,19 +72,14 @@ const LanguagePicker = () => {
             </button>
             <ul className={showPicker ? "show" : ""}>
                 {languageArr.map((language) => (
-                    <li
-                        key={language.value}
-                        className="dropdown-item"
-                        onClick={() => {
-                            i18n.changeLanguage(language.value);
-                            setShowPicker(!showPicker);
-                        }}
-                    >
-                        <img
-                            src={buildFlag(language.label.toLocaleUpperCase())}
-                            alt={`option-lang-${language.label.toLocaleUpperCase()}`}
-                        />
-                        {language.label}
+                    <li key={language.value}>
+                        <button type="button" className="dropdown-item" onClick={() => selectLanguage(language.value)}>
+                            <img
+                                src={buildFlag(language.label.toLocaleUpperCase())}
+                                alt={`option-lang-${language.label.toLocaleUpperCase()}`}
+                            />
+                            {language.label}
+                        </button>
                     </li>
                 ))}
             </ul>

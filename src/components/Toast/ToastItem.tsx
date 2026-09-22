@@ -21,7 +21,7 @@ export function ToastItem({ toast, onClose }: Props) {
     }, [toast.duration]);
 
     return (
-        <div className={`toast toast-${toast.type}`}>
+        <div className={`toast toast-${toast.type}`} role="status" aria-live="polite" aria-atomic="true">
             <button
                 className="toast-close"
                 onClick={() => onClose(toast.id)}
