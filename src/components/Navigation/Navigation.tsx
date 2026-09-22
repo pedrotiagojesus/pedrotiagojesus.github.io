@@ -15,12 +15,23 @@ import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
 // Utils
 import { useVocabularyText } from "@utils/vocabulary";
 
+// Config
+import { NAV_ITEMS, SOCIAL_ITEMS } from "@config/navigation";
+
 // Analytics
-import { trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick, trackCVClick } from "@analytics/events";
+import { trackCVClick } from "@analytics/events";
 
 const Navigation = () => {
     const { activePage } = useActivePage();
     const [navigationCollapse, setNavigationCollapse] = useState(false);
+
+    const navLabels: Record<string, string> = {
+        home: useVocabularyText("navigation.home"),
+        experience: useVocabularyText("navigation.experience"),
+        project: useVocabularyText("navigation.projects"),
+        about: useVocabularyText("navigation.about"),
+        contact: useVocabularyText("navigation.contact"),
+    };
 
     return (
         <nav id="navigation" className={navigationCollapse ? "collapse" : ""}>
@@ -38,49 +49,24 @@ const Navigation = () => {
             <hr />
             <div className="navigation-block">
                 <ul className="navigation-list">
+                    {NAV_ITEMS.map((item) => (
+                        <li key={item.to}>
+                            <Link to={item.to} className={activePage === item.activeKey ? "active" : ""}>
+                                <i className={`${item.icon} fa-fw`}></i>
+                                <span className="label">
+                                    <span className="label-inner">{navLabels[item.activeKey]}</span>
+                                </span>
+                            </Link>
+                        </li>
+                    ))}
                     <li>
-                        <Link to="/" className={activePage === "home" ? "active" : ""}>
-                            <i className="fa-regular fa-compass fa-fw"></i>
-                            <span className="label">
-                                <span className="label-inner">{useVocabularyText("navigation.home")}</span>
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/experience" className={activePage === "experience" ? "active" : ""}>
-                            <i className="fa-solid fa-suitcase fa-fw"></i>
-                            <span className="label">
-                                <span className="label-inner">{useVocabularyText("navigation.experience")}</span>
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/project" className={activePage === "project" ? "active" : ""}>
-                            <i className="fa-solid fa-pencil fa-fw"></i>
-                            <span className="label">
-                                <span className="label-inner">{useVocabularyText("navigation.projects")}</span>
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/about" className={activePage === "about" ? "active" : ""}>
-                            <i className="fa-regular fa-user fa-fw"></i>
-                            <span className="label">
-                                <span className="label-inner">{useVocabularyText("navigation.about")}</span>
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/contact" className={activePage === "contact" ? "active" : ""}>
-                            <i className="fa-solid fa-phone fa-fw"></i>
-                            <span className="label">
-                                <span className="label-inner">{useVocabularyText("navigation.contact")}</span>
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV"
-                            onClick={() => trackCVClick("navigation")}>
+                        <a
+                            href="/CV.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Download CV"
+                            onClick={() => trackCVClick("navigation")}
+                        >
                             <i className="fa-regular fa-file fa-fw"></i>
                             <span className="label">
                                 <span className="label-inner">CV</span>
@@ -92,54 +78,20 @@ const Navigation = () => {
             <hr />
             <div className="navigation-block social-media">
                 <ul className="navigation-list">
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/in/pedro-jesus-7a1654140/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn profile"
-                            onClick={() => trackLinkedinClick("navigation")}
-                        >
-                            <i className="fa-brands fa-linkedin-in"></i>
-                            <span className="label">LinkedIn</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://github.com/pedrotiagojesus"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub profile"
-                            onClick={() => trackGithubClick("navigation")}
-                        >
-                            <i className="fa-brands fa-github"></i>
-                            <span className="label">Github</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://x.com/PedroJe07463775"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="X (Twitter) profile"
-                            onClick={() => trackXClick("navigation")}
-                        >
-                            <i className="fa-brands fa-x-twitter"></i>
-                            <span className="label">X</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="mailto:pedrotiagojesus1995@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Send email"
-                            onClick={() => trackEmailClick("navigation")}
-                        >
-                            <i className="fa-regular fa-envelope"></i>
-                            <span className="label">Email</span>
-                        </a>
-                    </li>
+                    {SOCIAL_ITEMS.map((item) => (
+                        <li key={item.href}>
+                            <a
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={item.ariaLabel}
+                                onClick={() => item.track("navigation")}
+                            >
+                                <i className={item.icon}></i>
+                                <span className="label">{item.label}</span>
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </div>
             <div className="navigation-block settings">

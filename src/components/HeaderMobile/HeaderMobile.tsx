@@ -14,7 +14,10 @@ import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 
 // Utils
 import { useVocabularyText } from "@utils/vocabulary";
-import { trackCVClick, trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick } from "@analytics/events";
+import { trackCVClick } from "@analytics/events";
+
+// Config
+import { NAV_ITEMS, SOCIAL_ITEMS } from "@config/navigation";
 
 const HeaderMobile = () => {
     const { activePage } = useActivePage();
@@ -24,6 +27,14 @@ const HeaderMobile = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [height, setHeight] = useState<number | undefined>(0);
     const [scrolled, setScrolled] = useState(false);
+
+    const navLabels: Record<string, string> = {
+        home: useVocabularyText("navigation.home"),
+        experience: useVocabularyText("navigation.experience"),
+        project: useVocabularyText("navigation.projects"),
+        about: useVocabularyText("navigation.about"),
+        contact: useVocabularyText("navigation.contact"),
+    };
 
     const toggleMenu = () => {
         if (!contentRef.current) return;
@@ -92,38 +103,22 @@ const HeaderMobile = () => {
             <nav className={`nav-collapse ${isOpen ? "show" : ""}`} style={{ height }}>
                 <div className="content" ref={contentRef}>
                     <ul>
+                        {NAV_ITEMS.map((item) => (
+                            <li key={item.to}>
+                                <Link to={item.to} className={activePage === item.activeKey ? "active" : ""}>
+                                    <i className={item.icon}></i>
+                                    <span className="label">{navLabels[item.activeKey]}</span>
+                                </Link>
+                            </li>
+                        ))}
                         <li>
-                            <Link to="/" className={activePage === "home" ? "active" : ""}>
-                                <i className="fa-regular fa-compass"></i>
-                                <span className="label">{useVocabularyText("navigation.home")}</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/experience" className={activePage === "experience" ? "active" : ""}>
-                                <i className="fa-solid fa-suitcase"></i>
-                                <span className="label">{useVocabularyText("navigation.experience")}</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/project" className={activePage === "project" ? "active" : ""}>
-                                <i className="fa-solid fa-pencil"></i>
-                                <span className="label">{useVocabularyText("navigation.projects")}</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/about" className={activePage === "about" ? "active" : ""}>
-                                <i className="fa-regular fa-user"></i>
-                                <span className="label">{useVocabularyText("navigation.about")}</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/contact" className={activePage === "contact" ? "active" : ""}>
-                                <i className="fa-solid fa-phone"></i>
-                                <span className="label">{useVocabularyText("navigation.contact")}</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV" onClick={() => trackCVClick("header_mobile")}>
+                            <a
+                                href="/CV.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Download CV"
+                                onClick={() => trackCVClick("header_mobile")}
+                            >
                                 <i className="fa-regular fa-file"></i>
                                 <span className="label">CV</span>
                             </a>
@@ -131,50 +126,19 @@ const HeaderMobile = () => {
                     </ul>
                     <hr />
                     <ul className="social-network">
-                        <li>
-                            <a
-                                href="https://www.linkedin.com/in/pedro-jesus-7a1654140/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="LinkedIn profile"
-                                onClick={() => trackLinkedinClick("header_mobile")}
-                            >
-                                <i className="fa-brands fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/pedrotiagojesus"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="GitHub profile"
-                                onClick={() => trackGithubClick("header_mobile")}
-                            >
-                                <i className="fa-brands fa-github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://x.com/PedroJe07463775"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="X (Twitter) profile"
-                                onClick={() => trackXClick("header_mobile")}
-                            >
-                                <i className="fa-brands fa-x-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="mailto:pedrotiagojesus1995@gmail.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Send email"
-                                onClick={() => trackEmailClick("header_mobile")}
-                            >
-                                <i className="fa-regular fa-envelope"></i>
-                            </a>
-                        </li>
+                        {SOCIAL_ITEMS.map((item) => (
+                            <li key={item.href}>
+                                <a
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={item.ariaLabel}
+                                    onClick={() => item.track("header_mobile")}
+                                >
+                                    <i className={item.icon}></i>
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                     <hr />
                     <div className="settings">
