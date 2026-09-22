@@ -10,7 +10,6 @@ export function useContents(sections: string[], projectsSlug?: string[]) {
         queryKey: ["contents", i18n.language, sections, projectsSlug],
         queryFn: () => getContents(i18n.language, sections, projectsSlug),
         staleTime: 1000 * 60 * 5,
-        // cacheTime: 1000 * 60 * 30,
         retry: 1,
     });
 }

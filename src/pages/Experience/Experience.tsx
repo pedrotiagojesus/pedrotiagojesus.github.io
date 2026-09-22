@@ -9,9 +9,6 @@ import Block from "@components/Block/Block";
 import Loading from "@components/Loading/Loading";
 import Seo from "@components/Seo";
 
-// Types
-import type { Experience } from "@typesLocal/index";
-
 // Hooks
 import { useContents } from "@hooks/useContents";
 
@@ -28,12 +25,10 @@ const Experience = () => {
     const { data, isLoading, isError } = useContents(["experiences", "seo"]);
 
     // Experience
-    const experienceArr = data?.experience;
+    const safeExperience = data?.experience ?? [];
 
     if (isLoading) return <Loading />;
     if (isError) return <p>Erro ao carregar experiências.</p>;
-
-    const safeExperience: Experience[] = Array.isArray(experienceArr) ? experienceArr : [];
 
     // Seo
     const seo = data?.seo?.experience;

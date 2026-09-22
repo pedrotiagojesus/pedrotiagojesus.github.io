@@ -42,14 +42,14 @@ const HeaderMobile = () => {
         const contentHeight = contentRef.current.scrollHeight;
 
         if (!isOpen) {
-            // ABRIR
+            // Open
             isClosingRef.current = false;
             setHeight(contentHeight);
             setIsOpen(true);
         } else {
-            // FECHAR
+            // Close
             isClosingRef.current = true;
-            setHeight(contentHeight); // força ponto inicial
+            setHeight(contentHeight); // force the starting point for the collapse transition
             requestAnimationFrame(() => {
                 setHeight(0);
             });
@@ -61,7 +61,7 @@ const HeaderMobile = () => {
         if (!isOpen || isClosingRef.current) return;
 
         const timeout = setTimeout(() => {
-            setHeight(undefined); // height: auto apenas após abrir
+            setHeight(undefined); // switch to height: auto only after the open transition finishes
         }, 300);
 
         return () => clearTimeout(timeout);

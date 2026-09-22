@@ -28,9 +28,7 @@ export const ActivePageProvider: React.FC<ActivePageProviderProps> = ({
 export const useActivePage = (): ActivePageContextType => {
     const context = useContext(ActivePageContext);
     if (!context) {
-        throw new Error(
-            "useActivePage deve ser usado dentro de um ActivePageProvider"
-        );
+        throw new Error("useActivePage must be used within an ActivePageProvider");
     }
     return context;
 };

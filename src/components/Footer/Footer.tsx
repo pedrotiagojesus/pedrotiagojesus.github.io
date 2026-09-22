@@ -2,9 +2,11 @@
 import "./Footer.css";
 
 const Footer = () => {
+    const year = new Date().getFullYear();
+
     return (
         <footer>
-            <p>© 2025 Portfolio. All rights reserved.</p>
+            <p>© {year} Portfolio. All rights reserved.</p>
             <p>Made with 💓 By Pedro Jesus</p>
         </footer>
     );

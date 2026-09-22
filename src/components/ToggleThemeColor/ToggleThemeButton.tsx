@@ -35,8 +35,4 @@ const ToggleThemeButton = () => {
     );
 };
 
-/**
- *
- */
-
 export default ToggleThemeButton;
