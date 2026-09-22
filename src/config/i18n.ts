@@ -4,7 +4,8 @@ import { initReactI18next } from "react-i18next";
 
 i18n.use(LanguageDetector).use(initReactI18next).init({
     fallbackLng: "pt",
-    lng: "pt", // força pt sempre
+    supportedLngs: ["pt", "en"],
+    load: "languageOnly", // treat "en-US", "pt-BR", etc. as "en"/"pt" instead of falling back
 });
 
 export default i18n;
