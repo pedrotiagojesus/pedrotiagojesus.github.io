@@ -113,16 +113,6 @@
 
     <body>
         <div id="root"></div>
-        <script>
-            // Load reCAPTCHA asynchronously after page load
-            window.addEventListener("load", function () {
-                const script = document.createElement("script");
-                script.src = "https://www.google.com/recaptcha/api.js";
-                script.async = true;
-                script.defer = true;
-                document.body.appendChild(script);
-            });
-        </script>
         <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>
