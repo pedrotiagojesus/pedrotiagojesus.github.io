@@ -10,7 +10,7 @@ import CardSkeleton from "@components/Card/Skeleton/CardSkeleton";
 import type { ProjectList as ProjectListProps } from "@typesLocal/index";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 import Button from "@components/Button/Button";
 import Card from "@components/Card/Card";
 import { getProjectImage } from "@utils/image";
@@ -33,7 +33,7 @@ const ProjectList = ({
     keyPrefix = "project",
 }: ProjectListProps) => {
     // Vocabulary
-    const seeAll = vocabulary("common.seeAll");
+    const seeAll = useVocabularyText("common.seeAll");
     const skeletonCount = itemLimit ?? 4;
 
     if (isLoading) {

@@ -7,16 +7,16 @@ import "./Block.css";
 import Light from "@components/BackgrounAnimation/Light/Light";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 import Button from "@components/Button/Button";
 
 const Block = () => {
 
     // Vocabulary
     const i18n = {
-        title: vocabulary("sections.projectsPreview.title"),
-        summary: vocabulary("sections.projectsPreview.summary"),
-        cta: vocabulary("sections.projectsPreview.cta"),
+        title: useVocabularyText("sections.projectsPreview.title"),
+        summary: useVocabularyText("sections.projectsPreview.summary"),
+        cta: useVocabularyText("sections.projectsPreview.cta"),
     };
 
     return (

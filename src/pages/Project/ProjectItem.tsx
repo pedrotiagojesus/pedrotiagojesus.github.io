@@ -4,7 +4,7 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import "./ProjectItem.css";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 import { getProjectImage } from "@utils/image";
 
 // Hooks
@@ -16,11 +16,11 @@ import Seo from "@components/Seo";
 import Button from "@components/Button/Button";
 
 const ProjectItem = () => {
-    const i18nAll = vocabulary("pages.projects.actions.all");
-    const i18nDemo = vocabulary("pages.projects.actions.demo");
-    const i18nSource = vocabulary("pages.projects.actions.source");
-    const i18nModalTitle = vocabulary("pages.projects.demoModal.title");
-    const i18nModalDescription = vocabulary("pages.projects.demoModal.description");
+    const i18nAll = useVocabularyText("pages.projects.actions.all");
+    const i18nDemo = useVocabularyText("pages.projects.actions.demo");
+    const i18nSource = useVocabularyText("pages.projects.actions.source");
+    const i18nModalTitle = useVocabularyText("pages.projects.demoModal.title");
+    const i18nModalDescription = useVocabularyText("pages.projects.demoModal.description");
 
     const { slug } = useParams<{ slug: string }>();
     const { data, isLoading, isError } = useContents(["projects", "seo"], [slug!]);

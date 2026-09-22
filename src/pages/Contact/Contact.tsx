@@ -2,7 +2,7 @@
 import "./Contact.css";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 
 // Components
 import Block from "@components/Block/Block";
@@ -25,14 +25,14 @@ const Contact = () => {
 
     // Vocabulary
     const i18n = {
-        title: vocabulary("pages.contact.title"),
-        summary: vocabulary("pages.contact.summary"),
-        name: vocabulary("pages.contact.name"),
-        email: vocabulary("pages.contact.email"),
-        message: vocabulary("pages.contact.message"),
-        send: vocabulary("pages.contact.send"),
-        messageSuccess: vocabulary("pages.contact.messageSuccess"),
-        messageError: vocabulary("pages.contact.messageError"),
+        title: useVocabularyText("pages.contact.title"),
+        summary: useVocabularyText("pages.contact.summary"),
+        name: useVocabularyText("pages.contact.name"),
+        email: useVocabularyText("pages.contact.email"),
+        message: useVocabularyText("pages.contact.message"),
+        send: useVocabularyText("pages.contact.send"),
+        messageSuccess: useVocabularyText("pages.contact.messageSuccess"),
+        messageError: useVocabularyText("pages.contact.messageError"),
     };
 
     const { data } = useContents(["seo"]);

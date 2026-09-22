@@ -6,7 +6,7 @@ import ProjectList from "@components/ProjectList/ProjectList";
 import Seo from "@components/Seo";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 
 // Hooks
 import { useContents } from "@hooks/useContents";
@@ -21,8 +21,8 @@ const Project = () => {
         <>
             <Seo title={seo?.title} description={seo?.description} />
             <section id="project-list-content">
-                <h1 className="page-title">{vocabulary("pages.projects.title")}</h1>
-                <p className="page-summary">{vocabulary("pages.projects.summary")}</p>
+                <h1 className="page-title">{useVocabularyText("pages.projects.title")}</h1>
+                <p className="page-summary">{useVocabularyText("pages.projects.summary")}</p>
                 <ProjectList
                     title=""
                     projects={projects}

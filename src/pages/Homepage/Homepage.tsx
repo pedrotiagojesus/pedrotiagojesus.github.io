@@ -11,7 +11,7 @@ import Seo from "@components/Seo";
 import Button from "@components/Button/Button";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 
 // Hooks
 import { useContents } from "@hooks/useContents";
@@ -19,13 +19,13 @@ import { useContents } from "@hooks/useContents";
 const Homepage = () => {
     // Vocabulary
     const i18n = {
-        heroTitle: vocabulary("pages.home.hero.title"),
-        heroSubtitle: vocabulary("pages.home.hero.subtitle"),
-        about: vocabulary("navigation.about"),
-        projects: vocabulary("navigation.projects"),
+        heroTitle: useVocabularyText("pages.home.hero.title"),
+        heroSubtitle: useVocabularyText("pages.home.hero.subtitle"),
+        about: useVocabularyText("navigation.about"),
+        projects: useVocabularyText("navigation.projects"),
     };
 
-    const defaultText = vocabulary("common.copyEmail");
+    const defaultText = useVocabularyText("common.copyEmail");
     const [buttonText, setButtonText] = useState<string | undefined>(defaultText);
 
     const handleCopy = async () => {

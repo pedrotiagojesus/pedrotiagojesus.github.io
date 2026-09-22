@@ -2,7 +2,7 @@
 import "./About.css";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 
 // Hooks
 import { useContents } from "@hooks/useContents";
@@ -13,7 +13,7 @@ import Loading from "@components/Loading/Loading";
 import Seo from "@components/Seo";
 
 // Types
-import type { About, Skill, Education, Certification } from "@typesLocal/index";
+import type { About } from "@typesLocal/index";
 import Card from "@components/Card/Card";
 
 const DEFAULT_ABOUT: About = {
@@ -26,14 +26,14 @@ const DEFAULT_ABOUT: About = {
 const About = () => {
     // Vocabulary
     const i18n = {
-        title: vocabulary("pages.about.title"),
-        summary: vocabulary("pages.about.summary"),
-        skills: vocabulary("pages.about.sections.skills"),
-        softSkills: vocabulary("pages.about.sections.softSkills"),
-        interests: vocabulary("pages.about.sections.interests"),
-        education: vocabulary("pages.about.sections.education"),
-        certificates: vocabulary("pages.about.sections.certificates"),
-        hobbies: vocabulary("pages.about.sections.hobbies"),
+        title: useVocabularyText("pages.about.title"),
+        summary: useVocabularyText("pages.about.summary"),
+        skills: useVocabularyText("pages.about.sections.skills"),
+        softSkills: useVocabularyText("pages.about.sections.softSkills"),
+        interests: useVocabularyText("pages.about.sections.interests"),
+        education: useVocabularyText("pages.about.sections.education"),
+        certificates: useVocabularyText("pages.about.sections.certificates"),
+        hobbies: useVocabularyText("pages.about.sections.hobbies"),
     };
 
     const { data, isLoading, isError } = useContents(["profile", "seo"]);
@@ -44,11 +44,11 @@ const About = () => {
     if (isLoading) return <Loading />;
     if (isError) return <p>Erro ao carregar informações do perfil.</p>;
 
-    const aboutMe = (profile?.aboutMe as About) || DEFAULT_ABOUT;
-    const skillArr = (profile?.skill as Skill[]) || [];
-    const skillSoftArr = (profile?.softSkill as string[]) || [];
-    const educationArr = (profile?.education as Education[]) || [];
-    const certificationArr = (profile?.certifications as Certification[]) || [];
+    const aboutMe = profile?.aboutMe || DEFAULT_ABOUT;
+    const skillArr = profile?.skill || [];
+    const skillSoftArr = profile?.softSkill || [];
+    const educationArr = profile?.education || [];
+    const certificationArr = profile?.certifications || [];
 
     // Seo
     const seo = data?.seo?.profile;
@@ -96,17 +96,17 @@ const About = () => {
                     {i18n.education}
                 </h2>
                 <div className="list">
-                    {educationArr.map((item) => (
+                    {educationArr.map((item, index) => (
                         <Card
-                            key={`education-${item.id}`}
+                            key={`education-${index}`}
                             htmlElement="article"
                             title={item.organization}
                             description={
                                 <>
                                     <p className="degree">{item.degree}</p>
                                     <p className="time">
-                                        <time dateTime={item.dateStart}>{item.dateStart}</time>|
-                                        <time dateTime={item.dateEnd}>{item.dateEnd}</time>
+                                        <time dateTime={String(item.dateStart)}>{item.dateStart}</time>|
+                                        <time dateTime={String(item.dateEnd)}>{item.dateEnd}</time>
                                     </p>
                                     <p className="description">{item.description}</p>
                                 </>

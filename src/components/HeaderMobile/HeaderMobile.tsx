@@ -13,7 +13,7 @@ import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
 import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 import { trackCVClick, trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick } from "@analytics/events";
 
 const HeaderMobile = () => {
@@ -95,31 +95,31 @@ const HeaderMobile = () => {
                         <li>
                             <Link to="/" className={activePage === "home" ? "active" : ""}>
                                 <i className="fa-regular fa-compass"></i>
-                                <span className="label">{vocabulary("navigation.home")}</span>
+                                <span className="label">{useVocabularyText("navigation.home")}</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/experience" className={activePage === "experience" ? "active" : ""}>
                                 <i className="fa-solid fa-suitcase"></i>
-                                <span className="label">{vocabulary("navigation.experience")}</span>
+                                <span className="label">{useVocabularyText("navigation.experience")}</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/project" className={activePage === "project" ? "active" : ""}>
                                 <i className="fa-solid fa-pencil"></i>
-                                <span className="label">{vocabulary("navigation.projects")}</span>
+                                <span className="label">{useVocabularyText("navigation.projects")}</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/about" className={activePage === "about" ? "active" : ""}>
                                 <i className="fa-regular fa-user"></i>
-                                <span className="label">{vocabulary("navigation.about")}</span>
+                                <span className="label">{useVocabularyText("navigation.about")}</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/contact" className={activePage === "contact" ? "active" : ""}>
                                 <i className="fa-solid fa-phone"></i>
-                                <span className="label">{vocabulary("navigation.contact")}</span>
+                                <span className="label">{useVocabularyText("navigation.contact")}</span>
                             </Link>
                         </li>
                         <li>

@@ -16,13 +16,13 @@ type ButtonAsLink = ButtonPropsBase & LinkProps & { as: typeof Link };
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const Button: React.FC<ButtonProps> = ({ variant = "primary", children, as, ...props }) => {
-    const Component: any = as || "button";
-    const className = ["btn-" + variant, (props as any).className]
+    const Component: React.ElementType = as || "button";
+    const className = ["btn-" + variant, props.className]
         .filter(Boolean)
         .join(" ");
 
     return (
-        <Component {...props} className={'btn ' + className}>
+        <Component {...(props as Record<string, unknown>)} className={'btn ' + className}>
             {children}
         </Component>
     );

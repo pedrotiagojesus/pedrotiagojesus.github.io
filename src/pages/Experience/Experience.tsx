@@ -2,7 +2,7 @@
 import "./Experience.css";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 
 // Components
 import Block from "@components/Block/Block";
@@ -18,8 +18,8 @@ import { useContents } from "@hooks/useContents";
 const Experience = () => {
     // Vocabulary
     const i18n = {
-        title: vocabulary("pages.experience.title"),
-        summary: vocabulary("pages.experience.summary"),
+        title: useVocabularyText("pages.experience.title"),
+        summary: useVocabularyText("pages.experience.summary"),
     };
 
     const { data, isLoading, isError } = useContents(["experiences", "seo"]);

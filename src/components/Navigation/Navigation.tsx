@@ -13,7 +13,7 @@ import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
 
 // Utils
-import { vocabulary } from "@utils/vocabulary";
+import { useVocabularyText } from "@utils/vocabulary";
 
 // Analytics
 import { trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick, trackCVClick } from "@analytics/events";
@@ -42,7 +42,7 @@ const Navigation = () => {
                         <Link to="/" className={activePage === "home" ? "active" : ""}>
                             <i className="fa-regular fa-compass fa-fw"></i>
                             <span className="label">
-                                <span className="label-inner">{vocabulary("navigation.home")}</span>
+                                <span className="label-inner">{useVocabularyText("navigation.home")}</span>
                             </span>
                         </Link>
                     </li>
@@ -50,7 +50,7 @@ const Navigation = () => {
                         <Link to="/experience" className={activePage === "experience" ? "active" : ""}>
                             <i className="fa-solid fa-suitcase fa-fw"></i>
                             <span className="label">
-                                <span className="label-inner">{vocabulary("navigation.experience")}</span>
+                                <span className="label-inner">{useVocabularyText("navigation.experience")}</span>
                             </span>
                         </Link>
                     </li>
@@ -58,7 +58,7 @@ const Navigation = () => {
                         <Link to="/project" className={activePage === "project" ? "active" : ""}>
                             <i className="fa-solid fa-pencil fa-fw"></i>
                             <span className="label">
-                                <span className="label-inner">{vocabulary("navigation.projects")}</span>
+                                <span className="label-inner">{useVocabularyText("navigation.projects")}</span>
                             </span>
                         </Link>
                     </li>
@@ -66,7 +66,7 @@ const Navigation = () => {
                         <Link to="/about" className={activePage === "about" ? "active" : ""}>
                             <i className="fa-regular fa-user fa-fw"></i>
                             <span className="label">
-                                <span className="label-inner">{vocabulary("navigation.about")}</span>
+                                <span className="label-inner">{useVocabularyText("navigation.about")}</span>
                             </span>
                         </Link>
                     </li>
@@ -74,7 +74,7 @@ const Navigation = () => {
                         <Link to="/contact" className={activePage === "contact" ? "active" : ""}>
                             <i className="fa-solid fa-phone fa-fw"></i>
                             <span className="label">
-                                <span className="label-inner">{vocabulary("navigation.contact")}</span>
+                                <span className="label-inner">{useVocabularyText("navigation.contact")}</span>
                             </span>
                         </Link>
                     </li>
