@@ -9,6 +9,13 @@ import { Card as CardProps } from "@typesLocal/index";
 
 const Card = ({ htmlElement, title, description, image, link, linkCover, isLcp }: CardProps) => {
     const Element = htmlElement || "div";
+
+    // React 18's runtime doesn't recognize the camelCase `fetchPriority` DOM
+    // property yet (added in React 19) and warns about it, even though
+    // @types/react already declares it. Passing the real lowercase HTML
+    // attribute name instead avoids the warning and still sets it correctly.
+    const imgPriorityProps: Record<string, string> = { fetchpriority: isLcp ? "high" : "auto" };
+
     return (
         <Element className={`card ${linkCover ? "link-cover" : ""}`}>
             {image && (
@@ -18,7 +25,7 @@ const Card = ({ htmlElement, title, description, image, link, linkCover, isLcp }
                         alt={`image - ${slugify(title)}`}
                         width="1920"
                         height="1080"
-                        fetchPriority={isLcp ? "high" : "auto"}
+                        {...imgPriorityProps}
                         loading={isLcp ? "eager" : "lazy"}
                         decoding="async"
                     />
