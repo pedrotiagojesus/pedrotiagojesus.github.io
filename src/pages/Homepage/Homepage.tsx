@@ -45,10 +45,9 @@ const Homepage = () => {
 
     // Seo
     const { data, isLoading } = useContents(["seo", "projects"]);
-    const projects = data?.projects ?? [];
     const limitedProjects = useMemo(() => {
-        return projects.slice(0, 2);
-    }, [projects]);
+        return (data?.projects ?? []).slice(0, 2);
+    }, [data?.projects]);
 
     const seo = data?.seo?.home;
 
