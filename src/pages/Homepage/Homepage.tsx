@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useMemo, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-regular-svg-icons";
 
 // CSS
 import "./Homepage.css";
@@ -63,7 +65,7 @@ const Homepage = () => {
                         {i18n.about}
                     </Button>
                     <Button variant="secondary" onClick={handleCopy} className="email">
-                        <i className="fa-regular fa-copy"></i> {buttonText}
+                        <FontAwesomeIcon icon={faCopy} /> {buttonText}
                     </Button>
                 </div>
             </section>

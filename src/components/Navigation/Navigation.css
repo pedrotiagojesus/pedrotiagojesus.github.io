@@ -188,7 +188,7 @@ body[data-theme="dark"] #collapse-navigation {
     border-color: var(--color-primary-700);
 }
 
-#collapse-navigation i {
+#collapse-navigation .collapse-icon {
     transition: var(--motion-base) transform var(--ease-standard);
 }
 
@@ -201,7 +201,7 @@ body[data-theme="dark"] #collapse-navigation:hover {
     background-color: var(--color-primary-500);
 }
 
-#navigation.collapse #collapse-navigation i {
+#navigation.collapse #collapse-navigation .collapse-icon {
     transform: rotate(180deg);
 }
 

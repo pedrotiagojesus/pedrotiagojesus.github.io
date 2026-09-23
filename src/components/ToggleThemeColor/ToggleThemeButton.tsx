@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 
 // CSS
 import "./ToggleThemeButton.css";
@@ -25,11 +27,7 @@ const ToggleThemeButton = () => {
                 checked={theme === "dark"}
             />
             <div className="icons">
-                {theme === "dark" ? (
-                    <i className="fa-regular fa-moon"></i>
-                ) : (
-                    <i className="fa-regular fa-sun"></i>
-                )}
+                {theme === "dark" ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}
             </div>
         </label>
     );

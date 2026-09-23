@@ -1,4 +1,6 @@
 import { useParams, Navigate, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 // CSS
 import "./ProjectItem.css";
@@ -50,7 +52,7 @@ const ProjectItem = () => {
             />
             <section id="project-item-content">
                 <Button as={Link} to="/project" className="all-project-link">
-                    <i className="fa-solid fa-arrow-left"></i>
+                    <FontAwesomeIcon icon={faArrowLeft} />
                     {i18nAll}
                 </Button>
 

@@ -23,7 +23,7 @@ body[data-theme="dark"] #block article:hover {
     border-color: var(--color-primary-800);
 }
 
-#block article i {
+#block article .block-icon {
     width: 2.5rem;
     height: 2.5rem;
     background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));

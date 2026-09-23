@@ -31,22 +31,6 @@ import Loading from "@components/Loading/Loading";
 // Initialize Google Analytics once
 initGA();
 
-// Load FontAwesome after initial render to avoid blocking critical path
-const loadFontAwesome = () => {
-    // Load optimized font-face declarations first (with font-display: swap)
-    import("@styles/fontawesome-optimized.css");
-    // Then load the icon classes
-    import("@assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css");
-};
-
-// Load FontAwesome when browser is idle
-if (typeof requestIdleCallback !== "undefined") {
-    requestIdleCallback(loadFontAwesome);
-} else {
-    // Fallback: load after a delay
-    setTimeout(loadFontAwesome, 500);
-}
-
 const router = createBrowserRouter([
     {
         path: "/",

@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faFile } from "@fortawesome/free-regular-svg-icons";
 
 // CSS
 import "./Navigation.css";
@@ -43,7 +46,7 @@ const Navigation = () => {
                 aria-label={navigationCollapse ? "Expand navigation" : "Collapse navigation"}
                 aria-expanded={!navigationCollapse}
             >
-                <i className="fa-solid fa-angle-left"></i>
+                <FontAwesomeIcon icon={faAngleLeft} className="collapse-icon" />
             </button>
             <Profile />
             <hr />
@@ -52,7 +55,7 @@ const Navigation = () => {
                     {NAV_ITEMS.map((item) => (
                         <li key={item.to}>
                             <Link to={item.to} className={activePage === item.activeKey ? "active" : ""}>
-                                <i className={`${item.icon} fa-fw`}></i>
+                                <FontAwesomeIcon icon={item.icon} fixedWidth />
                                 <span className="label">
                                     <span className="label-inner">{navLabels[item.activeKey]}</span>
                                 </span>
@@ -67,7 +70,7 @@ const Navigation = () => {
                             aria-label="Download CV"
                             onClick={() => trackCVClick("navigation")}
                         >
-                            <i className="fa-regular fa-file fa-fw"></i>
+                            <FontAwesomeIcon icon={faFile} fixedWidth />
                             <span className="label">
                                 <span className="label-inner">CV</span>
                             </span>
@@ -87,7 +90,7 @@ const Navigation = () => {
                                 aria-label={item.ariaLabel}
                                 onClick={() => item.track("navigation")}
                             >
-                                <i className={item.icon}></i>
+                                <FontAwesomeIcon icon={item.icon} />
                                 <span className="label">{item.label}</span>
                             </a>
                         </li>

@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faFile } from "@fortawesome/free-regular-svg-icons";
 
 // CSS
 import "./HeaderMobile.css";
@@ -98,7 +101,7 @@ const HeaderMobile = () => {
                 aria-label={isOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isOpen}
             >
-                <i className="fa-solid fa-bars"></i>
+                <FontAwesomeIcon icon={faBars} />
             </button>
             <nav className={`nav-collapse ${isOpen ? "show" : ""}`} style={{ height }}>
                 <div className="content" ref={contentRef}>
@@ -106,7 +109,7 @@ const HeaderMobile = () => {
                         {NAV_ITEMS.map((item) => (
                             <li key={item.to}>
                                 <Link to={item.to} className={activePage === item.activeKey ? "active" : ""}>
-                                    <i className={item.icon}></i>
+                                    <FontAwesomeIcon icon={item.icon} />
                                     <span className="label">{navLabels[item.activeKey]}</span>
                                 </Link>
                             </li>
@@ -119,7 +122,7 @@ const HeaderMobile = () => {
                                 aria-label="Download CV"
                                 onClick={() => trackCVClick("header_mobile")}
                             >
-                                <i className="fa-regular fa-file"></i>
+                                <FontAwesomeIcon icon={faFile} />
                                 <span className="label">CV</span>
                             </a>
                         </li>
@@ -135,7 +138,7 @@ const HeaderMobile = () => {
                                     aria-label={item.ariaLabel}
                                     onClick={() => item.track("header_mobile")}
                                 >
-                                    <i className={item.icon}></i>
+                                    <FontAwesomeIcon icon={item.icon} />
                                 </a>
                             </li>
                         ))}

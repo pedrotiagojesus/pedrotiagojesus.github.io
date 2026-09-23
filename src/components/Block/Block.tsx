@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPencil } from "@fortawesome/free-solid-svg-icons";
 
 // CSS
 import "./Block.css";
@@ -23,7 +25,9 @@ const Block = () => {
         <section id="block">
             <div className="block-list">
                 <article>
-                    <i className="fa-solid fa-pencil"></i>
+                    <span className="block-icon">
+                        <FontAwesomeIcon icon={faPencil} />
+                    </span>
                     <h2>{i18n.title}</h2>
                     <p>{i18n.summary}</p>
                     <Button as={Link} to="/project">
