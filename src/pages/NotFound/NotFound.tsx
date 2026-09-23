@@ -1,33 +1,26 @@
+import { Link } from "react-router-dom";
+
 // CSS
 import "./NotFound.css";
 
 // Components
 import Seo from "@components/Seo";
+import Button from "@components/Button/Button";
 
 const NotFound = () => {
     return (
         <>
-            <Seo title="404/ not_found" description="page missing" />
+            <Seo title="404/ NOT_FOUND" description="The page you're looking for doesn't exist." noIndex={true} />
             <section id="not-found-content">
                 <h1 className="page-title">404/ NOT_FOUND</h1>
                 <p className="page-summary">PAGE MISSING</p>
                 <div>
-                    <p>RESOURCE DEPRECATION: The resource may have been</p>
-                    <p>RESOURCE DEPRECATION: The resource may have been deprecated or removed from the system.</p>
+                    <p>WARNING: Resource not found.</p>
+                    <p>The requested resource does not exist, may have been removed, or the link is broken.</p>
                 </div>
-                <div>
-                    <p>INFO: Attempting to Locate Resource</p>
-                    <p>Resource Path: /pedrotiagojesus.github.io/notfound.html</p>
-                    <p>Resource Status: NOT FOUND</p>
-                </div>
-                <div>
-                    <p>WARNING: Resource Not Found</p>
-                    <p>The requested resource does not exist.</p>
-                    <p>Potential Reasons:</p>
-                    <p>Resource may have been removed or renamed.</p>
-                    <p>Directory structure may have changed.</p>
-                    <p>Permissions issues may restrict access.</p>
-                </div>
+                <Button as={Link} to="/">
+                    Back to home
+                </Button>
             </section>
         </>
     );
