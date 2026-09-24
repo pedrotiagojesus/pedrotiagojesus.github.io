@@ -62,7 +62,8 @@ form .form-group textarea {
     font-size: var(--text-base);
     border: 2px solid var(--color-border);
     border-radius: 3px;
-    background-color: hsl(0, 0%, 90%);
+    background-color: var(--color-surface-elevated);
+    color: var(--color-text);
 }
 
 form .form-group input:focus,
@@ -81,7 +82,7 @@ form .form-group textarea {
 
 form .form-group input::placeholder,
 form .form-group textarea::placeholder {
-    color: hsl(0, 0%, 70%);
+    color: var(--color-text-subtle);
 }
 
 /* Accessibility: Screen reader only */
