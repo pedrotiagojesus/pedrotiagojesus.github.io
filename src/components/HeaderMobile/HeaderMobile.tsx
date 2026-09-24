@@ -12,7 +12,7 @@ import { useActivePage } from "@contexts/ActivePageContext";
 
 // Components
 import Profile from "@components/Profile/Profile";
-import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
+import ToggleThemeButton from "@components/ToggleThemeButton/ToggleThemeButton";
 import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 
 // Utils

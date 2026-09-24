@@ -6,7 +6,7 @@ import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import "./Block.css";
 
 // Components
-import Light from "@components/BackgrounAnimation/Light/Light";
+import Light from "@components/BackgroundAnimation/Light/Light";
 
 // Utils
 import { useVocabularyText } from "@utils/vocabulary";

@@ -13,7 +13,7 @@ import { useActivePage } from "@contexts/ActivePageContext";
 // Components
 import Profile from "@components/Profile/Profile";
 import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
-import ToggleThemeButton from "@components/ToggleThemeColor/ToggleThemeButton";
+import ToggleThemeButton from "@components/ToggleThemeButton/ToggleThemeButton";
 
 // Utils
 import { useVocabularyText } from "@utils/vocabulary";
