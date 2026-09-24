@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 
-import { getContents } from "@service/contentService";
+import { getContents } from "@services/contentService";
 import type { ContentsResponse } from "@typesLocal/index";
 
 export function useContents(sections: string[], projectsSlug?: string[]) {

@@ -16,7 +16,7 @@ import { useContents } from "@hooks/useContents";
 import { env } from "@config/env";
 import { SITE_URL } from "@config/site";
 import { useEffect, useState } from "react";
-import { postEmail } from "@service/emailService";
+import { postEmail } from "@services/emailService";
 
 // Api
 import { ApiError } from "@api/errors";

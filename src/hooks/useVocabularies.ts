@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 
-import { getVocabularies } from "@service/vocabularyService";
+import { getVocabularies } from "@services/vocabularyService";
 
 export function useVocabularies() {
     const { i18n } = useTranslation();
