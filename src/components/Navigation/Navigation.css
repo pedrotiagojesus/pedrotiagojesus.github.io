@@ -205,11 +205,6 @@ body[data-theme="dark"] #collapse-navigation:hover {
     transform: rotate(180deg);
 }
 
-/* SM ≥ 576px */
-@media (min-width: 576px) {
-    /* ... */
-}
-
 /* MD ≥ 768px */
 @media (min-width: 768px) {
     #navigation {
@@ -217,17 +212,3 @@ body[data-theme="dark"] #collapse-navigation:hover {
     }
 }
 
-/* LG ≥ 992px */
-@media (min-width: 992px) {
-    /* ... */
-}
-
-/* XL ≥ 1200px */
-@media (min-width: 1200px) {
-    /* ... */
-}
-
-/* XXL ≥ 1400px */
-@media (min-width: 1400px) {
-    /* ... */
-}

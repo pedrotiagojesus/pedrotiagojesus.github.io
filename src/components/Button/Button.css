@@ -36,30 +36,6 @@
     --btn-border-color: none;
 }
 
-/* SM ≥ 576px */
-@media (min-width: 576px) {
-    /* ... */
-}
-
-/* MD ≥ 768px */
-@media (min-width: 768px) {
-    /* ... */
-}
-
-/* LG ≥ 992px */
-@media (min-width: 992px) {
-    /* ... */
-}
-
-/* XL ≥ 1200px */
-@media (min-width: 1200px) {
-    /* ... */
-}
-
-/* XXL ≥ 1400px */
-@media (min-width: 1400px) {
-    /* ... */
-}
 /* Light theme adjustments for better contrast */
 body[data-theme="light"] .btn {
     box-shadow: var(--shadow-sm);

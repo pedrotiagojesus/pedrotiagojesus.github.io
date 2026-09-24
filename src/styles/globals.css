@@ -98,11 +98,6 @@ form .form-group textarea::placeholder {
     border-width: 0;
 }
 
-/* SM ≥ 576px */
-@media (min-width: 576px) {
-    /* ... */
-}
-
 /* MD ≥ 768px */
 @media (min-width: 768px) {
     #root {
@@ -113,19 +108,4 @@ form .form-group textarea::placeholder {
     .container {
         margin: var(--space-28) auto;
     }
-}
-
-/* LG ≥ 992px */
-@media (min-width: 992px) {
-    /* ... */
-}
-
-/* XL ≥ 1200px */
-@media (min-width: 1200px) {
-    /* ... */
-}
-
-/* XXL ≥ 1400px */
-@media (min-width: 1400px) {
-    /* ... */
 }

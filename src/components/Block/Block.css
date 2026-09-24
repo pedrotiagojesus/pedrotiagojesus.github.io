@@ -55,11 +55,6 @@ body[data-theme="dark"] #block article:hover {
     position: relative;
 }
 
-/* SM ≥ 576px */
-@media (min-width: 576px) {
-    /* ... */
-}
-
 /* MD ≥ 768px */
 @media (min-width: 768px) {
     #block .block-list {
@@ -67,17 +62,3 @@ body[data-theme="dark"] #block article:hover {
     }
 }
 
-/* LG ≥ 992px */
-@media (min-width: 992px) {
-    /* ... */
-}
-
-/* XL ≥ 1200px */
-@media (min-width: 1200px) {
-    /* ... */
-}
-
-/* XXL ≥ 1400px */
-@media (min-width: 1400px) {
-    /* ... */
-}
