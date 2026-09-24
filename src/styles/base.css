@@ -5,6 +5,15 @@
 @import "./tokens/motion.css";
 @import "./tokens/shadows.css";
 
+/* --font-family-base / --font-family-heading (typography.css) reference these
+   font families, but nothing loaded their @font-face rules until now — every
+   visitor was silently falling back to the browser's generic sans-serif.
+   Each face already sets font-display: swap, so this doesn't block first
+   paint, and browsers only fetch the specific weight/style files a page
+   actually renders with, not all of them upfront. */
+@import "../assets/fonts/Roboto/Rototo.css";
+@import "../assets/fonts/Lato/Lato.css";
+
 body {
     margin: 0;
     background-color: var(--color-bg);
