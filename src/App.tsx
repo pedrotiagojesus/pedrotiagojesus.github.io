@@ -4,8 +4,8 @@ import { Outlet } from "react-router-dom";
 import Navigation from "@components/Navigation/Navigation";
 import Footer from "@components/Footer/Footer";
 import HeaderMobile from "@components/HeaderMobile/HeaderMobile";
-import ScrollToTop from "@components/ScrollToTop";
-import ActivePage from "@components/ActivePage";
+import ScrollToTop from "@components/ScrollToTop/ScrollToTop";
+import ActivePage from "@components/ActivePage/ActivePage";
 import Loading from "@components/Loading/Loading";
 
 // Contexts

@@ -3,7 +3,7 @@ import "./Project.css";
 
 // Components
 import ProjectList from "@components/ProjectList/ProjectList";
-import Seo from "@components/Seo";
+import Seo from "@components/Seo/Seo";
 
 // Utils
 import { useVocabularyText } from "@utils/vocabulary";

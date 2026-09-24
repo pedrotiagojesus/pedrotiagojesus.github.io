@@ -6,7 +6,7 @@ import { useVocabularyText } from "@utils/vocabulary";
 
 // Components
 import Block from "@components/Block/Block";
-import Seo from "@components/Seo";
+import Seo from "@components/Seo/Seo";
 
 // Context
 import { useToast } from "@contexts/ToastContext";

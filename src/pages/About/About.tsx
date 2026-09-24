@@ -13,7 +13,7 @@ import { SITE_URL } from "@config/site";
 // Components
 import Block from "@components/Block/Block";
 import Loading from "@components/Loading/Loading";
-import Seo from "@components/Seo";
+import Seo from "@components/Seo/Seo";
 
 // Types
 import type { About } from "@typesLocal/index";

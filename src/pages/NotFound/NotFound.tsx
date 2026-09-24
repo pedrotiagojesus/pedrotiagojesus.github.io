@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./NotFound.css";
 
 // Components
-import Seo from "@components/Seo";
+import Seo from "@components/Seo/Seo";
 import Button from "@components/Button/Button";
 
 const NotFound = () => {

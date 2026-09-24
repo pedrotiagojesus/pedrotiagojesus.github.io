@@ -17,7 +17,7 @@ import { SITE_URL } from "@config/site";
 
 // Components
 import Loading from "@components/Loading/Loading";
-import Seo from "@components/Seo";
+import Seo from "@components/Seo/Seo";
 import Button from "@components/Button/Button";
 
 const ProjectItem = () => {

@@ -9,7 +9,7 @@ import "./Homepage.css";
 // Components
 import Block from "@components/Block/Block";
 import ProjectList from "@components/ProjectList/ProjectList";
-import Seo from "@components/Seo";
+import Seo from "@components/Seo/Seo";
 import Button from "@components/Button/Button";
 
 // Utils

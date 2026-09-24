@@ -7,7 +7,7 @@ import { useVocabularyText } from "@utils/vocabulary";
 // Components
 import Block from "@components/Block/Block";
 import Loading from "@components/Loading/Loading";
-import Seo from "@components/Seo";
+import Seo from "@components/Seo/Seo";
 
 // Hooks
 import { useContents } from "@hooks/useContents";
