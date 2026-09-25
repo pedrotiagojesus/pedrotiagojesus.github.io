@@ -34,6 +34,7 @@ const Navigation = () => {
         project: useVocabularyText("navigation.projects"),
         about: useVocabularyText("navigation.about"),
         contact: useVocabularyText("navigation.contact"),
+        cv: useVocabularyText("navigation.cv"),
     };
 
     return (

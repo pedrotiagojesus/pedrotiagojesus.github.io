@@ -10,6 +10,7 @@ const Project = lazy(() => import("@pages/Project/Project"));
 const ProjectItem = lazy(() => import("@pages/Project/ProjectItem"));
 const About = lazy(() => import("@pages/About/About"));
 const Contact = lazy(() => import("@pages/Contact/Contact"));
+const Cv = lazy(() => import("@pages/Cv/Cv"));
 const NotFound = lazy(() => import("@pages/NotFound/NotFound"));
 
 export const router = createBrowserRouter([
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
             {
                 path: "contact",
                 element: <Contact />,
+            },
+            {
+                path: "cv",
+                element: <Cv />,
             },
             {
                 path: "*",

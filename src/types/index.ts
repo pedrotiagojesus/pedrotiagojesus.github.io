@@ -93,7 +93,7 @@ export type Profile = {
     softSkill: string[];
 };
 
-export type ContentSeoPage = "home" | "projects" | "project" | "profile" | "experience" | "contact";
+export type ContentSeoPage = "home" | "projects" | "project" | "profile" | "experience" | "contact" | "cv";
 
 export type ContentSeoEntry = {
     title: string;

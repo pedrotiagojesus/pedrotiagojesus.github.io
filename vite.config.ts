@@ -15,7 +15,7 @@ export default defineConfig({
         preload(),
         sitemap({
             hostname: "https://pedrotiagojesus.github.io",
-            dynamicRoutes: ["/experience", "/project", "/about", "/contact"],
+            dynamicRoutes: ["/experience", "/project", "/about", "/contact", "/cv"],
             exclude: ["/404"],
             changefreq: {
                 "*": "monthly",
@@ -28,6 +28,7 @@ export default defineConfig({
                 "/project": 0.9,
                 "/experience": 0.8,
                 "/contact": 0.6,
+                "/cv": 0.6,
             },
         }),
     ],

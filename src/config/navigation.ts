@@ -1,6 +1,6 @@
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faCompass, faEnvelope, faUser } from "@fortawesome/free-regular-svg-icons";
-import { faSuitcase, faPencil, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faSuitcase, faPencil, faPhone, faFile } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faGithub, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import { trackEmailClick, trackGithubClick, trackLinkedinClick, trackXClick } from "@analytics/events";
@@ -20,6 +20,7 @@ export const NAV_ITEMS: NavItem[] = [
     { to: "/project", icon: faPencil, activeKey: "project", i18nKey: "navigation.projects" },
     { to: "/about", icon: faUser, activeKey: "about", i18nKey: "navigation.about" },
     { to: "/contact", icon: faPhone, activeKey: "contact", i18nKey: "navigation.contact" },
+    { to: "/cv", icon: faFile, activeKey: "cv", i18nKey: "navigation.cv" },
 ];
 
 export type SocialItem = {

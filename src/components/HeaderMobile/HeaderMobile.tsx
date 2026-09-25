@@ -37,6 +37,7 @@ const HeaderMobile = () => {
         project: useVocabularyText("navigation.projects"),
         about: useVocabularyText("navigation.about"),
         contact: useVocabularyText("navigation.contact"),
+        cv: useVocabularyText("navigation.cv"),
     };
 
     const toggleMenu = () => {
