@@ -1,5 +1,6 @@
 import client from "../api/client";
 import API_ENDPOINTS from "../api/endpoint";
+import type { EmailResponse } from "@typesLocal/index";
 
 interface EmailPayload {
     name: string;
@@ -8,7 +9,7 @@ interface EmailPayload {
     recaptchaToken: string;
 }
 
-export const postEmail = async (payload: EmailPayload) => {
-    const response = await client.post(API_ENDPOINTS.EMAIL, payload);
+export const postEmail = async (payload: EmailPayload): Promise<EmailResponse> => {
+    const response = await client.post<EmailResponse>(API_ENDPOINTS.EMAIL, payload);
     return response.data;
 };

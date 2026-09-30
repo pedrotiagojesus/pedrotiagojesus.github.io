@@ -69,6 +69,7 @@ export type Language = {
 };
 
 export type Education = {
+    id: number;
     organization: string;
     degree: string;
     dateStart: number;
@@ -107,6 +108,10 @@ export type ContentsResponse = {
     projects?: Project[];
     experience?: Experience[];
     profile?: Profile;
+};
+
+export type EmailResponse = {
+    success: boolean;
 };
 
 export type SEOProps = {
