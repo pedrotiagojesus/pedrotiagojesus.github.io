@@ -2,8 +2,11 @@
 import "../Card.css";
 import "./CardSkeleton.css";
 
-// Types
-import { CardSkeleton as CardSkeletonProps } from "@typesLocal/index";
+type CardSkeletonProps = {
+    title: boolean;
+    description: boolean;
+    image: boolean;
+};
 
 const CardSkeleton = ({ title, description, image }: CardSkeletonProps) => {
     return (

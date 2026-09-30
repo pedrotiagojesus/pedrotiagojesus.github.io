@@ -7,7 +7,7 @@ import "./ProjectList.css";
 import CardSkeleton from "@components/Card/Skeleton/CardSkeleton";
 
 // Types
-import type { ProjectList as ProjectListProps } from "@typesLocal/index";
+import type { Project } from "@typesLocal/index";
 
 // Utils
 import { useVocabularyText } from "@utils/vocabulary";
@@ -15,6 +15,15 @@ import Button from "@components/Button/Button";
 import Card from "@components/Card/Card";
 import { getProjectImage } from "@utils/image";
 import { slugify } from "@utils/text";
+
+type ProjectListProps = {
+    title: string;
+    projects: Project[];
+    showViewAllButton: boolean;
+    isLoading: boolean;
+    itemLimit?: number;
+    keyPrefix: string;
+};
 
 const SkeletonList = ({ count }: { count: number }) => (
     <div className="list">

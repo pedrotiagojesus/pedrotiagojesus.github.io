@@ -1,11 +1,20 @@
+import type { ElementType, ReactNode } from "react";
+
 // CSS
 import "./Card.css";
 
 // Utils
 import { slugify } from "@utils/text";
 
-// Types
-import { Card as CardProps } from "@typesLocal/index";
+type CardProps = {
+    htmlElement?: ElementType;
+    title: string;
+    description: ReactNode;
+    image?: string;
+    link?: string;
+    linkCover?: boolean;
+    isLcp?: boolean;
+};
 
 const Card = ({ htmlElement, title, description, image, link, linkCover, isLcp }: CardProps) => {
     const Element = htmlElement || "div";

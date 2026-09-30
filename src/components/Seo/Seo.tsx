@@ -1,7 +1,13 @@
 import { Helmet } from "react-helmet-async";
 
-// Types
-import { SEOProps } from "@typesLocal/index";
+type SEOProps = {
+    title?: string;
+    description?: string;
+    image?: string;
+    url?: string;
+    type?: "website" | "article" | "profile";
+    noIndex?: boolean;
+};
 
 const Seo = ({ title, description, image, url, type = "website", noIndex = false }: SEOProps) => {
     if (!title && !description) return null;
