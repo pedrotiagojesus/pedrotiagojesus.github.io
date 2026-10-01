@@ -1,4 +1,4 @@
-import { createContext, useEffect, ReactNode } from "react";
+import { createContext, useLayoutEffect, ReactNode } from "react";
 import useLocalStorage from "use-local-storage";
 
 interface ThemeContextContextType {
@@ -25,7 +25,10 @@ export const ThemeContextProvider = ({ children }: ThemeProps) => {
         setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
-    useEffect(() => {
+    // Layout effect (not useEffect) so the attribute is set during the commit:
+    // ToggleThemeButton's View Transition snapshots the page right after
+    // flushSync(toggleTheme) returns, and needs the new theme already applied.
+    useLayoutEffect(() => {
         document.body.dataset.theme = theme;
     }, [theme]);
 

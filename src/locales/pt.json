@@ -69,6 +69,13 @@
             "generating": "A gerar…",
             "generatingPdf": "A gerar PDF…",
             "loadError": "Erro ao carregar o CV."
+        },
+        "notFound": {
+            "seoDescription": "A página que procura não existe.",
+            "summary": "PÁGINA EM FALTA",
+            "warning": "AVISO: Recurso não encontrado.",
+            "description": "O recurso pedido não existe, pode ter sido removido ou o link está partido.",
+            "backHome": "Voltar ao início"
         }
     },
     "sections": {
@@ -81,6 +88,7 @@
     "common": {
         "copyEmail": "Copiar email",
         "seeAll": "Ver todos",
-        "loading": "A carregar..."
+        "loading": "A carregar...",
+        "copied": "Copiado!"
     }
 }

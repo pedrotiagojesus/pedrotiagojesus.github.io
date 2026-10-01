@@ -17,3 +17,51 @@
     margin-bottom: var(--space-xl);
 }
 
+/* Hero entrance: title → summary → buttons, one after the other. Plays on
+   load rather than on scroll, since the hero is always above the fold. */
+#homepage-about > * {
+    animation: homepage-enter var(--motion-duration-slowest) var(--ease-decelerated) both;
+}
+
+#homepage-about > :nth-child(2) {
+    animation-delay: var(--delay-medium);
+}
+
+#homepage-about > :nth-child(3) {
+    animation-delay: var(--delay-long);
+}
+
+@keyframes homepage-enter {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+}
+
+/* Terminal-style caret after the title, matching the code theme of the CV.
+   Blinks a few times and then stays solid, so it doesn't loop forever. */
+#homepage-about .page-title::after {
+    content: "_";
+    margin-left: 0.1em;
+    color: var(--color-primary);
+    animation: homepage-caret 1s steps(1) 6;
+}
+
+@keyframes homepage-caret {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Copy email: the ✓ that replaces the copy icon pops in */
+#homepage-about .copy-icon-pop {
+    color: var(--color-success-500);
+    animation: homepage-pop var(--motion-duration-slow) var(--ease-back-out);
+}
+
+@keyframes homepage-pop {
+    from {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+}

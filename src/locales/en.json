@@ -69,6 +69,13 @@
             "generating": "Generating…",
             "generatingPdf": "Generating PDF…",
             "loadError": "Failed to load the CV."
+        },
+        "notFound": {
+            "seoDescription": "The page you are looking for does not exist.",
+            "summary": "PAGE MISSING",
+            "warning": "WARNING: Resource not found.",
+            "description": "The requested resource does not exist, may have been removed, or the link is broken.",
+            "backHome": "Back to home"
         }
     },
     "sections": {
@@ -81,6 +88,7 @@
     "common": {
         "copyEmail": "Copy Email",
         "seeAll": "See all",
-        "loading": "Loading..."
+        "loading": "Loading...",
+        "copied": "Copied!"
     }
 }

@@ -11,6 +11,7 @@ import type { Project } from "@typesLocal/index";
 
 // Utils
 import { useTranslation } from "react-i18next";
+import { useReveal } from "@hooks/useReveal";
 import Button from "@components/Button/Button";
 import Card from "@components/Card/Card";
 import { getProjectImage } from "@utils/image";
@@ -42,6 +43,7 @@ const ProjectList = ({
     keyPrefix = "project",
 }: ProjectListProps) => {
     const { t } = useTranslation();
+    const revealRef = useReveal<HTMLDivElement>();
 
     // Vocabulary
     const seeAll = t("common.seeAll");
@@ -59,7 +61,7 @@ const ProjectList = ({
     return (
         <section id="project-list" aria-labelledby="project-list-title">
             {title && <h2 id="project-list-title">{title}</h2>}
-            <div className="list">
+            <div className="list reveal-group" ref={revealRef}>
                 {projects.map((project, index) => (
                     <Card
                         key={`${keyPrefix}-${project.id}`}

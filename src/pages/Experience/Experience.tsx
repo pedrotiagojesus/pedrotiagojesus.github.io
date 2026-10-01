@@ -3,6 +3,7 @@ import "./Experience.css";
 
 // Utils
 import { useTranslation } from "react-i18next";
+import { useReveal } from "@hooks/useReveal";
 
 // Components
 import Block from "@components/Block/Block";
@@ -17,6 +18,7 @@ import { SITE_URL } from "@config/site";
 
 const Experience = () => {
     const { t } = useTranslation();
+    const revealRef = useReveal<HTMLDivElement>();
 
     // Vocabulary
     const i18n = {
@@ -41,7 +43,7 @@ const Experience = () => {
             <section id="experience-content">
                 <h1 className="page-title">{i18n.title}</h1>
                 <p className="page-summary">{i18n.summary}</p>
-                <div className="experience-list">
+                <div className="experience-list reveal-group" ref={revealRef}>
                     {safeExperience.map((exp) => (
                         <article key={exp.id} className="experience-card">
                             <h2 className="experience-role">{exp.role}</h2>

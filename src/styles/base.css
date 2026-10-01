@@ -47,3 +47,26 @@ a:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
+
+/* motion.css only zeroes the motion *tokens*, so anything with a hardcoded
+   duration (the floating lights, loading, toasts, skeleton shine) kept
+   animating for visitors who asked for less motion. This catches all of it,
+   including the View Transitions used for page changes and the theme toggle. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+        scroll-behavior: auto !important;
+    }
+
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none !important;
+    }
+}

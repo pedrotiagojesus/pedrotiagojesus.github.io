@@ -109,3 +109,61 @@ form .form-group textarea::placeholder {
         margin: var(--space-28) auto;
     }
 }
+
+/* Scroll reveal: pair with useReveal(), which adds .is-visible once the element
+   enters the viewport. .reveal animates the element itself (set --i on
+   siblings to stagger them); .reveal-group animates its children, staggered
+   by position. */
+.reveal,
+.reveal-group > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity var(--motion-duration-slower) var(--ease-decelerated),
+        transform var(--motion-duration-slower) var(--ease-decelerated);
+    transition-delay: calc(var(--i, 0) * var(--delay-short));
+}
+
+.reveal.is-visible,
+.reveal-group.is-visible > * {
+    opacity: 1;
+    transform: none;
+}
+
+/* Capped at 6 steps so a long list never waits more than ~0.4s to finish */
+.reveal-group > :nth-child(2) { --i: 1; }
+.reveal-group > :nth-child(3) { --i: 2; }
+.reveal-group > :nth-child(4) { --i: 3; }
+.reveal-group > :nth-child(5) { --i: 4; }
+.reveal-group > :nth-child(n + 6) { --i: 5; }
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-group > * {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Page changes (NAV links use React Router's viewTransition): a short
+   cross-fade instead of the browser's default. */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: var(--motion-duration-normal);
+}
+
+/* Theme toggle: the new theme is revealed as a growing circle (animated from
+   ToggleThemeButton), so the default cross-fade is turned off for it. */
+.theme-transition::view-transition-old(root),
+.theme-transition::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+/* The circle reveals a live view of the page, so the elements' own 250ms
+   color transitions would show up inside it as an in-between palette. Switch
+   colors instantly while the reveal runs. */
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+    transition: none !important;
+}

@@ -58,6 +58,7 @@ const Navigation = () => {
                         <li key={item.to}>
                             <Link
                                 to={item.to}
+                                viewTransition
                                 className={activePage === item.activeKey ? "active" : ""}
                                 onClick={item.activeKey === "cv" ? () => trackCVClick("navigation") : undefined}
                             >

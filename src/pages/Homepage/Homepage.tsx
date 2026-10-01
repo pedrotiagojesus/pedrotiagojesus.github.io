@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-regular-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 // CSS
 import "./Homepage.css";
@@ -32,14 +33,19 @@ const Homepage = () => {
         projects: t("navigation.projects"),
     };
 
-    const defaultText = t("common.copyEmail");
-    const [buttonText, setButtonText] = useState<string | undefined>(defaultText);
+    const [copied, setCopied] = useState(false);
+
+    // Back to "Copy email" 2s after a copy (and no stray timer after unmount)
+    useEffect(() => {
+        if (!copied) return;
+        const timeout = setTimeout(() => setCopied(false), 2000);
+        return () => clearTimeout(timeout);
+    }, [copied]);
 
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText("pedrotiagojesus1995@gmail.com");
-            setButtonText("Copied");
-            setTimeout(() => setButtonText(defaultText), 2000);
+            setCopied(true);
         } catch (error) {
             console.error("Failed to copy the value:", error);
         }
@@ -66,7 +72,13 @@ const Homepage = () => {
                         {i18n.about}
                     </Button>
                     <Button variant="secondary" onClick={handleCopy} className="email">
-                        <FontAwesomeIcon icon={faCopy} /> {buttonText}
+                        {/* key remounts the icon on each swap so the pop animation replays */}
+                        <FontAwesomeIcon
+                            key={copied ? "check" : "copy"}
+                            icon={copied ? faCheck : faCopy}
+                            className={copied ? "copy-icon-pop" : undefined}
+                        />{" "}
+                        {copied ? t("common.copied") : t("common.copyEmail")}
                     </Button>
                 </div>
             </section>

@@ -3,6 +3,7 @@ import "./About.css";
 
 // Utils
 import { useTranslation } from "react-i18next";
+import { useReveal } from "@hooks/useReveal";
 
 // Hooks
 import { useContents } from "@hooks/useContents";
@@ -28,6 +29,9 @@ const DEFAULT_ABOUT: About = {
 
 const About = () => {
     const { t } = useTranslation();
+    const revealAboutRef = useReveal<HTMLDivElement>();
+    const revealEducationRef = useReveal<HTMLDivElement>();
+    const revealCertificationRef = useReveal<HTMLDivElement>();
 
     // Vocabulary
     const i18n = {
@@ -69,7 +73,7 @@ const About = () => {
                     ))}
                 </ul>
             </section>
-            <div className="about-list">
+            <div className="about-list reveal-group" ref={revealAboutRef}>
                 <section id="about-skill-content" className="about-tags">
                     <h2 className="page-subtitle">{i18n.skills}</h2>
                     <div className="list">
@@ -99,7 +103,7 @@ const About = () => {
                 <h2 id="education-title" className="page-subtitle">
                     {i18n.education}
                 </h2>
-                <div className="list">
+                <div className="list reveal-group" ref={revealEducationRef}>
                     {educationArr.map((item, index) => (
                         <Card
                             key={`education-${index}`}
@@ -122,7 +126,7 @@ const About = () => {
             {certificationArr && certificationArr.length > 0 && (
                 <section id="certification">
                     <h2 className="page-subtitle">{i18n.certificates}</h2>
-                    <div className="list">
+                    <div className="list reveal-group" ref={revealCertificationRef}>
                         {certificationArr.map((certification) => (
                             <Card
                                 key={`certification-${certification.id}`}
