@@ -1,5 +1,4 @@
 #project-item-content .btn.all-project-link {
-    --btn-font-weight: var(--font-weight-light);
     --btn-font-size: var(--text-xs);
 
     margin-bottom: var(--space-6);

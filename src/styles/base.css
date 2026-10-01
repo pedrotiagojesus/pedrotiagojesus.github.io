@@ -11,7 +11,7 @@
    Each face already sets font-display: swap, so this doesn't block first
    paint, and browsers only fetch the specific weight/style files a page
    actually renders with, not all of them upfront. */
-@import "../assets/fonts/Roboto/Rototo.css";
+@import "../assets/fonts/Roboto/Roboto.css";
 @import "../assets/fonts/Lato/Lato.css";
 
 body {

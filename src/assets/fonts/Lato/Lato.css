@@ -1,14 +1,20 @@
-/* Only the weights actually used in the app (see src/styles/tokens/typography.css
-   and the font-weight overrides across component CSS) are declared here, to
+/* Only Regular and Bold are bundled (see Roboto.css for the same reasoning) to
    avoid shipping the full Lato family (thin/light/black/italics) for nothing.
    Weight 500 reuses the Regular file, same as the original full family CSS
-   did — Lato's static set has no separate Medium face. */
+   did — Lato's static set has no separate Medium face.
+
+   WOFF2 converted losslessly from the TTFs but deliberately NOT subset: Lato's
+   OFL licence has a Reserved Font Name, and a subset counts as a Modified
+   Version, which couldn't keep the name "Lato". A plain format conversion
+   isn't a modification. ~27KB each instead of ~73KB.
+
+   No local(), for the same reason as in Roboto.css. */
 
 @font-face {
     font-family: "Lato";
     font-weight: 400;
     font-style: normal;
-    src: local("Lato"), url(./Lato-Regular.ttf) format("opentype");
+    src: url(./Lato-Regular.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -16,7 +22,7 @@
     font-family: "Lato";
     font-weight: 500;
     font-style: normal;
-    src: local("Lato"), url(./Lato-Regular.ttf) format("opentype");
+    src: url(./Lato-Regular.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -24,6 +30,6 @@
     font-family: "Lato";
     font-weight: 700;
     font-style: normal;
-    src: local("Lato"), url(./Lato-Bold.ttf) format("opentype");
+    src: url(./Lato-Bold.woff2) format("woff2");
     font-display: swap;
 }

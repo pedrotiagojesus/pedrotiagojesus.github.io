@@ -82,7 +82,7 @@ It renders the CV as normal HTML/React, lets the visitor download it as a PDF (v
 
 ### Fonts and icons
 
-Roboto/Lato are self-hosted (`src/assets/fonts/`) but trimmed to only the weights actually used in CSS (light/regular/medium/bold, no italics) — check `font-weight` usage across the codebase before re-adding a weight file. Icons come from `@fortawesome/react-fontawesome` with per-icon imports (`free-solid-svg-icons`, `free-regular-svg-icons`, `free-brands-svg-icons`), not the bundled Font Awesome CSS/webfont package — `<FontAwesomeIcon icon={faXxx} />`, with icon definitions for nav/social links centralized in `src/config/navigation.ts`.
+Roboto/Lato are self-hosted (`src/assets/fonts/`) as WOFF2, trimmed to only the weights actually used in CSS (regular/medium/bold, no light, no italics) — check `font-weight` usage across the codebase before re-adding a weight file. Roboto is additionally subset to Google Fonts' "latin" range with a matching `unicode-range` (~22KB per weight); Lato is only converted, never subset, because its OFL licence reserves the name "Lato" for unmodified versions. Neither uses `local()`, so every visitor (and the CV's PDF) renders the same files. To add a weight, convert from the upstream TTF the same way (e.g. `subset-font`/`fonttools`, outside the repo) rather than committing a TTF. Icons come from `@fortawesome/react-fontawesome` with per-icon imports (`free-solid-svg-icons`, `free-regular-svg-icons`, `free-brands-svg-icons`), not the bundled Font Awesome CSS/webfont package — `<FontAwesomeIcon icon={faXxx} />`, with icon definitions for nav/social links centralized in `src/config/navigation.ts`.
 
 ### GitHub Pages SPA routing
 

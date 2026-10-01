@@ -1,0 +1,43 @@
+/* Only the weights actually used in the app (see src/styles/tokens/typography.css
+   and the font-weight overrides across component CSS) are declared here, to
+   avoid shipping the full Roboto family (thin/light/black/italics) for nothing.
+
+   The files are WOFF2 subset to Google Fonts' "latin" range (Portuguese,
+   Spanish, Western European punctuation) — ~22KB each instead of ~165KB TTF.
+   unicode-range matches that subset, so a character outside it falls back to
+   the system font for that character only. Roboto is Apache 2.0, which allows
+   subsetting (see LICENSE.txt).
+
+   No local(): it matches by family name, so on a machine with Roboto installed
+   it could hand back the Regular face for every weight, and the CV's PDF would
+   depend on what each visitor has installed. */
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    src: url(./Roboto-Regular.woff2) format("woff2");
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+20AC, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-style: normal;
+    src: url(./Roboto-Medium.woff2) format("woff2");
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+20AC, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: normal;
+    src: url(./Roboto-Bold.woff2) format("woff2");
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+20AC, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
