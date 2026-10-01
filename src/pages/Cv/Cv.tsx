@@ -21,6 +21,15 @@ import { useContents } from "@hooks/useContents";
 // Image
 import Avatar from "@assets/img/avatar.webp";
 
+// Shown as `key: value` pairs; the key's label comes from pages.cv.contactKeys.
+const CONTACTS = [
+    { key: "email", value: "pedrotiagojesus1995@gmail.com" },
+    { key: "web", value: "pedrotiagojesus.github.io" },
+    { key: "location", value: "Lousã, Coimbra, Portugal" },
+    { key: "linkedin", value: "linkedin.com/in/pedro-jesus-7a1654140" },
+    { key: "github", value: "github.com/pedrotiagojesus" },
+] as const;
+
 const PDF_MARGIN_MM = 0;
 const PDF_PAGE_WIDTH_MM = 210;
 const PDF_PAGE_HEIGHT_MM = 297; 
@@ -56,33 +65,31 @@ const Cv = () => {
         const skillArr = profile.skill ?? [];
         const softSkillArr = profile.softSkill ?? [];
         const languageArr = profile.language ?? [];
-        const languagesLabel = i18next.language === "pt" ? "Idiomas" : "Languages";
 
         return (
             <>
                 <div className="cv-sidebar-photo">
-                    <div className="cv-sidebar-photo-ring">
-                        <img src={Avatar} alt="Pedro Jesus" />
-                    </div>
+                    <img src={Avatar} alt="Pedro Jesus" />
                 </div>
                 <div className="cv-sidebar-block">
                     <h1 className="cv-name">Pedro Jesus</h1>
                     <p className="cv-role">Full Stack Developer</p>
                 </div>
                 <div className="cv-sidebar-block">
-                    <h2 className="cv-sidebar-title">Contact</h2>
+                    <h2 className="cv-sidebar-title">{t("pages.cv.contact")}</h2>
                     <ul className="cv-contacts">
-                        <li>pedrotiagojesus1995@gmail.com</li>
-                        <li>pedrotiagojesus.github.io</li>
-                        <li>Lousã, Coimbra, Portugal</li>
-                        <li>linkedin.com/in/pedro-jesus-7a1654140</li>
-                        <li>github.com/pedrotiagojesus</li>
+                        {CONTACTS.map((contact) => (
+                            <li key={contact.key}>
+                                <span className="cv-contact-key">{t(`pages.cv.contactKeys.${contact.key}`)}</span>
+                                <span>{contact.value}</span>
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 {skillArr.length > 0 && (
                     <div className="cv-sidebar-block">
                         <h2 className="cv-sidebar-title">{i18n.skills}</h2>
-                        <ul className="cv-pill-list cv-pill-list-sidebar">
+                        <ul className="cv-token-list">
                             {skillArr.map((skill) => (
                                 <li key={skill.id}>{skill.name}</li>
                             ))}
@@ -92,7 +99,7 @@ const Cv = () => {
                 {softSkillArr.length > 0 && (
                     <div className="cv-sidebar-block">
                         <h2 className="cv-sidebar-title">{i18n.softSkills}</h2>
-                        <ul className="cv-pill-list cv-pill-list-sidebar">
+                        <ul className="cv-token-list">
                             {softSkillArr.map((item, index) => (
                                 <li key={`${item}-${index}`}>{item}</li>
                             ))}
@@ -101,8 +108,8 @@ const Cv = () => {
                 )}
                 {languageArr.length > 0 && (
                     <div className="cv-sidebar-block">
-                        <h2 className="cv-sidebar-title">{languagesLabel}</h2>
-                        <ul className="cv-pill-list cv-pill-list-sidebar">
+                        <h2 className="cv-sidebar-title">{t("pages.cv.languages")}</h2>
+                        <ul className="cv-token-list">
                             {languageArr.map((lang) => (
                                 <li key={lang.name}>{lang.name}</li>
                             ))}
@@ -111,7 +118,7 @@ const Cv = () => {
                 )}
             </>
         );
-    }, [profile, i18n.skills, i18n.softSkills, i18next.language]);
+    }, [profile, i18n.skills, i18n.softSkills, t]);
 
     const mainBlocks = useMemo<CvBlock[]>(() => {
         if (!profile) return [];
@@ -143,10 +150,10 @@ const Cv = () => {
                             <div className="cv-entry-head">
                                 <h3>{exp.role}</h3>
                                 <span className="cv-entry-date">
-                                    {exp.dateStart} — {exp.dateEnd}
+                                    {exp.dateStart} – {exp.dateEnd}
                                 </span>
                             </div>
-                            <p className="cv-entry-subtitle">{exp.company}</p>
+                            <p className="cv-entry-subtitle cv-entry-company">{exp.company}</p>
                             <ul className="cv-entry-list">
                                 {exp.content.map((item, i) => (
                                     <li key={`${item}-${i}`}>{item}</li>
@@ -168,7 +175,7 @@ const Cv = () => {
                             <div className="cv-entry-head">
                                 <h3>{item.organization}</h3>
                                 <span className="cv-entry-date">
-                                    {item.dateStart} — {item.dateEnd}
+                                    {item.dateStart} – {item.dateEnd}
                                 </span>
                             </div>
                             <p className="cv-entry-subtitle">{item.degree}</p>
@@ -298,7 +305,7 @@ const Cv = () => {
     };
 
     if (isLoading) return <Loading />;
-    if (isError) return <p>Erro ao carregar o CV.</p>;
+    if (isError) return <p>{t("pages.cv.loadError")}</p>;
 
     // While exporting (or before the first measurement completes), fall
     // back to putting everything on "page 1" — matching the flat layout
@@ -311,13 +318,13 @@ const Cv = () => {
             <Seo title={seo?.title} description={seo?.description} url={SITE_URL + "/cv"} />
             <div className="cv-toolbar">
                 <Button variant="primary" onClick={handleDownload} disabled={isExporting}>
-                    <FontAwesomeIcon icon={faFileArrowDown} /> {isExporting ? "A gerar…" : "Download PDF"}
+                    <FontAwesomeIcon icon={faFileArrowDown} /> {isExporting ? t("pages.cv.generating") : t("pages.cv.download")}
                 </Button>
             </div>
             {isExporting && (
                 <div className="cv-export-overlay">
                     <span className="cv-export-spinner" aria-hidden="true" />
-                    <p>A gerar PDF…</p>
+                    <p>{t("pages.cv.generatingPdf")}</p>
                 </div>
             )}
 

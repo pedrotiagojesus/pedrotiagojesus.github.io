@@ -54,6 +54,21 @@
             "message": "Message",
             "messageSuccess": "Message sent successfully!",
             "messageError": "An error occurred while sending the message. Please try again later."
+        },
+        "cv": {
+            "contact": "Contact",
+            "languages": "Languages",
+            "contactKeys": {
+                "email": "email",
+                "web": "web",
+                "location": "location",
+                "linkedin": "linkedin",
+                "github": "github"
+            },
+            "download": "Download PDF",
+            "generating": "Generating…",
+            "generatingPdf": "Generating PDF…",
+            "loadError": "Failed to load the CV."
         }
     },
     "sections": {
