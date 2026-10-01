@@ -1,0 +1,1 @@
+import{r as t}from"./react-vendor-BQnsOKes.js";function i(){const s=t.useRef(null);return t.useCallback(r=>{var n;if((n=s.current)==null||n.disconnect(),!r)return;const e=new IntersectionObserver(([o])=>{o.isIntersecting&&(r.classList.add("is-visible"),e.disconnect())},{rootMargin:"0px 0px -10% 0px"});e.observe(r),s.current=e},[])}export{i as u};
