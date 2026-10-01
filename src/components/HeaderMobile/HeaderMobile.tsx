@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faFile } from "@fortawesome/free-regular-svg-icons";
 
 // CSS
 import "./HeaderMobile.css";
@@ -109,24 +108,16 @@ const HeaderMobile = () => {
                     <ul>
                         {NAV_ITEMS.map((item) => (
                             <li key={item.to}>
-                                <Link to={item.to} className={activePage === item.activeKey ? "active" : ""}>
+                                <Link
+                                    to={item.to}
+                                    className={activePage === item.activeKey ? "active" : ""}
+                                    onClick={item.activeKey === "cv" ? () => trackCVClick("header_mobile") : undefined}
+                                >
                                     <FontAwesomeIcon icon={item.icon} />
                                     <span className="label">{navLabels[item.activeKey]}</span>
                                 </Link>
                             </li>
                         ))}
-                        <li>
-                            <a
-                                href="/CV.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Download CV"
-                                onClick={() => trackCVClick("header_mobile")}
-                            >
-                                <FontAwesomeIcon icon={faFile} />
-                                <span className="label">CV</span>
-                            </a>
-                        </li>
                     </ul>
                     <hr />
                     <ul className="social-network">

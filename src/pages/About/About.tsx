@@ -30,7 +30,6 @@ const About = () => {
     // Vocabulary
     const i18n = {
         title: useVocabularyText("pages.about.title"),
-        summary: useVocabularyText("pages.about.summary"),
         skills: useVocabularyText("pages.about.sections.skills"),
         softSkills: useVocabularyText("pages.about.sections.softSkills"),
         interests: useVocabularyText("pages.about.sections.interests"),
