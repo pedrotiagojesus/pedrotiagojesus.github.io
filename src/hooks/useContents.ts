@@ -2,9 +2,9 @@ import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 
 import { getContents } from "@services/contentService";
-import type { ContentsResponse } from "@typesLocal/index";
+import type { ContentSection, ContentsResponse } from "@typesLocal/index";
 
-export function useContents(sections: string[], projectsSlug?: string[]) {
+export function useContents(sections: ContentSection[], projectsSlug?: string[]) {
     const { i18n } = useTranslation();
     return useQuery<ContentsResponse, Error>({
         queryKey: ["contents", i18n.language, sections, projectsSlug],

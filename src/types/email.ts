@@ -1,3 +1,5 @@
+import { z } from "zod";
+
 export type EmailPayload = {
     name: string;
     email: string;
@@ -5,6 +7,7 @@ export type EmailPayload = {
     recaptchaToken: string;
 };
 
-export type EmailResponse = {
-    success: boolean;
-};
+export const emailResponseSchema = z.object({
+    success: z.boolean(),
+});
+export type EmailResponse = z.infer<typeof emailResponseSchema>;
