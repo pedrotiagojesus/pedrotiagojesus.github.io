@@ -1,0 +1,71 @@
+{
+    "navigation": {
+        "home": "Início",
+        "experience": "Experiência",
+        "projects": "Projetos",
+        "about": "Sobre mim",
+        "contact": "Contacto",
+        "cv": "CV"
+    },
+    "pages": {
+        "home": {
+            "hero": {
+                "title": "Olá, sou o Pedro 👋",
+                "subtitle": "O meu foco principal é o desenvolvimento frontend, especialmente com React e TypeScript, onde encontro a minha maior motivação. Ainda assim, tenho interesse e gosto em trabalhar noutras áreas do desenvolvimento web, o que me dá uma visão mais completa dos projetos."
+            },
+            "projects": {
+                "title": "Novos Projetos"
+            }
+        },
+        "experience": {
+            "title": "Experiência",
+            "summary": "Um resumo do meu histórico de trabalho profissional, tecnologias que utilizei e principais conquistas."
+        },
+        "projects": {
+            "title": "Projetos",
+            "summary": "A criar experiências digitais memoráveis.",
+            "actions": {
+                "all": "Todos os projetos",
+                "demo": "Demonstração",
+                "source": "Código"
+            },
+            "demoModal": {
+                "title": "Demonstração e código",
+                "description": "Gostaria de fazer uma demonstração rápida ou visualizar o código-fonte?"
+            }
+        },
+        "about": {
+            "title": "Sobre mim",
+            "sections": {
+                "skills": "Competências",
+                "interests": "Interesses",
+                "hobbies": "Hobbies",
+                "softSkills": "Competências interpessoais",
+                "education": "Educação",
+                "certificates": "Certificados"
+            }
+        },
+        "contact": {
+            "title": "Contacto",
+            "summary": "Transformo ideias em soluções funcionais, do front ao back-end. Vamos falar? 😊",
+            "send": "Enviar",
+            "name": "Nome",
+            "email": "Email",
+            "message": "Mensagem",
+            "messageSuccess": "Mensagem enviada com sucesso!",
+            "messageError": "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde."
+        }
+    },
+    "sections": {
+        "projectsPreview": {
+            "title": "Projetos",
+            "summary": "Explore os meus projetos em desenvolvimento web e além.",
+            "cta": "Ver os projetos"
+        }
+    },
+    "common": {
+        "copyEmail": "Copiar email",
+        "seeAll": "Ver todos",
+        "loading": "A carregar..."
+    }
+}

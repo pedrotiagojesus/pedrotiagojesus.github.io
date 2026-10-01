@@ -6,21 +6,13 @@ import Footer from "@components/Footer/Footer";
 import HeaderMobile from "@components/HeaderMobile/HeaderMobile";
 import ScrollToTop from "@components/ScrollToTop/ScrollToTop";
 import ActivePage from "@components/ActivePage/ActivePage";
-import Loading from "@components/Loading/Loading";
-
-// Contexts
-import { useVocabulary } from "@contexts/VocabularyContext";
 
 // Analytics
 import { usePageTracking } from "./analytics/usePageTracking";
 
 function App() {
-    const { isLoading } = useVocabulary();
-
     // Track page views
     usePageTracking();
-
-    if (isLoading) return <Loading />;
 
     return (
         <>

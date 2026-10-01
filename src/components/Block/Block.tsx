@@ -9,16 +9,17 @@ import "./Block.css";
 import Light from "@components/BackgroundAnimation/Light/Light";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 import Button from "@components/Button/Button";
 
 const Block = () => {
+    const { t } = useTranslation();
 
     // Vocabulary
     const i18n = {
-        title: useVocabularyText("sections.projectsPreview.title"),
-        summary: useVocabularyText("sections.projectsPreview.summary"),
-        cta: useVocabularyText("sections.projectsPreview.cta"),
+        title: t("sections.projectsPreview.title"),
+        summary: t("sections.projectsPreview.summary"),
+        cta: t("sections.projectsPreview.cta"),
     };
 
     return (

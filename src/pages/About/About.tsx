@@ -2,7 +2,7 @@
 import "./About.css";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 
 // Hooks
 import { useContents } from "@hooks/useContents";
@@ -27,15 +27,17 @@ const DEFAULT_ABOUT: About = {
 };
 
 const About = () => {
+    const { t } = useTranslation();
+
     // Vocabulary
     const i18n = {
-        title: useVocabularyText("pages.about.title"),
-        skills: useVocabularyText("pages.about.sections.skills"),
-        softSkills: useVocabularyText("pages.about.sections.softSkills"),
-        interests: useVocabularyText("pages.about.sections.interests"),
-        education: useVocabularyText("pages.about.sections.education"),
-        certificates: useVocabularyText("pages.about.sections.certificates"),
-        hobbies: useVocabularyText("pages.about.sections.hobbies"),
+        title: t("pages.about.title"),
+        skills: t("pages.about.sections.skills"),
+        softSkills: t("pages.about.sections.softSkills"),
+        interests: t("pages.about.sections.interests"),
+        education: t("pages.about.sections.education"),
+        certificates: t("pages.about.sections.certificates"),
+        hobbies: t("pages.about.sections.hobbies"),
     };
 
     const { data, isLoading, isError } = useContents(["profile", "seo"]);

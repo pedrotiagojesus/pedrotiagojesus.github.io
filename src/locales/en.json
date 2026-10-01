@@ -1,0 +1,71 @@
+{
+    "navigation": {
+        "home": "Home",
+        "experience": "Experience",
+        "projects": "Projects",
+        "about": "About",
+        "contact": "Contact",
+        "cv": "CV"
+    },
+    "pages": {
+        "home": {
+            "hero": {
+                "title": "Hello, I'm Pedro 👋",
+                "subtitle": "My main focus is frontend development, especially with React and TypeScript, where I find my greatest motivation. That said, I also enjoy working across other areas of web development, which gives me a broader perspective on projects."
+            },
+            "projects": {
+                "title": "New Drops"
+            }
+        },
+        "experience": {
+            "title": "Experience",
+            "summary": "A summary of my professional work history, technologies I've used, and key achievements."
+        },
+        "projects": {
+            "title": "Projects",
+            "summary": "Crafting memorable digital experiences.",
+            "actions": {
+                "all": "All projects",
+                "demo": "Demo",
+                "source": "Source"
+            },
+            "demoModal": {
+                "title": "Demo & Code",
+                "description": "Would you like to take a quick demo or view the source code?"
+            }
+        },
+        "about": {
+            "title": "About",
+            "sections": {
+                "skills": "Skills",
+                "interests": "Interests",
+                "hobbies": "Hobbies",
+                "softSkills": "Soft Skills",
+                "education": "Education",
+                "certificates": "Certification"
+            }
+        },
+        "contact": {
+            "title": "Contact",
+            "summary": "I turn ideas into functional solutions, from front-end to back-end. Let’s talk! 😊",
+            "send": "Send",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "messageSuccess": "Message sent successfully!",
+            "messageError": "An error occurred while sending the message. Please try again later."
+        }
+    },
+    "sections": {
+        "projectsPreview": {
+            "title": "Projects",
+            "summary": "Explore my diverse projects in web development and beyond.",
+            "cta": "View Projects"
+        }
+    },
+    "common": {
+        "copyEmail": "Copy Email",
+        "seeAll": "See all",
+        "loading": "Loading..."
+    }
+}

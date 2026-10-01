@@ -2,7 +2,7 @@
 import "./Contact.css";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 
 // Components
 import Block from "@components/Block/Block";
@@ -22,18 +22,20 @@ import { postEmail } from "@services/emailService";
 import { ApiError } from "@api/errors";
 
 const Contact = () => {
+    const { t } = useTranslation();
+
     const { showToast } = useToast();
 
     // Vocabulary
     const i18n = {
-        title: useVocabularyText("pages.contact.title"),
-        summary: useVocabularyText("pages.contact.summary"),
-        name: useVocabularyText("pages.contact.name"),
-        email: useVocabularyText("pages.contact.email"),
-        message: useVocabularyText("pages.contact.message"),
-        send: useVocabularyText("pages.contact.send"),
-        messageSuccess: useVocabularyText("pages.contact.messageSuccess"),
-        messageError: useVocabularyText("pages.contact.messageError"),
+        title: t("pages.contact.title"),
+        summary: t("pages.contact.summary"),
+        name: t("pages.contact.name"),
+        email: t("pages.contact.email"),
+        message: t("pages.contact.message"),
+        send: t("pages.contact.send"),
+        messageSuccess: t("pages.contact.messageSuccess"),
+        messageError: t("pages.contact.messageError"),
     };
 
     const { data } = useContents(["seo"]);

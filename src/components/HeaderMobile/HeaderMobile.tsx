@@ -15,13 +15,15 @@ import ToggleThemeButton from "@components/ToggleThemeButton/ToggleThemeButton";
 import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 import { trackCVClick } from "@analytics/events";
 
 // Config
 import { NAV_ITEMS, SOCIAL_ITEMS } from "@config/navigation";
 
 const HeaderMobile = () => {
+    const { t } = useTranslation();
+
     const { activePage } = useActivePage();
 
     const contentRef = useRef<HTMLDivElement>(null);
@@ -31,12 +33,12 @@ const HeaderMobile = () => {
     const [scrolled, setScrolled] = useState(false);
 
     const navLabels: Record<string, string> = {
-        home: useVocabularyText("navigation.home"),
-        experience: useVocabularyText("navigation.experience"),
-        project: useVocabularyText("navigation.projects"),
-        about: useVocabularyText("navigation.about"),
-        contact: useVocabularyText("navigation.contact"),
-        cv: useVocabularyText("navigation.cv"),
+        home: t("navigation.home"),
+        experience: t("navigation.experience"),
+        project: t("navigation.projects"),
+        about: t("navigation.about"),
+        contact: t("navigation.contact"),
+        cv: t("navigation.cv"),
     };
 
     const toggleMenu = () => {

@@ -15,7 +15,7 @@ import LanguagePicker from "@components/LanguagePicker/LanguagePicker";
 import ToggleThemeButton from "@components/ToggleThemeButton/ToggleThemeButton";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 
 // Config
 import { NAV_ITEMS, SOCIAL_ITEMS } from "@config/navigation";
@@ -24,16 +24,18 @@ import { NAV_ITEMS, SOCIAL_ITEMS } from "@config/navigation";
 import { trackCVClick } from "@analytics/events";
 
 const Navigation = () => {
+    const { t } = useTranslation();
+
     const { activePage } = useActivePage();
     const [navigationCollapse, setNavigationCollapse] = useState(false);
 
     const navLabels: Record<string, string> = {
-        home: useVocabularyText("navigation.home"),
-        experience: useVocabularyText("navigation.experience"),
-        project: useVocabularyText("navigation.projects"),
-        about: useVocabularyText("navigation.about"),
-        contact: useVocabularyText("navigation.contact"),
-        cv: useVocabularyText("navigation.cv"),
+        home: t("navigation.home"),
+        experience: t("navigation.experience"),
+        project: t("navigation.projects"),
+        about: t("navigation.about"),
+        contact: t("navigation.contact"),
+        cv: t("navigation.cv"),
     };
 
     return (

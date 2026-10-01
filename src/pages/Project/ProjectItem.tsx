@@ -6,7 +6,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "./ProjectItem.css";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 import { getProjectImage } from "@utils/image";
 
 // Hooks
@@ -21,11 +21,13 @@ import Seo from "@components/Seo/Seo";
 import Button from "@components/Button/Button";
 
 const ProjectItem = () => {
-    const i18nAll = useVocabularyText("pages.projects.actions.all");
-    const i18nDemo = useVocabularyText("pages.projects.actions.demo");
-    const i18nSource = useVocabularyText("pages.projects.actions.source");
-    const i18nModalTitle = useVocabularyText("pages.projects.demoModal.title");
-    const i18nModalDescription = useVocabularyText("pages.projects.demoModal.description");
+    const { t } = useTranslation();
+
+    const i18nAll = t("pages.projects.actions.all");
+    const i18nDemo = t("pages.projects.actions.demo");
+    const i18nSource = t("pages.projects.actions.source");
+    const i18nModalTitle = t("pages.projects.demoModal.title");
+    const i18nModalDescription = t("pages.projects.demoModal.description");
 
     const { slug } = useParams<{ slug: string }>();
     const { data, isLoading, isError } = useContents(["projects", "seo"], [slug!]);

@@ -6,7 +6,7 @@ import ProjectList from "@components/ProjectList/ProjectList";
 import Seo from "@components/Seo/Seo";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 
 // Hooks
 import { useContents } from "@hooks/useContents";
@@ -15,6 +15,8 @@ import { useContents } from "@hooks/useContents";
 import { SITE_URL } from "@config/site";
 
 const Project = () => {
+    const { t } = useTranslation();
+
     // Seo
     const { data, isLoading } = useContents(["seo", "projects"]);
     const projects = data?.projects ?? [];
@@ -24,8 +26,8 @@ const Project = () => {
         <>
             <Seo title={seo?.title} description={seo?.description} url={SITE_URL + "/project"} />
             <section id="project-list-content">
-                <h1 className="page-title">{useVocabularyText("pages.projects.title")}</h1>
-                <p className="page-summary">{useVocabularyText("pages.projects.summary")}</p>
+                <h1 className="page-title">{t("pages.projects.title")}</h1>
+                <p className="page-summary">{t("pages.projects.summary")}</p>
                 <ProjectList
                     title=""
                     projects={projects}

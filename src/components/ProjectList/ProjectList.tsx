@@ -10,7 +10,7 @@ import CardSkeleton from "@components/Card/Skeleton/CardSkeleton";
 import type { Project } from "@typesLocal/index";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 import Button from "@components/Button/Button";
 import Card from "@components/Card/Card";
 import { getProjectImage } from "@utils/image";
@@ -41,8 +41,10 @@ const ProjectList = ({
     itemLimit,
     keyPrefix = "project",
 }: ProjectListProps) => {
+    const { t } = useTranslation();
+
     // Vocabulary
-    const seeAll = useVocabularyText("common.seeAll");
+    const seeAll = t("common.seeAll");
     const skeletonCount = itemLimit ?? 4;
 
     if (isLoading) {

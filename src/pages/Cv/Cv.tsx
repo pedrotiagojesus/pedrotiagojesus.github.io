@@ -18,9 +18,6 @@ import { SITE_URL } from "@config/site";
 // Hooks
 import { useContents } from "@hooks/useContents";
 
-// Utils
-import { useVocabularyText } from "@utils/vocabulary";
-
 // Image
 import Avatar from "@assets/img/avatar.webp";
 
@@ -34,7 +31,7 @@ type CvBlock = { key: string; node: ReactNode };
 
 const Cv = () => {
     const { data, isLoading, isError } = useContents(["profile", "experiences", "seo"]);
-    const { i18n: i18next } = useTranslation();
+    const { t, i18n: i18next } = useTranslation();
     const cvRef = useRef<HTMLDivElement>(null);
     const measureContainerRef = useRef<HTMLDivElement>(null);
     const measureRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -42,11 +39,11 @@ const Cv = () => {
     const [isExporting, setIsExporting] = useState(false);
 
     const i18n = {
-        experience: useVocabularyText("pages.experience.title"),
-        skills: useVocabularyText("pages.about.sections.skills"),
-        softSkills: useVocabularyText("pages.about.sections.softSkills"),
-        education: useVocabularyText("pages.about.sections.education"),
-        certificates: useVocabularyText("pages.about.sections.certificates"),
+        experience: t("pages.experience.title"),
+        skills: t("pages.about.sections.skills"),
+        softSkills: t("pages.about.sections.softSkills"),
+        education: t("pages.about.sections.education"),
+        certificates: t("pages.about.sections.certificates"),
     };
 
     const profile = data?.profile;

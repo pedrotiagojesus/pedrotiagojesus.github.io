@@ -2,7 +2,7 @@
 import "./Experience.css";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 
 // Components
 import Block from "@components/Block/Block";
@@ -16,10 +16,12 @@ import { useContents } from "@hooks/useContents";
 import { SITE_URL } from "@config/site";
 
 const Experience = () => {
+    const { t } = useTranslation();
+
     // Vocabulary
     const i18n = {
-        title: useVocabularyText("pages.experience.title"),
-        summary: useVocabularyText("pages.experience.summary"),
+        title: t("pages.experience.title"),
+        summary: t("pages.experience.summary"),
     };
 
     const { data, isLoading, isError } = useContents(["experiences", "seo"]);

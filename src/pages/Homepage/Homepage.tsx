@@ -13,7 +13,7 @@ import Seo from "@components/Seo/Seo";
 import Button from "@components/Button/Button";
 
 // Utils
-import { useVocabularyText } from "@utils/vocabulary";
+import { useTranslation } from "react-i18next";
 
 // Hooks
 import { useContents } from "@hooks/useContents";
@@ -22,15 +22,17 @@ import { useContents } from "@hooks/useContents";
 import { SITE_URL } from "@config/site";
 
 const Homepage = () => {
+    const { t } = useTranslation();
+
     // Vocabulary
     const i18n = {
-        heroTitle: useVocabularyText("pages.home.hero.title"),
-        heroSubtitle: useVocabularyText("pages.home.hero.subtitle"),
-        about: useVocabularyText("navigation.about"),
-        projects: useVocabularyText("navigation.projects"),
+        heroTitle: t("pages.home.hero.title"),
+        heroSubtitle: t("pages.home.hero.subtitle"),
+        about: t("navigation.about"),
+        projects: t("navigation.projects"),
     };
 
-    const defaultText = useVocabularyText("common.copyEmail");
+    const defaultText = t("common.copyEmail");
     const [buttonText, setButtonText] = useState<string | undefined>(defaultText);
 
     const handleCopy = async () => {
