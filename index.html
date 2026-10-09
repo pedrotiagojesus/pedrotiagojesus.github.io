@@ -80,7 +80,11 @@
         <!-- Preconnect to external domains -->
         <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <!-- Two connections to the API host: CORS requests (axios, crossorigin)
+             and plain <img> requests (the project images it serves) use
+             separate connection pools, so each needs its own preconnect. -->
         <link rel="preconnect" href="https://studio-base-api.vercel.app" crossorigin />
+        <link rel="preconnect" href="https://studio-base-api.vercel.app" />
         <link rel="dns-prefetch" href="https://studio-base-api.vercel.app" />
 
         <script type="text/javascript">
@@ -107,10 +111,10 @@
                 }
             })(window.location);
         </script>
-      <script type="module" crossorigin src="/assets/index-DksWlWCA.js"></script>
+      <script type="module" crossorigin src="/assets/index-IzQLDvTf.js"></script>
       <link rel="modulepreload" crossorigin href="/assets/react-vendor-BQnsOKes.js">
       <link rel="modulepreload" crossorigin href="/assets/query-vendor-CMJR5PVz.js">
-      <link rel="stylesheet" crossorigin href="/assets/index-Cy99Jaw-.css">
+      <link rel="stylesheet" crossorigin href="/assets/index-Dmqph6EH.css">
       <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     </head>
 
