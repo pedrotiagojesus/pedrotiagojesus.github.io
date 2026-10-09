@@ -17,6 +17,7 @@ import { SITE_URL } from "@config/site";
 
 // Hooks
 import { useContents } from "@hooks/useContents";
+import { useFitScale } from "./useFitScale";
 
 // Image
 import Avatar from "@assets/img/avatar.webp";
@@ -36,6 +37,11 @@ const PDF_PAGE_HEIGHT_MM = 297;
 const PDF_INNER_RATIO =
     (PDF_PAGE_HEIGHT_MM - 2 * PDF_MARGIN_MM) / (PDF_PAGE_WIDTH_MM - 2 * PDF_MARGIN_MM);
 
+// The CV is always laid out exactly one A4 page wide (.cv-container's width is
+// --cv-page-width: 210mm), whatever the screen size — narrow screens shrink the
+// preview visually instead (see useFitScale). 96 CSS px per inch, 25.4mm/inch.
+const CV_PAGE_WIDTH_PX = (PDF_PAGE_WIDTH_MM * 96) / 25.4;
+
 type CvBlock = { key: string; node: ReactNode };
 
 const Cv = () => {
@@ -46,6 +52,7 @@ const Cv = () => {
     const measureRefs = useRef<Array<HTMLDivElement | null>>([]);
     const [pages, setPages] = useState<number[][] | null>(null);
     const [isExporting, setIsExporting] = useState(false);
+    const { ref: fitRef, scale } = useFitScale<HTMLDivElement>(CV_PAGE_WIDTH_PX);
 
     const i18n = {
         experience: t("pages.experience.title"),
@@ -216,12 +223,13 @@ const Cv = () => {
             return;
         }
 
-        // The page-height budget is based on the *full page's* rendered
-        // width (a page is one page tall regardless of what columns are
-        // inside it) — read directly from .cv-container, independently of
-        // whatever the sidebar's width happens to be.
-        const fullPageWidthPx = cvRef.current?.getBoundingClientRect().width ?? 0;
-        const pageContentHeightPx = fullPageWidthPx * PDF_INNER_RATIO;
+        // The page-height budget comes from the *full page's* width (a page
+        // is one page tall regardless of what columns are inside it). It's
+        // the fixed A4 width, not a measurement of .cv-container: measuring
+        // used to make the budget depend on the screen — on a phone the
+        // container was ~330px wide, so "page 1" held a single block and the
+        // PDF came out with a near-empty first page and misplaced breaks.
+        const pageContentHeightPx = CV_PAGE_WIDTH_PX * PDF_INNER_RATIO;
 
         const heights = measureRefs.current.slice(0, mainBlocks.length).map((el) => el?.offsetHeight ?? 0);
         const groups: number[][] = [];
@@ -340,36 +348,41 @@ const Cv = () => {
                 ))}
             </div>
 
-            <div className="cv-container" ref={cvRef}>
-                <div className="cv-page cv-page-cover">
-                    <aside className="cv-sidebar">{sidebarContent}</aside>
-                    <div className="cv-main">
-                        {page1Indices.map((blockIndex) => (
-                            <div key={mainBlocks[blockIndex].key}>{mainBlocks[blockIndex].node}</div>
-                        ))}
-                    </div>
-                </div>
-
-                {!isExporting &&
-                    laterPageGroups.map((group, pageIndex) => (
-                        <div key={pageIndex} className="cv-page">
-                            {group.map((blockIndex) => (
+            {/* zoom only shrinks the on-screen preview to fit narrow screens;
+                html2pdf clones .cv-container (not this wrapper) into its own
+                210mm-wide container, so the PDF is never affected by it. */}
+            <div className="cv-fit" ref={fitRef} style={{ zoom: scale }}>
+                <div className="cv-container" ref={cvRef}>
+                    <div className="cv-page cv-page-cover">
+                        <aside className="cv-sidebar">{sidebarContent}</aside>
+                        <div className="cv-main">
+                            {page1Indices.map((blockIndex) => (
                                 <div key={mainBlocks[blockIndex].key}>{mainBlocks[blockIndex].node}</div>
                             ))}
                         </div>
-                    ))}
-
-                {/* Export only: same later content, continuing directly below
-                    the cover section with no visual gap, so html2pdf's own
-                    canvas slicing (not this component) decides the real
-                    page breaks from here on. */}
-                {isExporting && laterPageGroups.length > 0 && (
-                    <div className="cv-page">
-                        {laterPageGroups.flat().map((blockIndex) => (
-                            <div key={mainBlocks[blockIndex].key}>{mainBlocks[blockIndex].node}</div>
-                        ))}
                     </div>
-                )}
+
+                    {!isExporting &&
+                        laterPageGroups.map((group, pageIndex) => (
+                            <div key={pageIndex} className="cv-page">
+                                {group.map((blockIndex) => (
+                                    <div key={mainBlocks[blockIndex].key}>{mainBlocks[blockIndex].node}</div>
+                                ))}
+                            </div>
+                        ))}
+
+                    {/* Export only: same later content, continuing directly below
+                        the cover section with no visual gap, so html2pdf's own
+                        canvas slicing (not this component) decides the real
+                        page breaks from here on. */}
+                    {isExporting && laterPageGroups.length > 0 && (
+                        <div className="cv-page">
+                            {laterPageGroups.flat().map((blockIndex) => (
+                                <div key={mainBlocks[blockIndex].key}>{mainBlocks[blockIndex].node}</div>
+                            ))}
+                        </div>
+                    )}
+                </div>
             </div>
         </>
     );

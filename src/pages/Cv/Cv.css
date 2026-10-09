@@ -52,8 +52,10 @@
     --cv-sidebar-width: 70mm;
 }
 
+/* Always exactly one A4 page wide, on every screen (see CV_PAGE_WIDTH_PX in
+   Cv.tsx); narrow screens get a scaled-down preview via .cv-fit's zoom. */
 .cv-container {
-    max-width: var(--cv-page-width);
+    width: var(--cv-page-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -198,8 +200,11 @@
     min-width: 0;
 }
 
+/* fixed, not absolute: an absolute 140mm-wide box widened the document and
+   gave phones a horizontal scrollbar; a fixed one never extends the scroll
+   area, and offsetHeight measures it the same either way. */
 .cv-measure {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: calc(var(--cv-page-width) - var(--cv-sidebar-width));
