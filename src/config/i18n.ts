@@ -11,6 +11,11 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
     fallbackLng: "pt",
     supportedLngs: ["pt", "en"],
     load: "languageOnly", // treat "en-US", "pt-BR", etc. as "en"/"pt" instead of falling back
+    detection: {
+        // load only affects which resources load: i18n.language would still be
+        // the browser's raw "en-US", which the API rejects with a 400.
+        convertDetectedLanguage: (lng: string) => lng.split("-")[0],
+    },
     resources: {
         pt: { translation: pt },
         // `satisfies` fails the build if en is missing a key that pt has

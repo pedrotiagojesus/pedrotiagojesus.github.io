@@ -53,7 +53,7 @@ Everything else stays next to its code, not in `src/types/`: component props are
 
 The split is by ownership: **UI copy** (labels, buttons, section titles) is part of the code and lives in `src/locales/{pt,en}.json`; **content** (projects, experience, profile, SEO) is data and comes from the backend through `useContents`. Don't move copy back into the API, and don't put content in the locale files.
 
-- **i18next** (`src/config/i18n.ts`) owns `i18n.language` (`"pt"` or `"en"` only — `supportedLngs` + `load: "languageOnly"` collapse regional variants like `en-US`). Detection order is querystring (`?lng=`) → cache → browser, so a URL can force the language deterministically.
+- **i18next** (`src/config/i18n.ts`) owns `i18n.language` (`"pt"` or `"en"` only — the detector's `convertDetectedLanguage` strips regional variants like `en-US`, which the API rejects with a 400; `load: "languageOnly"` alone only affects which resources load, not `i18n.language`). Detection order is querystring (`?lng=`) → cache → browser, so a URL can force the language deterministically.
 - Both locale files are bundled statically as i18next `resources`, so i18n initializes synchronously and no render waits on a request. Read copy with `const { t } = useTranslation(); t("pages.about.title")`.
 - **Keys are type-checked.** `src/types/i18next.d.ts` types `t()` against `pt.json`, so a misspelled or missing key is a compile error. `en` is checked with `satisfies typeof pt` in `i18n.ts` (missing key → build error), and `src/locales/locales.test.ts` catches the reverse (a key only in `en`) and empty strings. To add a string: add the key to **both** JSON files.
 

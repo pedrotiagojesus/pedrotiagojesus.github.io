@@ -4,6 +4,12 @@ import { useTranslation } from "react-i18next";
 // CSS
 import "./LanguagePicker.css";
 
+// Image
+import FlagPt from "@assets/img/flags/pt.svg";
+import FlagEn from "@assets/img/flags/en.svg";
+
+const FLAGS: Record<string, string> = { pt: FlagPt, en: FlagEn };
+
 const LanguagePicker = () => {
     const { i18n } = useTranslation();
     const [showPicker, setShowPicker] = useState<boolean>(false);
@@ -30,21 +36,6 @@ const LanguagePicker = () => {
         };
     }, [showPicker]);
 
-    const buildFlag = (iso2: string) => {
-        const urlCfg = {
-            country_code: iso2,
-            style: "flat",
-            size: 24,
-        };
-
-        if (urlCfg.country_code == "EN") {
-            urlCfg.country_code = "US";
-        }
-
-        const url = `https://flagsapi.com/${urlCfg.country_code}/${urlCfg.style}/${urlCfg.size}.png`;
-        return url;
-    };
-
     const languageArr = [
         { label: "pt", value: "pt" },
         { label: "en", value: "en" },
@@ -64,20 +55,14 @@ const LanguagePicker = () => {
                 aria-label={`Change language, current: ${i18n.language}`}
                 aria-expanded={showPicker}
             >
-                <img
-                    src={buildFlag(i18n.language.toLocaleUpperCase())}
-                    alt={`active-lang-${i18n.language.toLocaleUpperCase()}`}
-                />
+                <img src={FLAGS[i18n.language]} alt="" width={24} height={16} />
                 <span>{i18n.language}</span>
             </button>
             <ul className={showPicker ? "show" : ""}>
                 {languageArr.map((language) => (
                     <li key={language.value}>
                         <button type="button" className="dropdown-item" onClick={() => selectLanguage(language.value)}>
-                            <img
-                                src={buildFlag(language.label.toLocaleUpperCase())}
-                                alt={`option-lang-${language.label.toLocaleUpperCase()}`}
-                            />
+                            <img src={FLAGS[language.value]} alt="" width={24} height={16} />
                             {language.label}
                         </button>
                     </li>
