@@ -3,8 +3,10 @@ import { createBrowserRouter } from "react-router-dom";
 
 // Pages
 import App from "./App";
+// Not lazy: it's the landing page, and lazy-loading it added a request that
+// could only start once the main bundle had run, delaying LCP.
+import Homepage from "@pages/Homepage/Homepage";
 
-const Homepage = lazy(() => import("@pages/Homepage/Homepage"));
 const Experience = lazy(() => import("@pages/Experience/Experience"));
 const Project = lazy(() => import("@pages/Project/Project"));
 const ProjectItem = lazy(() => import("@pages/Project/ProjectItem"));

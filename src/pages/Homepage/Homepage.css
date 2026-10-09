@@ -18,7 +18,10 @@
 }
 
 /* Hero entrance: title → summary → buttons, one after the other. Plays on
-   load rather than on scroll, since the hero is always above the fold. */
+   load rather than on scroll, since the hero is always above the fold.
+   Slide only, no fade: the hero holds the LCP element, and Chrome doesn't
+   count LCP until an element's opacity is above 0, so fading in from 0
+   (plus the stagger delay) pushed LCP back by up to ~1s. */
 #homepage-about > * {
     animation: homepage-enter var(--motion-duration-slowest) var(--ease-decelerated) both;
 }
@@ -33,7 +36,6 @@
 
 @keyframes homepage-enter {
     from {
-        opacity: 0;
         transform: translateY(16px);
     }
 }
