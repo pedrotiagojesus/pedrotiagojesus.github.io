@@ -13,6 +13,13 @@
     margin-bottom: var(--space-xl);
 }
 
+/* The first card's image is the page's LCP element (it's the one Card gets
+   isLcp for): it slides in with the rest of the reveal-group but doesn't fade,
+   since Chrome doesn't count LCP until the element's opacity is above 0. */
+#project-list .list > :first-child {
+    opacity: 1;
+}
+
 #project-list .view-all-button {
     margin-bottom: var(--space-xl);
 }
