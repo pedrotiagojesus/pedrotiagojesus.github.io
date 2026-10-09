@@ -2,7 +2,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-import preload from "vite-plugin-preload";
 import sitemap from "vite-plugin-sitemap";
 import { fileURLToPath } from "url";
 
@@ -12,7 +11,6 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
     plugins: [
         react(),
-        preload(),
         sitemap({
             hostname: "https://pedrotiagojesus.github.io",
             dynamicRoutes: ["/experience", "/project", "/about", "/contact", "/cv"],
